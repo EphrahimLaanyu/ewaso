@@ -5,6 +5,7 @@ import ConservationOrbit from '@/components/sections/ConservationOrbit';
 import ExperiencesMap from '@/components/sections/ExperiencesMap';
 import Footer from '@/components/sections/Footer';
 import Hero from '@/components/sections/Hero';
+import Navbar from '@/components/sections/Navbar';
 import Peep from '@/components/sections/Peep';
 // import TheHouse from '@/components/sections/TheHouse';
 // import SafariExperience from '@/components/sections/SafariExperience';
@@ -17,6 +18,7 @@ export default function Home() {
         The Hero component will take up exactly 100vh.
         As the user scrolls down, the next components will slide into view.
       */}
+      <Navbar/>
       <Hero />
       <About/>
       <Peep/>
