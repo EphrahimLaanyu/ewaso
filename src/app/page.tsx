@@ -1,0 +1,25 @@
+import About from '@/components/sections/About';
+import ConservationOrbit from '@/components/sections/ConservationOrbit';
+import Hero from '@/components/sections/Hero';
+import Peep from '@/components/sections/Peep';
+// import TheHouse from '@/components/sections/TheHouse';
+// import SafariExperience from '@/components/sections/SafariExperience';
+// import NightSky from '@/components/sections/NightSky';
+
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between">
+      {/* 
+        The Hero component will take up exactly 100vh.
+        As the user scrolls down, the next components will slide into view.
+      */}
+      <Hero />
+      <About/>
+      <Peep/>
+      
+      {/* <TheHouse /> */}
+      {/* <SafariExperience /> */}
+      {/* <NightSky /> */}
+    </main>
+  );
+}
