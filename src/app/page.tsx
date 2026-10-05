@@ -1,7 +1,9 @@
 import About from '@/components/sections/About';
+import BookingReservation from '@/components/sections/BookingReservation';
 import ConservationEthos from '@/components/sections/ConservationEthos';
 import ConservationOrbit from '@/components/sections/ConservationOrbit';
 import ExperiencesMap from '@/components/sections/ExperiencesMap';
+import Footer from '@/components/sections/Footer';
 import Hero from '@/components/sections/Hero';
 import Peep from '@/components/sections/Peep';
 // import TheHouse from '@/components/sections/TheHouse';
@@ -18,8 +20,10 @@ export default function Home() {
       <Hero />
       <About/>
       <Peep/>
-      {/* <ExperiencesMap/> */}
+      <ExperiencesMap/>
       <ConservationEthos/>
+      <BookingReservation/>
+      <Footer/>
       
       {/* <TheHouse /> */}
       {/* <SafariExperience /> */}
