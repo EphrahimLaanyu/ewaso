@@ -44,113 +44,165 @@ export default function WildlifeTeaser() {
       }
     );
 
-    textRefs.current.forEach((ref) => {
+    const currentRefs = textRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      textRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
   }, []);
 
   return (
-    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-white">
+    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-white border-t border-[#2C2A25]/10">
       
       {/* 
         CHAPTER HEADER
-        A massive, breathable typography section to announce the content.
+        Padding heavily reduced for mobile screens (py-12).
       */}
-      <div className="w-full px-6 py-24 md:py-32 lg:py-40 flex flex-col items-center text-center">
-        <div className="flex items-center gap-4 mb-8">
-          <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
-          <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#2C2A25]/60">
+      <div className="w-full px-6 py-16 md:py-20 lg:py-24 flex flex-col items-center text-center">
+        <div className="flex items-center gap-4 mb-6 md:mb-8">
+          <span className="w-6 md:w-8 h-[1px] bg-[#2C2A25]/30"></span>
+          <span className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-semibold text-[#2C2A25]/60">
             The Inhabitants
           </span>
-          <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
+          <span className="w-6 md:w-8 h-[1px] bg-[#2C2A25]/30"></span>
         </div>
         
-        <h1 className="font-serif text-6xl md:text-8xl lg:text-[9rem] leading-none tracking-tight mb-6">
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-[8rem] leading-none tracking-tight mb-4 md:mb-6">
           Wildlife
         </h1>
         
-        <p className="font-sans text-sm md:text-base tracking-[0.1em] uppercase opacity-70">
+        <p className="font-sans text-xs md:text-sm tracking-[0.1em] uppercase opacity-70">
           Where the real wild begins
         </p>
       </div>
 
-      {/* 
-        THE STICKY INTERACTION
-        Wrapped in a relative container so it flows naturally under the header.
-      */}
-      <div className="relative flex flex-col lg:flex-row border-t border-[#2C2A25]/10">
+      <div className="w-full">
         
-        {/* LEFT COLUMN: The Sticky Image Viewport */}
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen sticky top-0 overflow-hidden bg-[#EAE7E0]">
+        {/* 
+          --- MOBILE & TABLET LAYOUT (< 1024px) ---
+          A clean, stacked editorial card layout to prevent scrolling friction.
+        */}
+        <div className="flex flex-col lg:hidden w-full">
           {wildlifeData.map((item, index) => (
-            <img
-              key={index}
-              src={item.image}
-              alt={item.title}
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
-                activeIndex === index 
-                  ? 'opacity-100 scale-100' 
-                  : 'opacity-0 scale-105'
-              }`}
-            />
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-        </div>
-
-        {/* RIGHT COLUMN: The Scrolling Text Blocks */}
-        <div className="w-full lg:w-1/2 flex flex-col px-6 md:px-16 lg:px-24">
-          {wildlifeData.map((item, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                textRefs.current[index] = el;
-              }}
-              data-index={index}
-              className="w-full min-h-[60vh] lg:min-h-screen flex flex-col justify-center py-16"
-            >
-              <div className="flex items-center gap-4 mb-8">
-                <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
-                <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#591C27]">
-                  {item.subtitle}
-                </span>
+            <div key={index} className="w-full flex flex-col border-t border-[#2C2A25]/10">
+              {/* Image Block */}
+              <div className="w-full h-[45vh] bg-[#EAE7E0] overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               
-              <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-tight mb-8">
-                {item.title}
-              </h2>
-              
-              <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide opacity-80 max-w-md mb-10">
-                {item.description}
-              </p>
-
-              {index < wildlifeData.length - 1 && (
-                <div className="mt-8 flex items-center gap-3 opacity-40">
-                  <div className="w-[1px] h-12 bg-current"></div>
-                  <span className="text-[9px] uppercase tracking-[0.2em]" style={{ writingMode: 'vertical-rl' }}>
-                    Keep Scrolling
+              {/* Text Block */}
+              <div className="w-full px-6 py-12 md:py-16 flex flex-col justify-center bg-[#F4F1EB]">
+                <div className="flex items-center gap-4 mb-5">
+                  <span className="w-6 h-[1px] bg-[#2C2A25]/30"></span>
+                  <span className="text-[9px] tracking-[0.2em] uppercase font-semibold text-[#591C27]">
+                    {item.subtitle}
                   </span>
                 </div>
-              )}
+                
+                <h2 className="font-serif text-4xl md:text-5xl tracking-tight mb-5">
+                  {item.title}
+                </h2>
+                
+                <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide opacity-80 mb-8 max-w-md">
+                  {item.description}
+                </p>
 
-              {index === wildlifeData.length - 1 && (
-                <a 
-                  href="#wildlife-details" 
-                  className="group flex items-center gap-4 text-xs tracking-[0.15em] uppercase font-medium hover:text-[#591C27] transition-colors duration-300 w-max"
-                >
-                  Read The Full Protocol
-                  <span className="block w-6 h-[1px] bg-current group-hover:w-12 group-hover:bg-[#591C27] transition-all duration-500 ease-out"></span>
-                </a>
-              )}
+                {index === wildlifeData.length - 1 && (
+                  <a 
+                    href="#wildlife-details" 
+                    className="group flex items-center gap-4 text-[10px] md:text-xs tracking-[0.15em] uppercase font-bold hover:text-[#591C27] transition-colors duration-300 w-max mt-2"
+                  >
+                    Read The Full Protocol
+                    <span className="block w-6 h-[1px] bg-current group-hover:w-10 group-hover:bg-[#591C27] transition-all duration-500 ease-out"></span>
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
-        
+
+        {/* 
+          --- DESKTOP LAYOUT (>= 1024px) ---
+          The premium sticky-scroll interaction.
+        */}
+        <div className="hidden lg:flex relative w-full flex-row border-t border-[#2C2A25]/10">
+          
+          {/* LEFT COLUMN: The Sticky Image Viewport */}
+          <div className="w-1/2 h-screen sticky top-0 overflow-hidden bg-[#EAE7E0]">
+            {wildlifeData.map((item, index) => (
+              <img
+                key={index}
+                src={item.image}
+                alt={item.title}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+                  activeIndex === index 
+                    ? 'opacity-100 scale-100' 
+                    : 'opacity-0 scale-105'
+                }`}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+          </div>
+
+          {/* RIGHT COLUMN: The Scrolling Text Blocks */}
+          <div className="w-1/2 flex flex-col px-16 xl:px-24">
+            {wildlifeData.map((item, index) => (
+              <div
+                key={index}
+                ref={(el) => {
+                  textRefs.current[index] = el;
+                }}
+                data-index={index}
+                className="w-full min-h-screen flex flex-col justify-center py-16"
+              >
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#591C27]">
+                    {item.subtitle}
+                  </span>
+                </div>
+                
+                <h2 className="font-serif text-5xl xl:text-6xl tracking-tight mb-8">
+                  {item.title}
+                </h2>
+                
+                <p className="font-sans text-sm xl:text-base leading-relaxed tracking-wide opacity-80 max-w-md mb-12">
+                  {item.description}
+                </p>
+
+                {index < wildlifeData.length - 1 && (
+                  <div className="flex items-center gap-3 opacity-30 mt-4">
+                    <div className="w-[1px] h-12 bg-current"></div>
+                    <span className="text-[9px] uppercase tracking-[0.2em]" style={{ writingMode: 'vertical-rl' }}>
+                      Scroll
+                    </span>
+                  </div>
+                )}
+
+                {index === wildlifeData.length - 1 && (
+                  <a 
+                    href="#wildlife-details" 
+                    className="group flex items-center gap-4 text-[10px] xl:text-xs tracking-[0.15em] uppercase font-bold hover:text-[#591C27] transition-colors duration-300 w-max mt-4"
+                  >
+                    Read The Full Protocol
+                    <span className="block w-6 h-[1px] bg-current group-hover:w-12 group-hover:bg-[#591C27] transition-all duration-500 ease-out"></span>
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+          
+        </div>
+
       </div>
     </section>
   );
