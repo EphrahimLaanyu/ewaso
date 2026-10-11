@@ -20,7 +20,7 @@ export default function Home() {
       */}
       <Navbar/>
       <Hero />
-      <About/>
+      {/* <About/> */}
       <Peep/>
       <ExperiencesMap/>
       <ConservationEthos/>

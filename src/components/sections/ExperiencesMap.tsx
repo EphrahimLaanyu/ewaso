@@ -3,43 +3,46 @@
 import React from 'react';
 
 export default function ExperiencesCards() {
-  const experiences = [
+const experiences = [
     {
       id: "01",
       title: "The Spotter Briefing",
       time: "Pre-Dawn",
       description: "Spotter teams radio in animal movements from pre-dawn patrols to brief and direct guests.",
-      image: "/images/wild-dog-track.jpg" // Replace with actual image path
+      image: "/images/Official-images/WhatsApp Image 2026-10-09 at 20.07.57.jpeg"
     },
     {
       id: "02",
       title: "Dalmas’s Masterclass",
       time: "Morning",
       description: "Led by Dalmas, a certified naturalist born in the Ewaso landscape. Covers birding, tracking, and ecosystem reading.",
-      image: "/images/ewaso-hero.jpg" // Replace with actual image path
+      image: "images/Official-images/WhatsApp Image 2026-10-09 at 20.01.55 (2).jpeg"
     },
     {
       id: "03",
       title: "The Elephant Kingdom Walk",
       time: "Mid-Day",
       description: "An on-foot guided walk along the routes thousands of elephants have crossed for generations.",
-      image: "/images/giza-full.jpg" // Replace with actual image path
+      image: "images/Official-images/WhatsApp Image 2026-10-11 at 09.43.53 (1).jpeg"
     },
     {
       id: "04",
       title: "The Day Hide",
       time: "Golden Hour",
       description: "Ground-level photography in golden hour light. Best for wildlife photographers and bird life at the waterpoint.",
-      image: "/images/elephants-family.jpg" // Replace with actual image path
+      image: "/images/Official-images/WhatsApp_enhanced_test.jpeg"
     },
     {
       id: "05",
       title: "The Night Hide",
       time: "Nightfall",
       description: "One of the very few night hides in Kenya. Best for nocturnal wildlife, guided black leopard sightings, and night sky photography.",
-      image: "/images/lodge-night-sky.jpg" // Replace with actual image path
+      image: "images/Official-images/WhatsApp Image 2026-10-09 at 20.05.48.jpeg"
     }
-  ];
+  ];///
+  ///images/Official-images/WhatsApp Image 2026-10-09 at 20.01.55 (2).jpeg
+  ///images/Official-images/WhatsApp Image 2026-10-09 at 20.05.48.jpeg
+  ///images/Official-images/WhatsApp Image 2026-10-11 at 09.43.53 (1).jpeg
 
   return (
     <section className="w-full bg-[#F4F1EB] py-24 md:py-32 px-4 md:px-8 selection:bg-[#591C27] selection:text-[#F4F1EB]">
@@ -54,7 +57,7 @@ export default function ExperiencesCards() {
             </span>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#2C2A25]">
-            A Day at Ewaso
+            A Day at Goshen
           </h2>
         </div>
         <p className="font-sans text-xs tracking-[0.15em] uppercase font-medium text-[#2C2A25]/50 max-w-xs">
