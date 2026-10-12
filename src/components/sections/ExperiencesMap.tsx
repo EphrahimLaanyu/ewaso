@@ -9,35 +9,35 @@ const experiences = [
       title: "The Spotter Briefing",
       time: "Pre-Dawn",
       description: "Spotter teams radio in animal movements from pre-dawn patrols to brief and direct guests.",
-      image: "/images/Official-images/WhatsApp Image 2026-10-09 at 20.07.57.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.07.57.jpeg"
     },
     {
       id: "02",
       title: "Dalmas’s Masterclass",
       time: "Morning",
       description: "Led by Dalmas, a certified naturalist born in the Ewaso landscape. Covers birding, tracking, and ecosystem reading.",
-      image: "images/Official-images/WhatsApp Image 2026-10-09 at 20.01.55 (2).jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.01.55%20(2).jpeg"
     },
     {
       id: "03",
       title: "The Elephant Kingdom Walk",
       time: "Mid-Day",
       description: "An on-foot guided walk along the routes thousands of elephants have crossed for generations.",
-      image: "images/Official-images/WhatsApp Image 2026-10-11 at 09.43.53 (1).jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.53%20(1).jpeg"
     },
     {
       id: "04",
       title: "The Day Hide",
       time: "Golden Hour",
       description: "Ground-level photography in golden hour light. Best for wildlife photographers and bird life at the waterpoint.",
-      image: "/images/Official-images/WhatsApp_enhanced_test.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.14.01.jpeg"
     },
     {
       id: "05",
       title: "The Night Hide",
       time: "Nightfall",
       description: "One of the very few night hides in Kenya. Best for nocturnal wildlife, guided black leopard sightings, and night sky photography.",
-      image: "images/Official-images/WhatsApp Image 2026-10-09 at 20.05.48.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.05.48.jpeg"
     }
   ];///
   ///images/Official-images/WhatsApp Image 2026-10-09 at 20.01.55 (2).jpeg

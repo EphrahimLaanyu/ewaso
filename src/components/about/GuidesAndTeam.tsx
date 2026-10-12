@@ -3,7 +3,7 @@
 import React from 'react';
 
 export default function GuidesAndTeam() {
-  const guideImage = "/images/Official-images/WhatsApp Image 2026-10-09 at 20.07.57.jpeg";
+  const guideImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.07.57.jpeg";
 
   return (
     <section className="w-full bg-[#F4F1EB] text-[#2C2A25] px-6 md:px-12 lg:px-20 pb-24 md:pb-32 selection:bg-[#591C27] selection:text-[#F4F1EB]">

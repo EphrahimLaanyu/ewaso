@@ -34,7 +34,7 @@ export default function OurConviction() {
             {/* The Image at the top */}
             <div className="w-full aspect-[4/3] overflow-hidden bg-[#EAE7E0] mb-8 md:mb-auto">
               <img 
-                src="/images/Official-images/WhatsApp Image 2026-10-09 at 20.01.55 (2).jpeg" 
+                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.01.55%20(2).jpeg" 
                 alt="Goshen Camp Conservation" 
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
