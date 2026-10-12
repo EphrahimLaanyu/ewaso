@@ -17,13 +17,13 @@ export default function WildlifeTeaser() {
       title: "The Elephant Kingdom",
       subtitle: "The Great Crossing",
       description: "For centuries, herds have moved freely through this valley. Observe the river crossing from a respectful distance, allowing you to watch the herds unseen and unobtrusive.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/elephants-family.jpg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.53%20(1).jpeg"
     },
     {
       title: "African Wild Dogs",
       subtitle: "Endangered Carnivores",
       description: "The conservancy is home to a satellite-tracked pack of African wild dogs, providing a vital sanctuary and monitoring system for one of the continent's most endangered carnivores.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/wild-dog-track.jpg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/catherine-merlin-zqrDvKRY2gU-unsplash.jpg"
     }
   ];
 
