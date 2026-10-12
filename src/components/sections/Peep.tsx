@@ -11,7 +11,7 @@ export default function WildlifeTeaser() {
       title: "Giza",
       subtitle: "The Black Leopard",
       description: "Melanistic leopards are exceptionally rare. Giza is among the very few in East Africa with a verified territory, living on her own terms within the conservancy.",
-      image: "/images/giza-full.jpg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza-full.jpg"
     },
     {
       title: "The Elephant Kingdom",
