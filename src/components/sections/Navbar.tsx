@@ -1,63 +1,129 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Navbar() {
+  const [isSolid, setIsSolid] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Track scroll to change navbar styling
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.9) {
+        setIsSolid(true);
+      } else {
+        setIsSolid(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Lock body scroll when the mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  // Determine text and line color based on scroll OR if the menu is open
+  const textColor = isSolid && !isOpen ? 'text-[#2C2A25]' : 'text-[#F4F1EB]';
+  const bgColor = isSolid && !isOpen ? 'bg-[#2C2A25]' : 'bg-[#F4F1EB]';
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 py-8 bg-transparent">
-      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-baseline">
-        
-        {/* LEFT: The Masthead / Logo */}
-        <a 
-          href="/" 
-          className="font-serif text-2xl md:text-3xl tracking-tight text-[#F4F1EB] hover:opacity-70 transition-opacity duration-500"
-        >
-          Goshen
-        </a>
-
-        {/* RIGHT: The Navigation Links */}
-        <nav className="hidden md:flex items-center gap-10 lg:gap-14">
-          <a 
-            href="#experiences" 
-            className="font-sans text-[9px] tracking-[0.2em] uppercase font-semibold text-[#F4F1EB]/80 hover:text-[#F4F1EB] transition-colors duration-500"
-          >
-            Experiences
-          </a>
+    <>
+      <header 
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+          isSolid && !isOpen
+            ? 'bg-[#F4F1EB] py-4 md:py-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)]' 
+            : 'bg-transparent py-6 md:py-8'
+        }`}
+      >
+        <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-center">
           
+          {/* LEFT: The Masthead / Logo */}
           <a 
-            href="#ethos" 
-            className="font-sans text-[9px] tracking-[0.2em] uppercase font-semibold text-[#F4F1EB]/80 hover:text-[#F4F1EB] transition-colors duration-500"
+            href="/" 
+            onClick={() => setIsOpen(false)}
+            className={`font-serif text-2xl md:text-3xl tracking-tight transition-colors duration-500 hover:opacity-70 ${textColor}`}
           >
-            Ethos
-          </a>
-          
-          <a 
-            href="#gallery" 
-            className="font-sans text-[9px] tracking-[0.2em] uppercase font-semibold text-[#F4F1EB]/80 hover:text-[#F4F1EB] transition-colors duration-500"
-          >
-            Gallery
+            Goshen
           </a>
 
-          {/* Primary Action */}
-          <a 
-            href="#reservations" 
-            className="group flex items-center gap-3 font-sans text-[9px] tracking-[0.2em] uppercase font-bold text-[#F4F1EB] transition-colors duration-500 ml-4"
-          >
-            Inquire
-            <span className="w-6 h-[1px] bg-[#F4F1EB] group-hover:w-10 transition-all duration-300"></span>
-          </a>
+          {/* RIGHT: CTA & Menu Toggle (Always visible on all screens) */}
+          <div className="flex items-center gap-6 md:gap-10">
+            
+            {/* Primary Action (Inquire) */}
+            <a 
+              href="#reservations" 
+              onClick={() => setIsOpen(false)}
+              className={`group flex items-center gap-3 font-sans text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-bold transition-colors duration-500 ${textColor}`}
+            >
+              Inquire
+              <span className={`hidden sm:block w-6 h-[1px] group-hover:w-10 transition-all duration-300 ${bgColor}`}></span>
+            </a>
+
+            {/* Hamburger Menu Icon */}
+            <button 
+              className="flex flex-col justify-center gap-[6px] w-8 h-8 focus:outline-none z-50 group"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              <span 
+                className={`block h-[1px] transition-all duration-300 ease-in-out ${bgColor} ${
+                  isOpen ? 'w-7 rotate-45 translate-y-[3.5px]' : 'w-7 group-hover:w-5'
+                }`}
+              ></span>
+              <span 
+                className={`block h-[1px] transition-all duration-300 ease-in-out ${bgColor} ${
+                  isOpen ? 'w-7 -rotate-45 -translate-y-[3.5px]' : 'w-5 group-hover:w-7'
+                }`}
+              ></span>
+            </button>
+
+          </div>
+
+        </div>
+      </header>
+
+      {/* 
+        FULL-SCREEN OVERLAY MENU
+        Houses all secondary links in a cinematic, distraction-free environment.
+      */}
+      <div 
+        className={`fixed inset-0 z-40 bg-[#1A1817] flex flex-col justify-center px-6 transition-all duration-700 ease-[cubic-bezier(0.87,0,0.13,1)] ${
+          isOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-4'
+        }`}
+      >
+        <nav className="flex flex-col gap-8 text-center mt-12">
+          {['About', 'Experiences', 'Ethos', 'Gallery'].map((item, i) => (
+            <a 
+              key={item}
+              href={item === 'About' ? '/about' : `#${item.toLowerCase()}`}
+              onClick={() => setIsOpen(false)}
+              className="font-serif text-4xl sm:text-5xl md:text-6xl tracking-tight text-[#F4F1EB] hover:text-[#591C27] hover:italic transition-colors duration-300"
+              style={{ transitionDelay: `${isOpen ? i * 50 : 0}ms` }}
+            >
+              {item}
+            </a>
+          ))}
         </nav>
-
-        {/* MOBILE: Minimalist Menu Toggle */}
-        <button 
-          className="md:hidden flex flex-col gap-[5px] p-2 focus:outline-none group"
-          aria-label="Toggle Menu"
-        >
-          <span className="w-6 h-[1px] bg-[#F4F1EB] group-hover:w-4 transition-all duration-300"></span>
-          <span className="w-6 h-[1px] bg-[#F4F1EB] group-hover:w-5 transition-all duration-300"></span>
-        </button>
-
+        
+        {/* Menu Footer */}
+        <div className="absolute bottom-12 left-0 w-full flex justify-center">
+          <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-[#F4F1EB]/40 font-bold">
+            The Ewaso Enclave • Laikipia
+          </p>
+        </div>
       </div>
-    </header>
+    </>
   );
 }
