@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 export default function EwasoEcosystem() {
@@ -34,7 +32,7 @@ export default function EwasoEcosystem() {
             
             {/* Lead Paragraph (Slightly larger and brighter) */}
             <p className="font-sans text-lg md:text-xl leading-relaxed tracking-wide text-[#F4F1EB]/90">
-              Set against the dramatic backdrop of the Laikipia plateau, our camp is woven seamlessly into the Ewaso ecosystem. This is a landscape of stark, rolling beauty, carved by the life-giving waters of the Ewaso River.
+              Located right in the heart of the Laikipia plateau, our camp blends perfectly into the natural surroundings. It is a beautiful, open landscape brought to life by the waters of the Ewaso River.
             </p>
             
             {/* Elegant Divider */}
@@ -42,7 +40,7 @@ export default function EwasoEcosystem() {
             
             {/* Secondary Paragraph (Standard size and slightly muted) */}
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/70">
-              To preserve the integrity of this terrain, Goshen operates with an absolute commitment to intimacy. With a strict limit on vehicles and a deeply restricted guest capacity, you are afforded the ultimate modern luxury: pure, uninterrupted space. There are no convoys or crowds—only you, the endless horizon, and the quiet crackle of the dry earth.
+              To keep this area as wild as possible, we keep things small and private. We strictly limit the number of guests and safari vehicles, giving you the greatest luxury of all: endless, open space. There are no crowded tourist traps here—just you, the vast horizon, and the sounds of the African bush.
             </p>
             
           </div>

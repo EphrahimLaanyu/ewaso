@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 export default function ElephantAndGiza() {
@@ -34,7 +32,7 @@ export default function ElephantAndGiza() {
                 <span className="italic text-[#591C27] font-light">Kingdom</span>
               </h3>
               <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80">
-                The ground beneath Goshen Camp is etched with history. We sit directly along ancient migratory corridors, allowing you to witness the majestic procession of the Elephant Kingdom from the private sanctuary of your tent.
+                Goshen Camp sits right on paths that elephants have used for hundreds of years. You can sit back and watch these gentle giants walk by right from the comfort and privacy of your own tent.
               </p>
             </div>
 
@@ -71,7 +69,7 @@ export default function ElephantAndGiza() {
                 <span className="italic text-[#591C27] font-light">Giza</span>
               </h3>
               <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80">
-                But the daylight giants are only half the story. As dusk falls, the territory transforms, revealing the shadow of Laikipia’s most elusive resident: Giza, the melanistic black leopard. Through our specialized hides and low-impact tracking, we offer a rare, highly privileged window into the lives of these apex predators.
+                When the sun goes down, a different side of the wild wakes up. This is when Giza, the rare black leopard, steps out of the shadows. Using our specially designed hides and expert tracking, you get a safe and incredibly rare chance to see her up close in her natural home.
               </p>
             </div>
             

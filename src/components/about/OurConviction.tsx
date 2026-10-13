@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 export default function OurConviction() {
@@ -11,7 +9,7 @@ export default function OurConviction() {
         <div className="flex items-center gap-4 mb-16 md:mb-24">
           <span className="w-12 h-[1px] bg-[#2C2A25]/30"></span>
           <h2 className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#2C2A25]/50">
-            Our Conviction
+            Our Belief
           </h2>
         </div>
 
@@ -21,10 +19,10 @@ export default function OurConviction() {
           {/* LEFT COLUMN: The Core Belief */}
           <div className="md:pr-12 lg:pr-20 flex flex-col justify-center">
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-[1.2] tracking-tight mb-8">
-              Goshen Laikipia Camp was born from a singular, unyielding belief: the rarest wildlife experiences must remain <span className="italic text-[#591C27] font-light">wild.</span>
+              Goshen Laikipia Camp was built on one simple belief: true wildlife experiences must stay <span className="italic text-[#591C27] font-light">wild.</span>
             </h3>
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80">
-              We do not stage the savannah, nor do we crowd it. By maintaining a strictly limited footprint, we ensure that the natural rhythms of Laikipia continue entirely undisturbed.
+              We do not stage animal sightings or crowd the savannah with vehicles. By keeping our camp small, we make sure the natural life of Laikipia continues completely undisturbed.
             </p>
           </div>
 
@@ -42,7 +40,7 @@ export default function OurConviction() {
 
             {/* The Text at the bottom */}
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mt-8">
-              Here, conservation is not a corporate initiative—it is the very foundation of our existence. Our presence is a quiet one, designed to protect the landscape while granting our guests an ethical, front-row seat to the untamed reality of the African bush.
+              Protecting nature isn't just an extra project for us—it is the whole reason we exist. We stay quiet and respectful to protect the land, giving you a responsible, front-row seat to the real African bush.
             </p>
           </div>
 
