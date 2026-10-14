@@ -123,7 +123,7 @@ export default function BookingReservation() {
               <span className="font-serif text-sm text-[#591C27] italic">R</span>
             </div>
             <p className="font-sans text-[10px] leading-relaxed uppercase tracking-wider text-[#2C2A25]/70">
-              Booking is exclusive with <strong className="text-[#591C27]">Rhino Watch Safaris Ltd.</strong>
+              Booking is exclusive with <strong className="text-[#591C27]">Goshen Camp</strong>
               <span className="block mt-0.5 capitalize tracking-normal font-serif italic text-xs text-[#2C2A25]/50">(Part of the Apasio Collection)</span>
             </p>
           </div>

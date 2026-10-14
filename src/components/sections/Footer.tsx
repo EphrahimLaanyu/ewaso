@@ -48,11 +48,11 @@ export default function Footer() {
               
               <div className="flex flex-col gap-4">
                 <a 
-                  href="mailto:info@rhinowatchlodge.com" 
+                  href="mailto:info@goshencamp.com" 
                   className="group flex flex-col w-max"
                 >
                   <span className="font-serif text-xl md:text-2xl leading-snug opacity-90 group-hover:opacity-100 transition-opacity">
-                    info@rhinowatchlodge.com
+                    info@goshencamp.com
                   </span>
                   <span className="w-0 h-[1px] bg-[#F4F1EB] group-hover:w-full transition-all duration-500 ease-out mt-1"></span>
                 </a>
