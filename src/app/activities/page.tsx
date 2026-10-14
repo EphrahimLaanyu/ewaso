@@ -10,10 +10,10 @@ import React from 'react';
 const EXPERIENCE_IMAGES = {
   hero: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.53%20(1).jpeg",
   dayDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.51.jpeg",
-  nightDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.14.03.jpeg",
+  nightDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/night-time%20viewing.jpeg",
   natureWalks: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.07.57.jpeg",
-  culturalVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_CULTURAL.jpeg",
-  marketVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_MARKET.jpeg",
+  culturalVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Cultutral%20visit.jpeg",
+  marketVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Market%20visit.jpeg",
   leopardTracking: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/IMG_5761.JPG",
   kopjeHikes: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_HIKE.jpeg",
   sundowners: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.05.48%20(1).jpeg",
