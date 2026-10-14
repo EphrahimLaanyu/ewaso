@@ -64,13 +64,13 @@ export default function Navbar({ onOpenEnquire }: NavbarProps) {
             <Link
               href="/"
               className="group flex flex-col items-start transition-opacity duration-300 hover:opacity-80"
-              aria-label="Ewaso Camp Home"
+              aria-label="Goshen Home"
             >
               <span className="font-serif text-2xl sm:text-3xl tracking-[0.18em] uppercase font-light text-[#221E1F]">
-                Ewaso Camp
+                Goshen
               </span>
               <span className="text-[9px] tracking-[0.32em] uppercase text-[#706C66] group-hover:text-[#591C27] transition-colors duration-300 font-sans pl-0.5">
-                Nanyuki · Kenya
+                Laikipia · Kenya
               </span>
             </Link>
           </div>

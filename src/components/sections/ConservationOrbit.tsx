@@ -18,11 +18,11 @@ export default function Conservation() {
         </h2>
         
         <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide opacity-80 mb-10 max-w-2xl">
-          We actively protect the Ewaso Enclave. Every stay directly funds 24/7 anti-poaching operations, species monitoring for endangered African wild dogs, and protects the historic elephant corridors of Laikipia.
+          We actively protect our surrounding wilderness. A portion of every booking helps fund 24/7 ranger teams, species monitoring for endangered African wild dogs, and protects the historic elephant paths of Laikipia.
         </p>
 
         <a 
-          href="#efforts" 
+          href="/#ethos" 
           className="group flex items-center gap-4 text-xs tracking-[0.15em] uppercase font-medium hover:text-[#591C27] transition-colors duration-300"
         >
           View Conservation Initiatives
@@ -40,7 +40,10 @@ export default function Conservation() {
         <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#EAE7E0] group shadow-lg">
           <img 
             src="https://images.unsplash.com/photo-1547471080-7fc2caa7fc12?q=80&w=800&auto=format&fit=crop" 
-            alt="Ewaso Nyiro River" 
+            alt="Goshen Landscape" 
+            loading="lazy"
+            width={800}
+            height={1000}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" 
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>
@@ -53,7 +56,10 @@ export default function Conservation() {
         <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#EAE7E0] group shadow-lg">
           <img 
             src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=800&auto=format&fit=crop" 
-            alt="African Wild Dogs / Antelope" 
+            alt="Laikipia Wildlife" 
+            loading="lazy"
+            width={800}
+            height={1000}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" 
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>
@@ -67,6 +73,9 @@ export default function Conservation() {
           <img 
             src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" 
             alt="Community and Flora" 
+            loading="lazy"
+            width={800}
+            height={1000}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" 
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>

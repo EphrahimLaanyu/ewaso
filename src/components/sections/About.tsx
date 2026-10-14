@@ -21,7 +21,10 @@ export default function About() {
             <div className="w-full aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-[#EAE7E0]">
               <img 
                 src={img1} 
-                alt="Goshen Camp Atmosphere" 
+                alt="Goshen Atmosphere" 
+                loading="lazy"
+                width={600}
+                height={750}
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" 
               />
             </div>
@@ -41,7 +44,7 @@ export default function About() {
               </span>
             </div>
             <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] tracking-tight text-[#2C2A25]">
-              The wild is not our product. It is our <span className="italic text-[#591C27] font-light">responsibility.</span>
+              The land is not an attraction. It is our <span className="italic text-[#591C27] font-light">responsibility.</span>
             </h2>
           </div>
 
@@ -51,10 +54,10 @@ export default function About() {
           */}
           <div className="lg:col-span-4 lg:col-start-2 flex flex-col justify-end order-3 pt-4 lg:pb-12">
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide opacity-80 mb-10 max-w-sm">
-              Set within the vast Laikipia landscape, Goshen Camp is built on a single belief: the rarest wildlife experiences must remain unstaged and unobtrusive. With a strict limit on vehicles and an intimate footprint, we offer an uncompromising gateway to the Elephant Kingdom and the elusive territory of Giza, the black leopard.
+              Set within the vast Laikipia landscape, Goshen is built on a single belief: the rarest wildlife experiences must remain unstaged and unobtrusive. With a strict limit on vehicles and an intimate footprint, we offer an uncompromising gateway to the Elephant Kingdom and the elusive territory of Giza, the black leopard.
             </p>
             <a 
-              href="#discover-more" 
+              href="/camp" 
               className="group flex items-center gap-4 text-[10px] md:text-xs tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors duration-300 w-max"
             >
               Explore The Camp
@@ -72,7 +75,10 @@ export default function About() {
             <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#EAE7E0] group z-10">
               <img 
                 src={img2} 
-                alt="Goshen Camp Landscape" 
+                alt="Goshen Landscape" 
+                loading="lazy"
+                width={800}
+                height={500}
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" 
               />
             </div>
@@ -81,7 +87,10 @@ export default function About() {
             <div className="absolute -bottom-10 md:-bottom-20 -left-4 md:-left-16 w-3/5 md:w-1/2 aspect-[4/5] overflow-hidden bg-[#EAE7E0] shadow-2xl group z-20 border-4 md:border-8 border-[#F4F1EB]">
               <img 
                 src={img3} 
-                alt="Goshen Camp Details" 
+                alt="Goshen Architectural Details" 
+                loading="lazy"
+                width={400}
+                height={500}
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" 
               />
             </div>

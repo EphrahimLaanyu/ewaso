@@ -66,7 +66,7 @@ export default function CampHero() {
             <span className="italic text-[#591C27] font-light">Open to the wild.</span>
           </h2>
           <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mb-10">
-            Set high on the natural rocks with wide-open views of the valley, our camp blends seamlessly into the land. Enjoy the absolute quiet of the bush with only a handful of luxury tents, offering total privacy and highly personalized service.
+            Stone, canvas and timber, set on the rocks above the valley. Enjoy the absolute quiet of the bush, offering total privacy and highly personalized service.
           </p>
           <a 
             href="#suites" 
@@ -87,7 +87,10 @@ export default function CampHero() {
           <div className="relative z-10 w-[65%] max-w-[350px] aspect-[3/4] shadow-2xl ml-[-20%] group overflow-hidden border-[8px] border-[#F4F1EB]">
             <img 
               src={portraitTent} 
-              alt="Goshen Tented Suite Exterior" 
+              alt="Goshen Tented Suite" 
+              loading="lazy"
+              width={350}
+              height={466}
               className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
             />
           </div>
@@ -97,6 +100,9 @@ export default function CampHero() {
             <img 
               src={squareVeranda} 
               alt="Private Stone Veranda" 
+              loading="lazy"
+              width={300}
+              height={300}
               className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
             />
           </div>

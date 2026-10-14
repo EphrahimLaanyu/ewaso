@@ -32,7 +32,7 @@ export default function ElephantAndGiza() {
                 <span className="italic text-[#591C27] font-light">Kingdom</span>
               </h3>
               <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80">
-                Goshen Camp sits right on paths that elephants have used for hundreds of years. You can sit back and watch these gentle giants walk by right from the comfort and privacy of your own tent.
+                Goshen sits right on paths that elephants have used for generations. You can sit back and watch these gentle giants walk by right from the comfort and privacy of your own tent.
               </p>
             </div>
 
@@ -40,7 +40,10 @@ export default function ElephantAndGiza() {
             <div className="w-full aspect-[4/5] overflow-hidden bg-[#EAE7E0] group shadow-xl">
               <img 
                 src={elephantImage} 
-                alt="Elephant Kingdom" 
+                alt="Goshen Elephants in Laikipia" 
+                loading="lazy"
+                width={800}
+                height={1000}
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
               />
             </div>
@@ -58,7 +61,10 @@ export default function ElephantAndGiza() {
             <div className="w-full aspect-[4/5] overflow-hidden bg-[#1A1817] group shadow-xl mb-12 md:mb-24">
               <img 
                 src={gizaImage} 
-                alt="Giza the Black Leopard" 
+                alt="Giza the Black Leopard in Laikipia" 
+                loading="lazy"
+                width={800}
+                height={1000}
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105 opacity-90"
               />
             </div>

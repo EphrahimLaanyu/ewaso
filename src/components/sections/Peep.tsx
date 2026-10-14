@@ -10,20 +10,21 @@ export default function WildlifeTeaser() {
     { 
       title: "Giza", 
       subtitle: "The Shadow of Laikipia", 
-      description: "Encounters with melanistic leopards are vanishingly rare. Giza stands as one of the few in the region with an established domain, roaming the landscape exactly as nature intended.", 
+      description: "Encounters with melanistic leopards are vanishingly rare. Giza stands as one of the few in the region with an established domain, roaming the landscape undisturbed in the quiet shadows of the bush.", 
       image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza-full.jpg" 
     }, 
     { 
       title: "The Elephant Trails", 
-      subtitle: "Ancient Migrations", 
-      description: "These ancestral corridors have guided wandering herds for millennia. From a discreet vantage point, you can witness their majestic river crossings in absolute silence, leaving their journey undisturbed.", 
+      subtitle: "Walking Paths", 
+      description: "These natural walking paths have guided wandering herds for generations. From a discreet vantage point, you can witness their river crossings in absolute silence, leaving their journey undisturbed.", 
       image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.53%20(1).jpeg" 
     }, 
     { 
       title: "African Wild Dogs", 
       subtitle: "A Vital Refuge", 
-      description: "Our territory serves as a critical haven for a monitored pack of African wild dogs. By fiercely protecting this habitat, we help secure the future of one of the continent’s most endangered predators.", 
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/catherine-merlin-zqrDvKRY2gU-unsplash.jpg" 
+      description: "Our territory serves as a critical haven for a monitored pack of African wild dogs. By fiercely protecting this habitat, we help secure the future of one of the continent's most endangered predators.", 
+      // Note: Stock photo removed per editorial brief. Placeholder set for client-provided field photograph of resident wild dog pack.
+      image: "" 
     } 
   ]; 
 
@@ -85,11 +86,30 @@ export default function WildlifeTeaser() {
               
               {/* Image Block */} 
               <div className="w-full h-[45vh] bg-[#EAE7E0] overflow-hidden"> 
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover" 
-                /> 
+                {item.image ? (
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover" 
+                  /> 
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-[#2C2A25] text-[#F4F1EB] p-8 text-center">
+                    {/* Placeholder for client-provided image */}
+                    <div className="w-12 h-12 rounded-full border border-[#F4F1EB]/30 flex items-center justify-center mb-3">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                      </svg>
+                    </div>
+                    <span className="font-serif text-2xl tracking-tight mb-1">African Wild Dogs</span>
+                    <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-[#F4F1EB]/60">
+                      Client Photo Placeholder · Monitored Pack
+                    </span>
+                  </div>
+                )}
               </div> 
 
               {/* Text Block */} 
@@ -109,7 +129,7 @@ export default function WildlifeTeaser() {
                 
                 {index === wildlifeData.length - 1 && ( 
                   <a 
-                    href="#wildlife-details" 
+                    href="/#ethos" 
                     className="group flex items-center gap-4 text-[10px] md:text-xs tracking-[0.15em] uppercase font-bold hover:text-[#591C27] transition-colors duration-300 w-max mt-2" 
                   > 
                     Explore Our Conservation Ethos
@@ -127,14 +147,38 @@ export default function WildlifeTeaser() {
           {/* LEFT COLUMN: The Sticky Image Viewport */} 
           <div className="w-1/2 h-screen sticky top-0 overflow-hidden bg-[#EAE7E0]"> 
             {wildlifeData.map((item, index) => ( 
-              <img 
-                key={index} 
-                src={item.image} 
-                alt={item.title} 
-                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${ 
-                  activeIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105' 
-                }`} 
-              /> 
+              item.image ? (
+                <img 
+                  key={index} 
+                  src={item.image} 
+                  alt={item.title} 
+                  loading="lazy"
+                  width={1200}
+                  height={1400}
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${ 
+                    activeIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105' 
+                  }`} 
+                /> 
+              ) : (
+                <div
+                  key={index}
+                  className={`absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[#2C2A25] text-[#F4F1EB] p-12 text-center transition-all duration-1000 ease-in-out ${ 
+                    activeIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105 pointer-events-none' 
+                  }`}
+                >
+                  {/* Placeholder note for client photograph */}
+                  <div className="w-16 h-16 rounded-full border border-[#F4F1EB]/30 flex items-center justify-center mb-6">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                  </div>
+                  <span className="font-serif text-3xl md:text-4xl tracking-tight mb-3">African Wild Dogs</span>
+                  <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#F4F1EB]/60 max-w-sm">
+                    Client Photography Forthcoming · Monitored Resident Pack
+                  </span>
+                </div>
+              )
             ))} 
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div> 
           </div> 
@@ -177,7 +221,7 @@ export default function WildlifeTeaser() {
 
                 {index === wildlifeData.length - 1 && ( 
                   <a 
-                    href="#wildlife-details" 
+                    href="/#ethos" 
                     className="group flex items-center gap-4 text-[10px] xl:text-xs tracking-[0.15em] uppercase font-bold hover:text-[#591C27] transition-colors duration-300 w-max mt-4" 
                   > 
                     Explore Our Conservation Ethos

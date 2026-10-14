@@ -73,7 +73,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6 md:gap-10">
             {/* Primary Action (Inquire) */}
             <a
-              href="#reservations"
+              href="/#reservations"
               onClick={() => setIsOpen(false)}
               className={`group flex items-center gap-3 font-sans text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-bold transition-colors duration-500 ${textColor}`}
             >
@@ -134,7 +134,7 @@ export default function Navbar() {
         {/* Menu Footer */}
         <div className="absolute bottom-12 left-0 w-full flex justify-center">
           <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-[#F4F1EB]/40 font-bold">
-            The Ewaso Enclave • Laikipia
+            Goshen • Laikipia
           </p>
         </div>
       </div>

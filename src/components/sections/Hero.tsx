@@ -63,7 +63,7 @@ export default function HeroAndAbout() {
 
           {/* MOBILE ONLY: Inquire Now Button */}
           <div className="flex md:hidden absolute bottom-12 left-0 right-0 flex-col items-center gap-4 z-20"> 
-            <a href="#reservations" className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-4 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"> 
+            <a href="/#reservations" className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-4 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"> 
               Inquire Now 
             </a> 
           </div> 
@@ -92,7 +92,7 @@ export default function HeroAndAbout() {
 
           {/* DESKTOP ONLY: Inquire Now Button */}
           <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4 z-20"> 
-            <a href="#reservations" className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"> 
+            <a href="/#reservations" className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"> 
               Inquire Now 
             </a> 
           </div> 
@@ -142,7 +142,7 @@ export default function HeroAndAbout() {
               <p className="font-sans text-xs xl:text-sm leading-relaxed tracking-wide text-[#2C2A25]/90 mb-6 max-w-[85%] pointer-events-auto"> 
                 It is our uncompromising responsibility. Set within the vast Laikipia landscape, we believe the rarest wildlife experiences must remain unstaged. 
               </p> 
-              <a href="#ethos" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
+              <a href="/#ethos" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
                 Read Our Ethos 
               </a> 
             </div> 
@@ -153,14 +153,14 @@ export default function HeroAndAbout() {
           <div className="relative w-1/3 h-full"> 
             <div className="absolute inset-0 bg-[#F4F1EB] mix-blend-lighten flex flex-col justify-center px-8 xl:px-12 text-right items-end"> 
               <h2 className="text-black font-serif text-5xl lg:text-6xl xl:text-[5.5vw] leading-[0.85] tracking-tight uppercase"> 
-                A legacy<br/>in<br/>Laikipia. 
+                Rooted<br/>in<br/>Laikipia. 
               </h2> 
             </div> 
             <div className="absolute inset-0 flex flex-col justify-end items-end text-right px-8 xl:px-12 pb-12 z-30 pointer-events-none"> 
               <p className="font-sans text-xs xl:text-sm leading-relaxed tracking-wide text-[#2C2A25]/90 mb-6 max-w-[85%] pointer-events-auto"> 
                 With a strict limit on vehicles and an intimate footprint, we offer an exclusive gateway to the Elephant Kingdom and the elusive black leopard. 
               </p> 
-              <a href="#camp" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
+              <a href="/camp" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
                 Explore The Camp 
               </a> 
             </div> 
@@ -178,14 +178,14 @@ export default function HeroAndAbout() {
           </div>
           
           <h2 className="text-[#2C2A25] font-serif text-5xl leading-[1.1] tracking-tight uppercase mb-8"> 
-            The wild <br/>is not our<br/><span className="italic text-[#591C27] font-light lowercase">product.</span> 
+            Untamed <br/>& Unscripted <br/><span className="italic text-[#591C27] font-light lowercase">sanctuary.</span> 
           </h2> 
           
           <p className="font-sans text-sm leading-relaxed tracking-wide text-[#2C2A25]/80 mb-10"> 
-            Set within the vast Laikipia landscape, Goshen Camp is built on a single belief: the rarest wildlife experiences must remain unstaged and unobtrusive. With an intimate footprint, we offer an exclusive gateway to the Elephant Kingdom.
+            Set within the vast Laikipia landscape, Goshen is built on a single belief: the rarest wildlife experiences must remain unstaged and unobtrusive. With an intimate footprint, we offer an exclusive gateway to the Elephant Kingdom.
           </p> 
           
-          <a href="#ethos" className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] border-b border-[#591C27]/30 pb-1 w-max hover:border-[#591C27] transition-all"> 
+          <a href="/#ethos" className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] border-b border-[#591C27]/30 pb-1 w-max hover:border-[#591C27] transition-all"> 
             Discover Our Story 
           </a> 
         </div> 

@@ -16,7 +16,7 @@ const EXPERIENCE_IMAGES = {
   culturalVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Cultutral%20visit.jpeg",
   marketVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Market%20visit.jpeg",
   leopardTracking: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/IMG_5761.JPG",
-  kopjeHikes: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_HIKE.jpeg",
+  kopjeHikes: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Hike.jpeg",
   sundowners: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.05.48%20(1).jpeg",
   fishing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_FISHING.jpeg",
   doingNothing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_RELAXING.jpeg",
@@ -148,7 +148,7 @@ const signatureExperiences = [
     subtitle: "Where golden sunsets meet unforgettable moments.",
     image: EXPERIENCE_IMAGES.sundowners,
     intro: "Picture this: the sun slowly sinking behind the Laikipia horizon, the sky painted in shades of gold and amber, a refreshing drink in your hand, and the gentle crackle of a campfire filling the evening air.",
-    description: "At Goshen Camp, our bush sundowners are more than just a drink at sunset. They are a celebration of the beauty and tranquillity of the African wilderness. A beautiful sunset. A warm fire. A cold drink. Nowhere else you need to be.",
+    description: "At Goshen, our bush sundowners are more than just a drink at sunset. They are a celebration of the beauty and tranquillity of the African wilderness. A beautiful sunset. A warm fire. A cold drink. Nowhere else you need to be.",
     highlights: [
       "A carefully selected location with beautiful wilderness views.",
       "Comfortable safari chairs and a beautifully arranged table.",
@@ -210,7 +210,7 @@ export default function ExperiencesPage() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="w-12 h-[1px] bg-[#F4F1EB]/60"></span>
             <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#F4F1EB]">
-              The Ewaso Enclave
+              Goshen • Laikipia
             </span>
             <span className="w-12 h-[1px] bg-[#F4F1EB]/60"></span>
           </div>
@@ -236,6 +236,9 @@ export default function ExperiencesPage() {
                 <img 
                   src={exp.image} 
                   alt={exp.title} 
+                  loading="lazy"
+                  width={800}
+                  height={1000}
                   className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105"
                 />
               </div>
@@ -279,8 +282,8 @@ export default function ExperiencesPage() {
       {/* ========================================================
           3. SLOW DOWN AT GOSHEN (Burgundy Interstitial)
       ======================================================== */}
-{/* ========================================================
-          3. OTHER ACTIVITIES (Burgundy Text-Only Section)
+      {/* ========================================================
+          3. OTHER ACTIVITIES (Burgundy Section with Images)
       ======================================================== */}
       <section className="w-full bg-[#591C27] text-[#F4F1EB] py-24 md:py-32 px-6 md:px-12 lg:px-20 selection:bg-[#F4F1EB] selection:text-[#591C27]">
         <div className="max-w-7xl mx-auto">
@@ -297,7 +300,14 @@ export default function ExperiencesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 lg:gap-24">
             
             {/* Fishing */}
-            <div className="flex flex-col border-t border-[#F4F1EB]/20 pt-8">
+            <div className="flex flex-col group">
+              <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[4px] md:border-[6px] border-[#F4F1EB]/10">
+                <img 
+                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/River-fishing.jpeg" 
+                  alt="Fishing by the river" 
+                  className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
+                />
+              </div>
               <h3 className="font-serif text-3xl mb-2">Fishing by the River</h3>
               <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">
                 Cast a line. Unwind. Let the river set the pace.
@@ -322,13 +332,20 @@ export default function ExperiencesPage() {
             </div>
 
             {/* Doing Nothing */}
-            <div className="flex flex-col border-t border-[#F4F1EB]/20 pt-8">
+            <div className="flex flex-col group">
+              <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[4px] md:border-[6px] border-[#F4F1EB]/10">
+                <img 
+                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/doing-nothing.jpeg" 
+                  alt="Relaxing at the camp" 
+                  className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
+                />
+              </div>
               <h3 className="font-serif text-3xl mb-2">The Art of Doing Nothing</h3>
               <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">
                 Stay a little longer. Slow down a little more.
               </h4>
               <p className="font-sans text-sm leading-relaxed tracking-wide text-[#F4F1EB]/80 mb-8">
-                At Goshen Camp, we believe that one of the greatest luxuries is the freedom to do absolutely nothing. You do not have to fill every moment with an activity. There is no pressure to be anywhere.
+                At Goshen, we believe that one of the greatest luxuries is the freedom to do absolutely nothing. You do not have to fill every moment with an activity. There is no pressure to be anywhere.
               </p>
               <ul className="space-y-3 mt-auto">
                 <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">

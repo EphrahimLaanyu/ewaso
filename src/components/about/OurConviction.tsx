@@ -19,7 +19,7 @@ export default function OurConviction() {
           {/* LEFT COLUMN: The Core Belief */}
           <div className="md:pr-12 lg:pr-20 flex flex-col justify-center">
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-[1.2] tracking-tight mb-8">
-              Goshen Laikipia Camp was built on one simple belief: true wildlife experiences must stay <span className="italic text-[#591C27] font-light">wild.</span>
+              Goshen was built on one simple belief: true wildlife experiences must stay <span className="italic text-[#591C27] font-light">wild.</span>
             </h3>
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80">
               We do not stage animal sightings or crowd the savannah with vehicles. By keeping our camp small, we make sure the natural life of Laikipia continues completely undisturbed.
@@ -33,7 +33,10 @@ export default function OurConviction() {
             <div className="w-full aspect-[4/3] overflow-hidden bg-[#EAE7E0] mb-8 md:mb-auto">
               <img 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.01.55%20(2).jpeg" 
-                alt="Goshen Camp Conservation" 
+                alt="Goshen Conservation" 
+                loading="lazy"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>

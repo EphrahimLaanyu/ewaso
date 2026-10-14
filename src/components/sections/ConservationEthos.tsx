@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ConservationEthos() { 
   return ( 
-    <section className="relative w-full bg-[#591C27] pt-36 pb-24 md:pt-48 md:pb-32 px-6 md:px-16 flex flex-col items-center selection:bg-[#F4F1EB] selection:text-[#591C27] border-t border-[#F4F1EB]/10 mt-12 overflow-hidden"> 
+    <section id="ethos" className="relative w-full bg-[#591C27] pt-36 pb-24 md:pt-48 md:pb-32 px-6 md:px-16 flex flex-col items-center selection:bg-[#F4F1EB] selection:text-[#591C27] border-t border-[#F4F1EB]/10 mt-12 overflow-hidden"> 
       
       {/* SUBTLE CSS NOISE TEXTURE OVERLAY */} 
       <div 
@@ -29,6 +29,9 @@ export default function ConservationEthos() {
           We don't bait. We don't stage sightings. We don't get in the way.<br className="hidden md:block mt-2" /> 
           <span className="italic font-light opacity-90"> Keeping this place wild is our biggest responsibility.</span> 
         </h2> 
+        <p className="relative z-10 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/85 mt-6 max-w-2xl mx-auto">
+          Guests explore on foot keeping a respectful distance, guided by an armed ranger.
+        </p>
       </div> 
 
       {/* THE THREE PILLARS (GRID) */} 
@@ -45,7 +48,7 @@ export default function ConservationEthos() {
             Stopping Poachers
           </h3> 
           <p className="font-sans text-xs md:text-sm leading-relaxed opacity-75 text-[#F4F1EB] font-normal tracking-wide"> 
-            Every stay helps pay for our 24/7 ranger teams who patrol the area and keep the animals safe from poachers.
+            A portion of every booking helps fund 24/7 ranger teams.
           </p> 
         </div> 
 

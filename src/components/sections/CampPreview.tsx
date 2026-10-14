@@ -28,7 +28,10 @@ export default function CampPreview() {
             <div className="w-[82%] h-[85%] overflow-hidden bg-[#2C2A25] shadow-2xl relative z-10 group rounded-sm">
               <img 
                 src={mainImage} 
-                alt="Goshen Camp Exterior" 
+                alt="Goshen Luxury Canvas Suite Interior" 
+                loading="lazy"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/30 via-transparent to-transparent pointer-events-none"></div>
@@ -38,7 +41,10 @@ export default function CampPreview() {
             <div className="w-[52%] h-[55%] absolute bottom-0 right-0 overflow-hidden bg-[#2C2A25] shadow-[0_25px_60px_rgba(0,0,0,0.6)] z-20 border-[6px] md:border-[10px] border-[#591C27] group rounded-sm">
               <img 
                 src={secondaryImage} 
-                alt="Goshen Camp Canvas Interior" 
+                alt="Goshen En-Suite Bathroom" 
+                loading="lazy"
+                width={500}
+                height={500}
                 className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/20 via-transparent to-transparent pointer-events-none"></div>
@@ -82,7 +88,7 @@ export default function CampPreview() {
             <div className="grid grid-cols-2 gap-6 pt-6 border-t border-[#F4F1EB]/15 mb-10">
               <div>
                 <span className="block font-serif text-xl md:text-2xl text-[#F4F1EB] mb-1">Luxury Tents</span>
-                <span className="text-[10px] tracking-[0.15em] uppercase text-[#F4F1EB]/60">King Beds & Private Decks</span>
+                <span className="text-[10px] tracking-[0.15em] uppercase text-[#F4F1EB]/60">King Beds & Private Stone Veranda</span>
               </div>
               <div>
                 <span className="block font-serif text-xl md:text-2xl text-[#F4F1EB] mb-1">Bush Dining</span>

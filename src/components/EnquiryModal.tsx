@@ -77,10 +77,10 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 Exclusive Residence Buyout
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-[#221E1F] font-light mt-1">
-                Enquire for Ewaso Camp
+                Enquire for Goshen
               </h2>
               <p className="text-xs text-[#706C66] mt-2 tracking-wide font-light">
-                Tailored solely for private groups, multi-generational families, and intimate expeditions in Nanyuki, Kenya.
+                Tailored solely for private groups, multi-generational families, and intimate expeditions in Laikipia, Kenya.
               </p>
             </div>
 

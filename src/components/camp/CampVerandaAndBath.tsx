@@ -41,10 +41,10 @@ export default function CampVerandaAndBath() {
             
             <div className="space-y-6 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/80">
               <p>
-                Roughing it has no place here. Every tent features its own fully private, indoor bathroom built with rich natural stone walls and handcrafted timber.
+                After a dusty day on the plains, every tent has its own private bathroom built with rich natural stone walls, handcrafted timber, and a private stone veranda.
               </p>
               <p>
-                Enjoy large vessel basins, high-pressure hot showers, and modern flushing toilets—bringing absolute comfort straight into the wild after a dusty day on the Laikipia plains.
+                Enjoy large vessel basins, high-pressure hot showers, and modern flushing toilets—bringing absolute comfort straight into the wild.
               </p>
             </div>
 
@@ -59,7 +59,10 @@ export default function CampVerandaAndBath() {
             <div className="absolute top-0 right-0 w-[80%] h-[75%] overflow-hidden bg-[#2C2A25] shadow-2xl rounded-sm group">
               <img 
                 src={bathMain} 
-                alt="Goshen Camp En-Suite Bathroom" 
+                alt="Goshen en-suite bathroom with stone shower and handcrafted vanity" 
+                loading="lazy"
+                width={1200}
+                height={800}
                 className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/20 via-transparent to-transparent pointer-events-none"></div>
@@ -69,7 +72,10 @@ export default function CampVerandaAndBath() {
             <div className="absolute bottom-0 left-0 w-[55%] h-[65%] overflow-hidden bg-[#2C2A25] shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-[6px] md:border-[10px] border-[#591C27] rounded-sm group z-20">
               <img 
                 src={bathDetail} 
-                alt="Stone wall and wooden vanity details" 
+                alt="Goshen bathroom stone wall and wooden vanity details" 
+                loading="lazy"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/20 via-transparent to-transparent pointer-events-none"></div>

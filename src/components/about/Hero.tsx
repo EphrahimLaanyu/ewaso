@@ -22,7 +22,9 @@ export default function Hero() {
       >
         <img 
           src={campImage} 
-          alt="Goshen Camp Landscape" 
+          alt="Goshen Landscape" 
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         
@@ -51,7 +53,7 @@ export default function Hero() {
         <div className="mt-8 flex items-center justify-center gap-4">
           <span className="w-12 h-[1px] bg-[#2C2A25]/20"></span>
           <p className="font-sans text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-[#2C2A25]/60 font-bold">
-            The Ewaso Enclave • Laikipia
+            Goshen • Laikipia
           </p>
           <span className="w-12 h-[1px] bg-[#2C2A25]/20"></span>
         </div>

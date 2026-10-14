@@ -14,13 +14,13 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
   const images = [
     {
       src: "/images/ewaso-hero.jpg",
-      alt: "Ewaso Camp luxury safari pavilion overlooking golden savannah and Mount Kenya",
+      alt: "Goshen luxury safari pavilion overlooking golden savannah and Mount Kenya",
       caption: "VERANDAH & INFINITY POOL — LAIKIPIA HORIZON",
       subcaption: "Mount Kenya Silhouette & Elephant Grazing Plains",
     },
     {
       src: "/images/ewaso-detail.jpg",
-      alt: "Ewaso Camp stone colonnade suite with linen daybed and savannah breeze",
+      alt: "Goshen stone colonnade suite with linen daybed and savannah breeze",
       caption: "COLONNADE SUITE & TEXTURAL STONEWORK",
       subcaption: "Hand-Hewn Local Stone Colonnade & Pure Linen Sanctuary",
     },
@@ -37,7 +37,7 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
           <div className="flex items-center gap-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#591C27] animate-pulse" />
             <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-medium text-[#706C66]">
-              Private Safari House · Nanyuki, Kenya
+              Private Safari House · Laikipia, Kenya
             </span>
           </div>
 
@@ -80,8 +80,8 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
               data-animate="hero-subtext"
             >
               Conceived in rammed earth, hand-hewn stone, and unhurried African
-              light. Ewaso Camp is an intimate, four-suite private safari house
-              set within the untamed silence of Nanyuki—crafted solely for
+              light. Goshen is an intimate private safari house
+              set within the untamed silence of Laikipia—crafted solely for
               exclusive buyouts and private expeditions.
             </p>
 
@@ -98,7 +98,7 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
               </button>
 
               <a
-                href="#house"
+                href="/camp"
                 className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-medium text-[#4A4541] hover:text-[#591C27] transition-colors py-2 px-1 group"
               >
                 <span className="border-b border-[#221E1F]/20 group-hover:border-[#591C27] pb-0.5 transition-colors">

@@ -26,7 +26,7 @@ export default function BookingReservation() {
           </h2>
           
           <p className="font-sans text-sm leading-relaxed text-[#591C27] font-medium mb-10">
-            Inaugural Season: Opening October 1, 2026.<br />
+            Now open.<br />
             <span className="opacity-70 italic font-normal text-[#2C2A25]">Availability is intentionally limited.</span>
           </p>
 
@@ -119,12 +119,8 @@ export default function BookingReservation() {
           </div>
 
           <div className="mt-8 flex items-center gap-4 px-2">
-            <div className="w-10 h-10 rounded-full border border-[#591C27]/20 flex items-center justify-center shrink-0">
-              <span className="font-serif text-sm text-[#591C27] italic">R</span>
-            </div>
-            <p className="font-sans text-[10px] leading-relaxed uppercase tracking-wider text-[#2C2A25]/70">
-              Booking is exclusive with <strong className="text-[#591C27]">Goshen Camp</strong>
-              <span className="block mt-0.5 capitalize tracking-normal font-serif italic text-xs text-[#2C2A25]/50">(Part of the Apasio Collection)</span>
+            <p className="font-sans text-[11px] leading-relaxed uppercase tracking-wider text-[#2C2A25]/75">
+              Booking is exclusive with <strong className="text-[#591C27]">Rhino Watch Safaris Ltd (Apasio Collection)</strong>.
             </p>
           </div>
         </div>

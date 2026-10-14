@@ -32,7 +32,7 @@ export default function EwasoEcosystem() {
             
             {/* Lead Paragraph (Slightly larger and brighter) */}
             <p className="font-sans text-lg md:text-xl leading-relaxed tracking-wide text-[#F4F1EB]/90">
-              Located right in the heart of the Laikipia plateau, our camp blends perfectly into the natural surroundings. It is a beautiful, open landscape brought to life by the waters of the Ewaso River.
+              Located right in the heart of the Laikipia plateau, Goshen is set naturally into the rocks and savannah. It is a beautiful, open landscape brought to life by the waters of the Ewaso River.
             </p>
             
             {/* Elegant Divider */}
@@ -40,7 +40,7 @@ export default function EwasoEcosystem() {
             
             {/* Secondary Paragraph (Standard size and slightly muted) */}
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/70">
-              To keep this area as wild as possible, we keep things small and private. We strictly limit the number of guests and safari vehicles, giving you the greatest luxury of all: endless, open space. There are no crowded tourist traps here—just you, the vast horizon, and the sounds of the African bush.
+              To keep this area as wild as possible, we keep things small and private. We strictly limit the number of guests and safari vehicles, giving you the greatest luxury of all: endless, open space. There are no crowded tourist routes here—just you, the vast horizon, and the sounds of the African bush.
             </p>
             
           </div>

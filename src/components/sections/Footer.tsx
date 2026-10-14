@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -9,16 +10,18 @@ export default function Footer() {
         {/* 
           TOP ROW: Brand & Contact Grid
         */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 mb-20">
           
           {/* Brand Column */}
           <div className="lg:col-span-5 flex flex-col">
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none mb-6">
-              Ewaso
-              <span className="block italic font-light opacity-90 mt-2">Elephant Crossing</span>
+              Goshen
             </h2>
-            <p className="font-sans text-xs tracking-[0.2em] uppercase opacity-60">
+            <p className="font-sans text-xs tracking-[0.2em] uppercase opacity-60 mb-6">
               Laikipia, Kenya
+            </p>
+            <p className="font-sans text-xs leading-relaxed opacity-75 max-w-md">
+              Booking is exclusive with Rhino Watch Safaris Ltd (Apasio Collection).
             </p>
           </div>
 
@@ -32,7 +35,7 @@ export default function Footer() {
                 Location
               </span>
               <p className="font-serif text-xl md:text-2xl leading-snug opacity-90">
-                Ewaso Enclave Conservancy
+                Laikipia
               </p>
               <p className="font-sans text-sm tracking-wide opacity-70 mt-3">
                 Laikipia County, Kenya
@@ -48,11 +51,11 @@ export default function Footer() {
               
               <div className="flex flex-col gap-4">
                 <a 
-                  href="mailto:info@goshencamp.com" 
+                  href="mailto:info@goshendomain.com" 
                   className="group flex flex-col w-max"
                 >
                   <span className="font-serif text-xl md:text-2xl leading-snug opacity-90 group-hover:opacity-100 transition-opacity">
-                    info@goshencamp.com
+                    info@goshendomain.com
                   </span>
                   <span className="w-0 h-[1px] bg-[#F4F1EB] group-hover:w-full transition-all duration-500 ease-out mt-1"></span>
                 </a>
@@ -64,7 +67,7 @@ export default function Footer() {
                   className="group flex flex-col w-max mt-2"
                 >
                   <span className="font-sans text-sm tracking-wide opacity-70 group-hover:opacity-100 transition-opacity">
-                    WhatsApp: +254 758 940 187
+                    WhatsApp: +254 721 753 593
                   </span>
                 </a>
               </div>
@@ -79,12 +82,12 @@ export default function Footer() {
         <div className="w-full border-t border-[#F4F1EB]/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           
           <p className="font-sans text-[10px] tracking-[0.15em] uppercase opacity-50 text-center md:text-left">
-            © 2026 Ewaso Elephant Crossing. All rights reserved.
+            © 2026 Goshen. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-8 font-sans text-[10px] tracking-[0.15em] uppercase opacity-50">
-            <a href="#" className="hover:opacity-100 transition-opacity duration-300">Privacy Policy</a>
-            <a href="#" className="hover:opacity-100 transition-opacity duration-300">Terms of Reserve</a>
+          <div className="flex items-center gap-8 font-sans text-[10px] tracking-[0.15em] uppercase opacity-60">
+            <Link href="/privacy" className="hover:opacity-100 transition-opacity duration-300">Privacy Policy</Link>
+            <Link href="/terms" className="hover:opacity-100 transition-opacity duration-300">Terms of Reserve</Link>
           </div>
 
         </div>

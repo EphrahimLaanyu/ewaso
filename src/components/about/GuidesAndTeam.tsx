@@ -25,7 +25,10 @@ export default function GuidesAndTeam() {
           <div className="lg:col-span-7 w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-[#EAE7E0] group shadow-xl order-2 lg:order-1"> 
             <img 
               src={guideImage} 
-              alt="Goshen Camp Guides and Tracking" 
+              alt="Goshen Guides and Tracking" 
+              loading="lazy"
+              width={1200}
+              height={750}
               className="w-full h-full object-cover transition-transform duration-[3s] ease-out group-hover:scale-105" 
             /> 
           </div> 

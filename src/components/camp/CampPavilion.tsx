@@ -45,7 +45,7 @@ export default function CampPavilion() {
                 At the heart of the camp sits our open-sided main pavilion. With 360-degree views of Laikipia, there are no walls between you and the landscape.
               </p>
               <p>
-                Gather around the long wooden table—dressed in bright Maasai shukas—for fresh, home-cooked meals, or sink into the lounge sofas with a cold drink during the heat of the day while keeping an eye on the plains below.
+                Gather around the long wooden table—dressed in bright Maasai shukas—for fresh, home-cooked meals. Our camp chef uses fresh local ingredients and expertly handles all dietary needs, while the lounge sofas invite you to relax with a cold drink during the heat of the day.
               </p>
             </div>
 
@@ -60,7 +60,10 @@ export default function CampPavilion() {
             <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
               <img 
                 src={diningMain} 
-                alt="Main dining table in the pavilion" 
+                alt="Main dining table in the Goshen pavilion" 
+                loading="lazy"
+                width={1200}
+                height={800}
                 className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
               />
               {/* Subtle inner dark gradient for depth where images meet */}
@@ -74,7 +77,10 @@ export default function CampPavilion() {
               <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
                 <img 
                   src={diningAlt1} 
-                  alt="Dining table setting details" 
+                  alt="Goshen dining table setting details" 
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
@@ -84,7 +90,10 @@ export default function CampPavilion() {
               <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden">
                 <img 
                   src={diningAlt2} 
-                  alt="Pavilion dining area looking out to the bush" 
+                  alt="Goshen pavilion lounge looking out across the bush" 
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
               </div>

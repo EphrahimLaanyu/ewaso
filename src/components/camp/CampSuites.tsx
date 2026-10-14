@@ -61,6 +61,9 @@ export default function CampSuites() {
               <img 
                 src={suiteMain} 
                 alt="Handcrafted king-size log bed and luxury canvas interior" 
+                loading="lazy"
+                width={800}
+                height={1000}
                 className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
               />
               {/* Subtle inner dark gradient for depth where images meet */}
@@ -75,6 +78,9 @@ export default function CampSuites() {
                 <img 
                   src={suiteAlt1} 
                   alt="Wide view of the bed looking out to the Laikipia plains" 
+                  loading="lazy"
+                  width={600}
+                  height={500}
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
@@ -85,6 +91,9 @@ export default function CampSuites() {
                 <img 
                   src={suiteAlt2} 
                   alt="Suite details and natural textures" 
+                  loading="lazy"
+                  width={600}
+                  height={500}
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
               </div>

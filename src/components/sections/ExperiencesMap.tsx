@@ -45,7 +45,7 @@ const experiences = [
   ///images/Official-images/WhatsApp Image 2026-10-11 at 09.43.53 (1).jpeg
 
   return (
-    <section className="w-full bg-[#F4F1EB] py-24 md:py-32 px-4 md:px-8 selection:bg-[#591C27] selection:text-[#F4F1EB]">
+    <section id="gallery" className="w-full bg-[#F4F1EB] py-24 md:py-32 px-4 md:px-8 selection:bg-[#591C27] selection:text-[#F4F1EB]">
       
       {/* SECTION HEADER */}
       <div className="w-full max-w-[1400px] mx-auto mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
@@ -77,6 +77,9 @@ const experiences = [
             <img 
               src={exp.image} 
               alt={exp.title}
+              loading="lazy"
+              width={600}
+              height={900}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110 opacity-80 group-hover:opacity-100"
             />
             

@@ -1,41 +1,51 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import Navbar from '@/components/sections/Navbar';
+import Footer from '@/components/sections/Footer';
 import CampHero from '@/components/camp/CampHero';
-import CampNightfall from '@/components/camp/CampNightfall';
-import CampPavilion from '@/components/camp/CampPavilion';
+import CampAtAGlance from '@/components/camp/CampAtAGlance';
 import CampSuites from '@/components/camp/CampSuites';
 import CampVerandaAndBath from '@/components/camp/CampVerandaAndBath';
-import Footer from '@/components/sections/Footer';
-import Navbar from '@/components/sections/Navbar';
-import React from 'react';
+import CampPavilion from '@/components/camp/CampPavilion';
+import CampNightfall from '@/components/camp/CampNightfall';
+import CampGettingHere from '@/components/camp/CampGettingHere';
+import CampInquiryCTA from '@/components/camp/CampInquiryCTA';
 
-// Uncomment these one by one as we build each section in your components folder:
-// import CampHero from '@/components/camp/CampHero';
-// import CampSuites from '@/components/camp/CampSuites';
-// import CampVerandaAndBath from '@/components/camp/CampVerandaAndBath';
-// import CampPavilion from '@/components/camp/CampPavilion';
-// import CampNightfall from '@/components/camp/CampNightfall';
+export const metadata: Metadata = {
+  title: 'The Camp | Goshen · Laikipia, Kenya',
+  description: 'Stone, canvas and timber, set on the rocks above the valley. Canvas suites with king or twin beds, private stone verandas, and unscripted wilderness at Goshen.',
+};
 
 export default function CampPage() {
   return (
     <main className="relative w-full overflow-x-hidden bg-[#F4F1EB] text-[#2C2A25]">
-    <Navbar/>
+      <Navbar />
       
-      {/* 1. Hero Section (Sticky / Curtain Effect to match Homepage & Navbar) */}
+      {/* 1. Hero Section */}
       <CampHero />
 
-      {/* 2. The Tented Suites (Cream Background) */}
+      {/* 2. At-a-Glance Strip */}
+      <CampAtAGlance />
+
+      {/* 3. The Tented Suites */}
       <CampSuites />
 
-      {/* 3. Private Verandas & En-Suite Bathrooms (Burgundy Background) */}
+      {/* 4. Private Verandas & En-Suite Bathrooms */}
       <CampVerandaAndBath />
 
-      {/* 4. The Main Pavilion & Dining (Cream Background) */}
+      {/* 5. The Main Pavilion & Dining */}
       <CampPavilion />
 
-      {/* 5. Sundowners & Campfire (Dark/Burgundy Closing Section) */}
+      {/* 6. Nightfall / Campfire */}
       <CampNightfall />
 
-      <Footer/>
+      {/* 7. Getting Here */}
+      <CampGettingHere />
 
+      {/* 8. Inquiry CTA */}
+      <CampInquiryCTA />
+
+      <Footer />
     </main>
   );
 }

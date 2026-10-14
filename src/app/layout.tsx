@@ -18,23 +18,30 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ewasocamp.com"),
-  title: "Ewaso Camp | Private Safari House · Nanyuki, Kenya",
+  metadataBase: new URL("https://goshendomain.com"),
+  title: "Goshen | Private Safari Sanctuary · Laikipia, Kenya",
   description:
-    "An exclusive, highly styled private safari house at the foot of Mount Kenya. Minimalist architecture immersed in the untamed Laikipia savannah.",
+    "An exclusive private safari retreat in the heart of Laikipia, Kenya. Stone, canvas and timber immersed in the untamed savannah.",
   keywords: [
-    "Ewaso Camp",
-    "Nanyuki Safari Lodge",
-    "Private Safari House Kenya",
-    "Mount Kenya Luxury Lodge",
+    "Goshen",
+    "Laikipia Safari Lodge",
+    "Private Safari Kenya",
+    "Laikipia Luxury Lodge",
     "Laikipia Safari",
-    "Luxury Boutique Safari",
+    "Boutique Safari Sanctuary",
   ],
   openGraph: {
-    title: "Ewaso Camp — Exclusive Private Safari House, Nanyuki",
+    title: "Goshen — Private Safari Sanctuary, Laikipia",
     description:
-      "Where the wild savannah meets quiet architectural sanctuary. Private buyouts at the foot of Mount Kenya.",
-    images: [{ url: "/images/ewaso-hero.jpg" }],
+      "Where the wild savannah meets quiet architectural sanctuary. An exclusive private safari retreat in Laikipia, Kenya.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Goshen Safari Sanctuary" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Goshen — Private Safari Sanctuary, Laikipia",
+    description:
+      "Where the wild savannah meets quiet architectural sanctuary. An exclusive private safari retreat in Laikipia, Kenya.",
+    images: ["/og-image.jpg"],
   },
 };
 

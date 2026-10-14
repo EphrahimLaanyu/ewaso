@@ -61,14 +61,17 @@ export default function CampNightfall() {
             </div>
 
             {/* Closing Call to Action */}
-            <div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <a 
-                href="#reservations" 
+                href="/#reservations" 
                 className="group inline-flex items-center justify-between gap-6 bg-[#591C27] text-[#F4F1EB] px-8 py-4 md:py-5 text-[10px] md:text-xs tracking-[0.25em] uppercase font-bold hover:bg-[#2C2A25] transition-colors duration-500"
               >
                 <span>Book Your Stay</span>
                 <span className="block w-4 h-[1px] bg-[#F4F1EB] group-hover:w-8 transition-all duration-500 ease-out"></span>
               </a>
+              <span className="font-sans text-xs tracking-wider text-[#2C2A25]/70 uppercase font-medium">
+                3-night minimum stay
+              </span>
             </div>
 
           </div>
@@ -82,7 +85,10 @@ export default function CampNightfall() {
             <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
               <img 
                 src={fireImage2} 
-                alt="Wide view of the Laikipia plains at twilight by the fire" 
+                alt="Goshen campfire and twilight horizon over Laikipia" 
+                loading="lazy"
+                width={1200}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
               />
               {/* Subtle bottom shadow where it meets the lower images */}
@@ -96,7 +102,10 @@ export default function CampNightfall() {
               <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
                 <img 
                   src={fireImage1} 
-                  alt="Campfire setting at dusk" 
+                  alt="Campfire setting at dusk at Goshen" 
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
                 {/* Subtle right shadow where it meets the right image */}
@@ -107,7 +116,10 @@ export default function CampNightfall() {
               <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden">
                 <img 
                   src={fireImage3} 
-                  alt="Guests enjoying sundowners by the fire" 
+                  alt="Guests enjoying sundowners by the campfire at Goshen" 
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
               </div>
