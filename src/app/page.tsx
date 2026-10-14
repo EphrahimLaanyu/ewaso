@@ -1,4 +1,5 @@
 import BookingReservation from '@/components/sections/BookingReservation';
+import CampPreview from '@/components/sections/CampPreview';
 import ConservationEthos from '@/components/sections/ConservationEthos';
 import ExperiencesMap from '@/components/sections/ExperiencesMap';
 import Footer from '@/components/sections/Footer';
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Navbar />
       <Hero />
+      <CampPreview />
       <Peep />
       <ExperiencesMap />
       <ConservationEthos />
