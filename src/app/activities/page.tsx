@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/sections/Navbar';
 import React from 'react';
 
@@ -278,12 +279,15 @@ export default function ExperiencesPage() {
       {/* ========================================================
           3. SLOW DOWN AT GOSHEN (Burgundy Interstitial)
       ======================================================== */}
+{/* ========================================================
+          3. OTHER ACTIVITIES (Burgundy Text-Only Section)
+      ======================================================== */}
       <section className="w-full bg-[#591C27] text-[#F4F1EB] py-24 md:py-32 px-6 md:px-12 lg:px-20 selection:bg-[#F4F1EB] selection:text-[#591C27]">
         <div className="max-w-7xl mx-auto">
           
-          <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
-            <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6">
-              Slow Down at Goshen
+          <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-6">
+              Other Activities
             </h2>
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/80 uppercase tracking-[0.1em]">
               Because sometimes the greatest adventure is having nowhere to be.
@@ -293,36 +297,52 @@ export default function ExperiencesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 lg:gap-24">
             
             {/* Fishing */}
-            <div className="flex flex-col group">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[6px] border-[#F4F1EB]/10">
-                <img src={EXPERIENCE_IMAGES.fishing} alt="Fishing" className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105" />
-              </div>
+            <div className="flex flex-col border-t border-[#F4F1EB]/20 pt-8">
               <h3 className="font-serif text-3xl mb-2">Fishing by the River</h3>
-              <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">Cast a line. Unwind. Let the river set the pace.</h4>
-              <p className="font-sans text-sm leading-relaxed tracking-wide text-[#F4F1EB]/80 mb-6">
+              <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">
+                Cast a line. Unwind. Let the river set the pace.
+              </h4>
+              <p className="font-sans text-sm leading-relaxed tracking-wide text-[#F4F1EB]/80 mb-8">
                 Not every adventure needs to be fast-paced. For guests who enjoy quieter moments, the Ewaso Nyiro River offers a beautiful setting to relax, reconnect with nature, and perhaps try your luck at fishing.
               </p>
-              <ul className="space-y-2 mt-auto">
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70"><span className="w-1 h-1 bg-[#F4F1EB]"></span> Enjoy a relaxed fishing outing</li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70"><span className="w-1 h-1 bg-[#F4F1EB]"></span> Birdwatching along the riverbank</li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70"><span className="w-1 h-1 bg-[#F4F1EB]"></span> The simple pleasure of being outdoors</li>
+              <ul className="space-y-3 mt-auto">
+                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
+                  Enjoy a relaxed fishing outing
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
+                  Birdwatching along the riverbank
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
+                  The simple pleasure of being outdoors
+                </li>
               </ul>
             </div>
 
             {/* Doing Nothing */}
-            <div className="flex flex-col group">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[6px] border-[#F4F1EB]/10">
-                <img src={EXPERIENCE_IMAGES.doingNothing} alt="The Art of Doing Nothing" className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105" />
-              </div>
+            <div className="flex flex-col border-t border-[#F4F1EB]/20 pt-8">
               <h3 className="font-serif text-3xl mb-2">The Art of Doing Nothing</h3>
-              <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">Stay a little longer. Slow down a little more.</h4>
-              <p className="font-sans text-sm leading-relaxed tracking-wide text-[#F4F1EB]/80 mb-6">
+              <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">
+                Stay a little longer. Slow down a little more.
+              </h4>
+              <p className="font-sans text-sm leading-relaxed tracking-wide text-[#F4F1EB]/80 mb-8">
                 At Goshen Camp, we believe that one of the greatest luxuries is the freedom to do absolutely nothing. You do not have to fill every moment with an activity. There is no pressure to be anywhere.
               </p>
-              <ul className="space-y-2 mt-auto">
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70"><span className="w-1 h-1 bg-[#F4F1EB]"></span> Wake up naturally to the sounds of the bush</li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70"><span className="w-1 h-1 bg-[#F4F1EB]"></span> Enjoy a leisurely breakfast without the clock</li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70"><span className="w-1 h-1 bg-[#F4F1EB]"></span> Find a comfortable chair and a good book</li>
+              <ul className="space-y-3 mt-auto">
+                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
+                  Wake up naturally to the sounds of the bush
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
+                  Enjoy a leisurely breakfast without the clock
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
+                  Find a comfortable chair and a good book
+                </li>
               </ul>
             </div>
 
@@ -356,7 +376,7 @@ export default function ExperiencesPage() {
         </div>
 
       </section>
-
+<Footer/>
     </main>
   );
 }
