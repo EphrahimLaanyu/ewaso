@@ -6,9 +6,9 @@ export default function CampNightfall() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
   // The three campfire/sundowner images
-  const fireImage1 = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.05.48.jpeg`;
-  const fireImage2 = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.05.48%20(1).jpeg`; // Wide view
-  const fireImage3 = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.05.48%20(2).jpeg`;
+  const fireImage1 = `${baseUrl}roaring-campfire-flames-sunset-bush.jpeg`;
+  const fireImage2 = `${baseUrl}bush-dinner-around-campfire-twilight.jpeg`; // Wide view
+  const fireImage3 = `${baseUrl}safari-campfire-evening-bush-dinner.jpeg`;
 
   return (
     <section id="nightfall" className="relative w-full min-h-[100svh] lg:h-[100svh] bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-[#F4F1EB] flex flex-col overflow-hidden">

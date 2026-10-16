@@ -6,9 +6,9 @@ export default function CampPavilion() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
   // The three dining/pavilion images
-  const diningMain = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.05.25.jpeg`;
-  const diningAlt1 = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.01.55%20(2).jpeg`;
-  const diningAlt2 = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.05.25%20(1).jpeg`;
+  const diningMain = `${baseUrl}open-air-dining-pavilion-bush-vista.jpeg`;
+  const diningAlt1 = `${baseUrl}open-air-dining-deck-table-setting.jpeg`;
+  const diningAlt2 = `${baseUrl}dining-tent-long-banquet-table-runner.jpeg`;
 
   return (
     <section id="pavilion" className="relative w-full min-h-[100svh] lg:h-[100svh] bg-[#F4F1EB] text-[#2C2A25] flex items-center selection:bg-[#591C27] selection:text-[#F4F1EB] overflow-hidden py-16 lg:py-0">

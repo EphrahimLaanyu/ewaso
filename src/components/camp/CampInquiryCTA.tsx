@@ -33,27 +33,17 @@ export default function CampInquiryCTA() {
 
         <div className="flex flex-col sm:flex-row items-center gap-5 mb-12">
           <Link
-            href="/#reservations"
+            href="/inquire"
             className="group inline-flex items-center justify-between gap-6 bg-[#F4F1EB] text-[#591C27] px-8 py-5 text-[11px] md:text-xs tracking-[0.25em] uppercase font-bold hover:bg-[#2C2A25] hover:text-[#F4F1EB] transition-colors duration-500 shadow-xl"
           >
             <span>Book Your Stay</span>
             <span className="block w-4 h-[1px] bg-[#591C27] group-hover:bg-[#F4F1EB] group-hover:w-8 transition-all duration-500 ease-out"></span>
           </Link>
-
-          <a 
-            href="mailto:info@goshendomain.com"
-            className="inline-flex items-center px-8 py-5 border border-[#F4F1EB]/30 text-[#F4F1EB] text-[11px] md:text-xs tracking-[0.25em] uppercase font-bold hover:bg-[#F4F1EB]/10 transition-colors duration-500"
-          >
-            Email Concierge
-          </a>
         </div>
 
         <div className="pt-8 border-t border-[#F4F1EB]/15 w-full max-w-xl text-center space-y-2">
           <p className="font-sans text-xs md:text-sm text-[#F4F1EB]/85 font-serif italic">
-            Booking is exclusive with Rhino Watch Safaris Ltd (Apasio Collection).
-          </p>
-          <p className="font-sans text-[11px] tracking-wider text-[#F4F1EB]/60 uppercase">
-            3-Night Minimum Stay &bull; Full Board &bull; Rates From $440 Per Person / Night (+$70 Conservancy Fee)
+            Booking is exclusive with Ewaso Enclave Conservacy.
           </p>
         </div>
 

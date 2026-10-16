@@ -17,12 +17,12 @@ export default function Footer() {
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none mb-6">
               Goshen
             </h2>
+                        <p className="font-sans text-xs leading-relaxed opacity-75 max-w-md">
+Ewaso Enclave Conservancy            </p>
             <p className="font-sans text-xs tracking-[0.2em] uppercase opacity-60 mb-6">
               Laikipia, Kenya
             </p>
-            <p className="font-sans text-xs leading-relaxed opacity-75 max-w-md">
-              Booking is exclusive with Rhino Watch Safaris Ltd (Apasio Collection).
-            </p>
+
           </div>
 
           {/* Contact Information Grid */}
@@ -51,17 +51,17 @@ export default function Footer() {
               
               <div className="flex flex-col gap-4">
                 <a 
-                  href="mailto:info@goshendomain.com" 
+                  href="mailto:info@goshencamp.com" 
                   className="group flex flex-col w-max"
                 >
                   <span className="font-serif text-xl md:text-2xl leading-snug opacity-90 group-hover:opacity-100 transition-opacity">
-                    info@goshendomain.com
+                    info@goshencamp.com
                   </span>
                   <span className="w-0 h-[1px] bg-[#F4F1EB] group-hover:w-full transition-all duration-500 ease-out mt-1"></span>
                 </a>
 
                 <a 
-                  href="https://wa.me/254758940187" 
+                  href="https://wa.me/254721753593" 
                   target="_blank" 
                   rel="noreferrer"
                   className="group flex flex-col w-max mt-2"

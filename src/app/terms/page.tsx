@@ -33,7 +33,7 @@ export default function TermsPage() {
           <div>
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">1. Exclusive Booking Partner</h2>
             <p>
-              Booking is exclusive with Rhino Watch Safaris Ltd (Apasio Collection). All confirmations, payments, invoicing, and reservation administration are managed through Rhino Watch Safaris Ltd.
+              Booking is exclusive with Ewaso Enclave Conservacy. All confirmations, payments, invoicing, and reservation administration are managed through Goshen Camp.
             </p>
           </div>
 

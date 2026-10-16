@@ -3,7 +3,7 @@
 import React from 'react';
 
 export default function Hero() {
-  const campImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.01.54.jpeg"; 
+  const campImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/aerial-panorama-laikipia-bushveld.jpeg"; 
 
   return (
     <section className="relative w-full min-h-screen bg-[#F4F1EB] selection:bg-[#591C27] selection:text-[#F4F1EB] flex flex-col">

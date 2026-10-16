@@ -3,9 +3,9 @@
 import React from 'react';
 
 export default function About() {
-  const img1 = "/images/Official-images/WhatsApp Image 2026-10-09 at 20.01.54.jpeg";
-  const img2 = "/images/Official-images/WhatsApp Image 2026-10-09 at 20.01.55 (2).jpeg";
-  const img3 = "/images/Official-images/WhatsApp Image 2026-10-09 at 20.01.57 (1).jpeg";
+  const img1 = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/safari-lounge-interior-couches-lanterns.jpeg";
+  const img2 = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/elevated-rock-outcrop-viewing-platform.jpeg";
+  const img3 = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/tent-suite-high-ceiling-timber-truss.jpeg";
 
   return (
     <section id="about" className="relative w-full bg-[#F4F1EB] text-[#2C2A25] py-24 md:py-32 lg:py-48 px-6 md:px-12 lg:px-20 selection:bg-[#591C27] selection:text-[#F4F1EB] overflow-hidden">

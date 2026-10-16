@@ -6,8 +6,8 @@ export default function CampVerandaAndBath() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
   // The two bathroom images
-  const bathMain = `${baseUrl}CAMP5.jpeg`;
-  const bathDetail = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.01.57%20(1).jpeg`;
+  const bathMain = `${baseUrl}ensuite-bathroom-stone-tile-rain-shower.jpeg`;
+  const bathDetail = `${baseUrl}ensuite-bathroom-vanity-basin-mirror.jpeg`;
 
   return (
     <section id="refresh" className="relative w-full min-h-[100svh] lg:h-[100svh] bg-[#591C27] text-[#F4F1EB] flex items-center selection:bg-[#F4F1EB] selection:text-[#591C27] overflow-hidden border-t border-[#F4F1EB]/10 py-16 lg:py-0">

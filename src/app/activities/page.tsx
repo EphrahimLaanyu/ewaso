@@ -1,25 +1,35 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/sections/Navbar';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Experiences & Wilderness Activities',
+  description:
+    'Track the elusive black leopard Giza, spend hours in dedicated photographic hides, and monitor resident wild dog packs on guided safaris across Goshen in Laikipia.',
+  openGraph: {
+    title: 'Experiences & Wilderness Activities | Goshen Laikipia',
+    description:
+      'Track the elusive black leopard Giza, spend hours in dedicated photographic hides, and monitor resident wild dog packs on guided safaris across Goshen in Laikipia.',
+  },
+};
 
 // ============================================================================
 // IMAGE CONFIGURATION
 // Paste your Supabase image links here. They will automatically update the page.
 // ============================================================================
 const EXPERIENCE_IMAGES = {
-  hero: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.53%20(1).jpeg",
-  dayDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.51.jpeg",
-  nightDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/night-time%20viewing.jpeg",
-  natureWalks: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.07.57.jpeg",
-  culturalVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Cultutral%20visit.jpeg",
-  marketVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Market%20visit.jpeg",
-  leopardTracking: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/IMG_5761.JPG",
-  kopjeHikes: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Hike.jpeg",
-  sundowners: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.05.48%20(1).jpeg",
-  fishing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_FISHING.jpeg",
-  doingNothing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/YOUR_RELAXING.jpeg",
+  hero: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/elephant-family-wading-river-waters.jpeg",
+  dayDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/grevys-zebra-pair-savannah-portrait.jpeg",
+  nightDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/night-game-drive-spotlight-elephants.jpeg",
+  natureWalks: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/guided-bush-walk-riverbank-trail.jpeg",
+  culturalVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/cultural-visit-samburu-village-elders.jpeg",
+  marketVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/market-visit-samburu-beadwork-stalls.jpeg",
+  leopardTracking: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/black-leopard-and-spotted-leopard-portrait.jpeg",
+  kopjeHikes: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/kopje-hike-sunset-viewpoint-couple.jpeg",
+  sundowners: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/laikipia-golden-sunset-kopje-silhouette.jpeg",
+  fishing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-fishing-ewaso-nyiro-rock-pools.jpeg",
+  doingNothing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/tent-relaxation-armchair-desk-view.jpeg",
 };
 
 // ============================================================================
@@ -28,137 +38,106 @@ const EXPERIENCE_IMAGES = {
 const signatureExperiences = [
   {
     title: "Day Game Drives",
-    subtitle: "Into the heart of the wild.",
+    subtitle: "Across the rugged bushveld of Ewaso Enclave.",
     image: EXPERIENCE_IMAGES.dayDrives,
-    intro: "Discover the beauty and diversity of Laikipia on unforgettable game drives through Ewaso Enclave Conservancy and the surrounding wilderness. Accompanied by our knowledgeable local guides, venture through beautiful rugged bushland in search of the extraordinary wildlife that calls this region home.",
-    description: "Every drive offers a different adventure, shaped by the seasons, animal movements, and the wonderful unpredictability of nature. Whether it is a herd of elephants crossing the river or a fleeting glimpse of a predator disappearing into the bush, every moment has a story to tell.",
+    intro: "Traverse the private Ewaso Enclave Conservancy and surrounding Laikipia wilderness in open 4x4 safari vehicles. Expert local trackers read spoor and navigate terrain shaped by seasonal wildlife corridors.",
+    description: "Encounters follow the pulse of the bush, from breeding herds crossing the Ewaso Nyiro River to leopards resting in riverine fig trees.",
     highlights: [
-      "Early morning game drives as the wilderness awakens.",
-      "Afternoon safaris in search of wildlife activity.",
-      "Opportunities to encounter elephants, giraffes, zebras, antelopes, and predators.",
-      "Explore the beautiful Ewaso Nyiro River corridor.",
-      "Learn about animal behaviour, tracking, and conservation.",
-      "Enjoy birdwatching and wildlife photography.",
-      "Stop at scenic locations for refreshments and beautiful photographs."
+      "Track elephants, lions, reticulated giraffes, and Grevy's zebras.",
+      "Explore the riverine habitats of the Ewaso Nyiro River corridor.",
+      "Morning and afternoon departures led by licensed local guides.",
+      "Scenic wilderness stops for French press coffee and light refreshments."
     ]
   },
   {
     title: "Night Game Drives",
-    subtitle: "Discover a different world after dark.",
+    subtitle: "The bushveld after sunset.",
     image: EXPERIENCE_IMAGES.nightDrives,
-    intro: "When the sun sets and darkness settles over Laikipia, the wilderness takes on an entirely different character. Join our guides for an exciting night drive and experience the mystery of the African bush after dark.",
-    description: "With carefully operated spotlights, explore the nocturnal world and discover creatures rarely seen during daylight hours. A night game drive is a reminder that even when the day ends, the wilderness never truly sleeps. (Available in designated areas, subject to conservancy regulations).",
+    intro: "Dusk shifts the savannah into an active hunting ground. Filtered red spotlights reveal elusive nocturnal species rarely encountered during daylight hours.",
+    description: "Drives operate across designated conservancy zones as temperature drops and predators begin their patrol. (Subject to conservancy regulations).",
     highlights: [
-      "Search for nocturnal wildlife, including genets, bush babies, porcupines, and other elusive species.",
-      "Look out for predators becoming active under the cover of darkness.",
-      "Learn to recognise the different calls and sounds of the nighttime bush.",
-      "Discover fascinating nocturnal animal behaviour.",
-      "Experience the thrill of exploring the wilderness beneath the stars.",
-      "Enjoy the peaceful atmosphere and mystery of Laikipia after sunset."
+      "Spot nocturnal wildlife: leopards, aardwolves, genets, and bush babies.",
+      "Observe predator activity under specialized non-disruptive red light.",
+      "Acoustic tracking and night-sky orientation across open plains.",
+      "Exclusive access to conservancy routes after dark."
     ]
   },
   {
     title: "Guided Nature Walks",
-    subtitle: "Discover the bush, one footprint at a time.",
+    subtitle: "The wilderness on foot.",
     image: EXPERIENCE_IMAGES.natureWalks,
-    intro: "Step out of the safari vehicle and experience the wilderness from an entirely new perspective. Join Dalmas, our certified naturalist, on an immersive guided nature walk designed to reveal the smaller wonders of the African bush.",
-    description: "Drawing on his knowledge of the natural environment, Dalmas introduces guests to the fascinating details that often go unnoticed: a fresh animal footprint, the distinctive call of a bird, the medicinal properties of an indigenous plant, or the subtle signs of wildlife movement. These walks are not simply about covering distance. They are about understanding the bush and developing a deeper connection with nature.",
+    intro: "Step beyond the vehicle with resident naturalist Dalmas to decode the landscape at ground level. Walking safaris reveal the intricate micro-ecosystems and subtle wildlife signs missed from a car.",
+    description: "Learn spoor identification, traditional ethnobotany, and bird alarm language across ancient game trails.",
     highlights: [
-      "Learn how to identify animal tracks, footprints, and droppings.",
-      "Discover indigenous trees, shrubs, and their traditional uses.",
-      "Learn fascinating facts about insects, birds, and smaller wildlife.",
-      "Understand animal behaviour and the relationships between different species.",
-      "Discover basic tracking techniques and wilderness awareness.",
-      "Explore the importance of plants within the local ecosystem.",
-      "Learn about conservation and the delicate balance of life in Laikipia.",
-      "Enjoy opportunities for close-up nature photography."
+      "Interpret fresh tracks, dung, and signs along active game corridors.",
+      "Learn traditional medicinal uses of indigenous trees and shrubs.",
+      "Bird identification and insect ecology with resident naturalist Dalmas.",
+      "Macro photography opportunities along pristine riverbanks."
     ]
   },
   {
     title: "Cultural Visits",
-    subtitle: "Beyond the wildlife, discover the people.",
+    subtitle: "Living heritage of the Samburu and Maasai.",
     image: EXPERIENCE_IMAGES.culturalVisits,
-    intro: "The beauty of Laikipia extends far beyond its landscapes and wildlife. It is also found in the rich traditions, knowledge, and hospitality of the communities who call this remarkable region home.",
-    description: "Our cultural visits offer guests an opportunity to experience local life, meet community members, and discover the traditions that have been passed down through generations. These experiences are arranged respectfully with participating community members, creating opportunities for authentic connections and shared learning.",
+    intro: "Visit neighboring pastoralist homesteads through genuine partnerships built on mutual respect. Spend unhurried time with elders, women artisans, and warriors.",
+    description: "Engage in direct dialogue on pastoral traditions, indigenous architecture, and community-led conservation coexistence.",
     highlights: [
-      "Visit a neighbouring community and learn about its way of life.",
-      "Discover traditional homes and local building techniques.",
-      "Learn about customs, family life, and cultural heritage.",
-      "Explore the importance of livestock in local communities.",
-      "Discover traditional beadwork and handmade crafts.",
-      "Hear stories and knowledge passed down through generations.",
-      "Learn about the relationship between local communities, wildlife, and conservation.",
-      "Support local artisans through the purchase of handmade souvenirs.",
-      "Enjoy genuine cultural exchange and meaningful conversations."
+      "Private visits to authentic Samburu and Maasai manyattas.",
+      "First-hand insights into livestock culture and pastoralist traditions.",
+      "Beadwork demonstrations with community women's artisan collectives.",
+      "Direct financial contributions supporting local schools and health clinics."
     ]
   },
   {
     title: "Village Market Visits",
-    subtitle: "A colourful glimpse into everyday Laikipia.",
+    subtitle: "Rural commerce and community life.",
     image: EXPERIENCE_IMAGES.marketVisits,
-    intro: "For guests curious to explore life beyond the safari trails, a visit to a nearby village market provides a wonderful opportunity to experience the everyday rhythm of rural Kenya.",
-    description: "Immerse yourself in the lively atmosphere of local traders, colourful stalls, fresh produce, traditional crafts, and friendly conversations. Sometimes, the most memorable travel experiences come from the simplest interactions. (Visits are arranged around local market days).",
+    intro: "Join your guide on market days to experience the trading hub of rural Laikipia. Pastoralists gather weekly from across the district to barter livestock, produce, and goods.",
+    description: "Browse stalls of hand-forged tools, bright textiles, and fresh regional harvests. (Arranged on designated weekly market days).",
     highlights: [
-      "Explore a traditional local marketplace.",
-      "Meet traders and learn about their daily lives.",
-      "Browse fresh produce, locally made goods, and household items.",
-      "Discover beautiful beadwork, fabrics, and handcrafted souvenirs.",
-      "Sample local snacks and experience everyday Kenyan flavours.",
-      "Learn about the role village markets play in the surrounding communities.",
-      "Enjoy candid travel photography and cultural interaction.",
-      "Support local businesses and small-scale traders."
+      "Experience regional weekly market days with your local guide.",
+      "Browse hand-loomed fabrics, beadwork, and artisanal ironcraft.",
+      "Observe traditional livestock trading and pastoral commerce.",
+      "Directly support small-scale local traders and family enterprises."
     ]
   },
   {
     title: "Black Leopard Tracking",
-    subtitle: "In search of the elusive shadow of Laikipia.",
+    subtitle: "Pursuing the melanistic leopard of the plateau.",
     image: EXPERIENCE_IMAGES.leopardTracking,
-    intro: "Few wildlife encounters capture the imagination quite like the possibility of seeing a black leopard. Laikipia has gained international recognition for sightings of these remarkable melanistic leopards, whose striking dark coats make them among Africa's most fascinating big cats.",
-    description: "For wildlife enthusiasts, adventurous travellers, and photographers, we offer an opportunity to explore suitable leopard habitat in search of this extraordinary animal. Black leopard sightings are never guaranteed, and this is part of what makes searching for one such an extraordinary experience.",
+    intro: "Laikipia hosts one of the world's few documented wild populations of melanistic leopards. Specialized tracking excursions navigate known territories across granite kopjes and dense riverine thickets.",
+    description: "Read pugmarks, monitor vervet monkey alarm calls, and glass territory markers alongside dedicated trackers. (Sightings depend on wild movement and are not guaranteed).",
     highlights: [
-      "Explore leopard territory with knowledgeable local guides.",
-      "Learn about melanism and the genetics behind the leopard's dark coat.",
-      "Discover leopard behaviour, habitat preferences, and territorial habits.",
-      "Search for footprints, tracks, and signs of leopard activity.",
-      "Learn about the conservation challenges facing these magnificent predators.",
-      "Enjoy exciting photographic opportunities throughout the tracking experience.",
-      "Discover other wildlife while exploring the surrounding wilderness.",
-      "Experience the anticipation and excitement of searching for one of nature's most elusive creatures."
+      "Targeted tracking in documented melanistic leopard territories.",
+      "Interpret fresh pugmarks, scrape marks, and kill caches.",
+      "Learn about melanism genetics and regional leopard research.",
+      "High-probability sightings of other carnivores and plains game."
     ]
   },
   {
     title: "Scenic Kopje Hikes",
-    subtitle: "Climb higher. See further. Feel closer to nature.",
+    subtitle: "Panoramic vistas from ancient granite inselbergs.",
     image: EXPERIENCE_IMAGES.kopjeHikes,
-    intro: "For guests who love a little adventure, our scenic kopje hikes offer an opportunity to discover the breathtaking beauty of Laikipia from above.",
-    description: "Accompanied by a guide, make your way through the surrounding bushland and climb our beautiful rocky outcrops, where spectacular panoramic views await. From the top, take a moment to appreciate the seemingly endless wilderness stretching towards the horizon. Some views are worth the climb.",
+    intro: "Ascend the weathered granite kopjes rising above the plateau. Guided scrambles through wild bushland yield unbroken 360-degree vistas across the northern frontier toward Mount Kenya.",
+    description: "Summit at dawn or late afternoon for cool breezes, raptor sightings, and vantage points unreachable by vehicle.",
     highlights: [
-      "Guided hikes through natural bushland and rocky terrain.",
-      "Discover interesting rock formations and indigenous vegetation.",
-      "Look out for birds, wildlife, and animal tracks along the way.",
-      "Enjoy spectacular views across the surrounding landscape.",
-      "Capture breathtaking photographs from elevated viewpoints.",
-      "Experience beautiful sunrise or late-afternoon lighting.",
-      "Stop for refreshments and enjoy the peaceful surroundings.",
-      "Discover the geological and ecological importance of these ancient formations."
+      "Guided ascent through natural rock shelters and wild bush.",
+      "Panoramic views across Laikipia toward Mount Kenya.",
+      "Spot klipspringers, rock hyraxes, and nesting Verreaux's eagles.",
+      "Summit break with refreshments timed for golden-hour light."
     ]
   },
   {
     title: "Bush Sundowners",
-    subtitle: "Where golden sunsets meet unforgettable moments.",
+    subtitle: "An enduring safari ritual as dusk settles.",
     image: EXPERIENCE_IMAGES.sundowners,
-    intro: "Picture this: the sun slowly sinking behind the Laikipia horizon, the sky painted in shades of gold and amber, a refreshing drink in your hand, and the gentle crackle of a campfire filling the evening air.",
-    description: "At Goshen, our bush sundowners are more than just a drink at sunset. They are a celebration of the beauty and tranquillity of the African wilderness. A beautiful sunset. A warm fire. A cold drink. Nowhere else you need to be.",
+    intro: "As the heat breaks, vehicles gather on elevated ridges or sandy riverbanks. A mobile bar opens with cold drinks, house canapés, and canvas camp chairs circled around an open fire.",
+    description: "Toast the sunset against dramatic escarpments as daytime sounds transition into the chorus of the African night.",
     highlights: [
-      "A carefully selected location with beautiful wilderness views.",
-      "Comfortable safari chairs and a beautifully arranged table.",
-      "A selection of refreshing drinks and delicious light bites.",
-      "A crackling campfire to gather around as evening approaches.",
-      "Spectacular sunset photography opportunities.",
-      "Uninterrupted views of the surrounding African landscape.",
-      "Time to share stories from the day's adventures.",
-      "Listen to the sounds of the bush as daytime gives way to night.",
-      "Enjoy the first stars appearing in the vast African sky."
+      "Private cliffside or riverbank locations with expansive vistas.",
+      "Full bar service, chilled spirits, and freshly prepared canapés.",
+      "Open fire pit with classic safari canvas seating.",
+      "Unobstructed golden-hour views across the Laikipia plateau."
     ]
   }
 ];
@@ -166,23 +145,23 @@ const signatureExperiences = [
 const memorableMoments = [
   {
     title: "Bush Breakfasts",
-    desc: "Begin your morning with a freshly prepared breakfast in the heart of the wilderness. Enjoy tea, coffee, delicious food, and beautiful views after an early morning safari."
+    desc: "Freshly cooked hot breakfasts laid out along the riverbank after first light. Enjoy brewed Kenyan coffee and freshly prepared orders against open water views."
   },
   {
     title: "Birdwatching",
-    desc: "Discover Laikipia's fascinating birdlife with our guides. Explore the river corridor and surrounding bushland, and identify birds by their unique calls."
+    desc: "Over 400 recorded species inhabit the river corridor and acacia woodland. Identify vulturine guineafowl, raptors, and endemic hornbills with expert guides."
   },
   {
     title: "Stargazing",
-    desc: "When darkness falls, settle into a comfortable chair and discover the beauty of the African night sky, identifying constellations while listening to nocturnal wildlife."
+    desc: "Unpolluted equatorial skies provide crisp viewing of the Milky Way and Southern constellations. Campfire guides map celestial paths and local constellations."
   },
   {
     title: "Wildlife Photography",
-    desc: "Capture the magic of Laikipia through your lens. Our guides can help you make the most of the photographic opportunities, from striking landscapes to golden sunsets."
+    desc: "Custom open-sided safari vehicles deliver clean sightlines and low angles. Guides position for optimal morning and afternoon light across dramatic terrain."
   },
   {
     title: "Private Bush Dining",
-    desc: "Celebrate a special occasion with an intimate dining experience beneath the African sky. Enjoy a beautifully arranged table, lantern lighting, and delicious food."
+    desc: "Lantern-lit dinners set in secluded wilderness clearings under the stars. Multi-course seasonal menus paired with fine wines beside an open wood fire."
   }
 ];
 
@@ -303,7 +282,7 @@ export default function ExperiencesPage() {
             <div className="flex flex-col group">
               <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[4px] md:border-[6px] border-[#F4F1EB]/10">
                 <img 
-                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/River-fishing.jpeg" 
+                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-fishing-ewaso-nyiro-rock-pools.jpeg" 
                   alt="Fishing by the river" 
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
                 />
@@ -335,7 +314,7 @@ export default function ExperiencesPage() {
             <div className="flex flex-col group">
               <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[4px] md:border-[6px] border-[#F4F1EB]/10">
                 <img 
-                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/doing-nothing.jpeg" 
+                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/tent-relaxation-armchair-desk-view.jpeg" 
                   alt="Relaxing at the camp" 
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
                 />

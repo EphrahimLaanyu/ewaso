@@ -120,7 +120,7 @@ export default function BookingReservation() {
 
           <div className="mt-8 flex items-center gap-4 px-2">
             <p className="font-sans text-[11px] leading-relaxed uppercase tracking-wider text-[#2C2A25]/75">
-              Booking is exclusive with <strong className="text-[#591C27]">Rhino Watch Safaris Ltd (Apasio Collection)</strong>.
+              Booking is exclusive with <strong className="text-[#591C27]">Ewaso Enclave Conservacy</strong>.
             </p>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function OurConviction() {
             {/* The Image at the top */}
             <div className="w-full aspect-[4/3] overflow-hidden bg-[#EAE7E0] mb-8 md:mb-auto">
               <img 
-                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.01.55%20(2).jpeg" 
+                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/beisa-oryx-pair-green-bush-portrait.jpeg" 
                 alt="Goshen Conservation" 
                 loading="lazy"
                 width={800}

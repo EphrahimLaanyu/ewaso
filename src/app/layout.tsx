@@ -18,29 +18,37 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://goshendomain.com"),
-  title: "Goshen | Private Safari Sanctuary · Laikipia, Kenya",
+  metadataBase: new URL("https://goshencamp.com"),
+  title: {
+    template: "%s | Goshen Laikipia",
+    default: "Goshen | Luxury Safari Camp in Laikipia",
+  },
   description:
-    "An exclusive private safari retreat in the heart of Laikipia, Kenya. Stone, canvas and timber immersed in the untamed savannah.",
+    "An exclusive luxury safari camp in Laikipia, Kenya. Home to rare black leopard tracking, bespoke canvas suites, and untamed wildlife corridors.",
   keywords: [
     "Goshen",
-    "Laikipia Safari Lodge",
-    "Private Safari Kenya",
-    "Laikipia Luxury Lodge",
-    "Laikipia Safari",
-    "Boutique Safari Sanctuary",
+    "Laikipia Safari Camp",
+    "Luxury Safari Kenya",
+    "Black Leopard Tracking",
+    "Ewaso Enclave",
+    "Private Safari Sanctuary",
+    "Wild Dog Monitoring",
   ],
   openGraph: {
-    title: "Goshen — Private Safari Sanctuary, Laikipia",
+    type: "website",
+    locale: "en_US",
+    url: "https://goshencamp.com",
+    siteName: "Goshen",
+    title: "Goshen | Luxury Safari Camp in Laikipia",
     description:
-      "Where the wild savannah meets quiet architectural sanctuary. An exclusive private safari retreat in Laikipia, Kenya.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Goshen Safari Sanctuary" }],
+      "An exclusive luxury safari camp in Laikipia, Kenya. Home to rare black leopard tracking, bespoke canvas suites, and untamed wildlife corridors.",
+    images: ["/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Goshen — Private Safari Sanctuary, Laikipia",
+    title: "Goshen | Luxury Safari Camp in Laikipia",
     description:
-      "Where the wild savannah meets quiet architectural sanctuary. An exclusive private safari retreat in Laikipia, Kenya.",
+      "An exclusive luxury safari camp in Laikipia, Kenya. Home to rare black leopard tracking, bespoke canvas suites, and untamed wildlife corridors.",
     images: ["/og-image.jpg"],
   },
 };

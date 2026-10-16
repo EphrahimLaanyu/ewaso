@@ -6,11 +6,11 @@ export default function CampHero() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
   
   // The new immersive backdrop image
-  const heroBackdrop = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.01.55%20(1).jpeg`;
+  const heroBackdrop = `${baseUrl}camp-stone-walkway-to-safari-cottage.jpeg`;
   
   // The editorial collage images
-  const portraitTent = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.01.54.jpeg`;
-  const squareVeranda = `${baseUrl}CAMP3.jpeg`;
+  const portraitTent = `${baseUrl}luxury-safari-tent-front-exterior-patio.jpeg`;
+  const squareVeranda = `${baseUrl}safari-tent-timber-glass-double-doors.jpeg`;
 
   return (
     <section className="relative w-full bg-[#1A1817] selection:bg-[#591C27] selection:text-[#F4F1EB] pb-24 md:pb-32">

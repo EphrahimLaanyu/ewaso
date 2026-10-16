@@ -51,7 +51,7 @@ export default function CampAtAGlance() {
         {/* Small Print Under Strip */}
         <div className="mt-10 pt-6 border-t border-[#2C2A25]/10 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <p className="font-sans text-xs md:text-[13px] leading-relaxed text-[#2C2A25]/75 italic">
-            Activities are priced separately. No outside vehicles are allowed in the conservancy. Booking is through Rhino Watch Safaris Ltd (Apasio Collection).
+            Activities are priced separately. No outside vehicles are allowed in the conservancy. Booking is through Ewaso Enclave Conservacy.
           </p>
         </div>
 

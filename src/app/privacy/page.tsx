@@ -40,7 +40,7 @@ export default function PrivacyPage() {
           <div>
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">2. Booking Partner Relationship</h2>
             <p>
-              Booking is exclusive with Rhino Watch Safaris Ltd (Apasio Collection). Reservation information submitted through our site is securely processed in coordination with Rhino Watch Safaris Ltd to facilitate bookings, private transfers, conservancy registrations, and guest services.
+              Booking is exclusive with Ewaso Enclave Conservacy. Reservation information submitted through our site is securely processed in coordination with Goshen Camp to facilitate bookings, private transfers, conservancy registrations, and guest services.
             </p>
           </div>
 

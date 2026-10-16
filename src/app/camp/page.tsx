@@ -12,8 +12,14 @@ import CampGettingHere from '@/components/camp/CampGettingHere';
 import CampInquiryCTA from '@/components/camp/CampInquiryCTA';
 
 export const metadata: Metadata = {
-  title: 'The Camp | Goshen · Laikipia, Kenya',
-  description: 'Stone, canvas and timber, set on the rocks above the valley. Canvas suites with king or twin beds, private stone verandas, and unscripted wilderness at Goshen.',
+  title: 'The Camp — Canvas Suites & Architecture',
+  description:
+    'Discover handcrafted canvas suites, private stone verandas, and luxury accommodation nestled into the granite kopjes of Laikipia at Goshen.',
+  openGraph: {
+    title: 'The Camp — Canvas Suites & Architecture | Goshen Laikipia',
+    description:
+      'Discover handcrafted canvas suites, private stone verandas, and luxury accommodation nestled into the granite kopjes of Laikipia at Goshen.',
+  },
 };
 
 export default function CampPage() {
@@ -25,7 +31,7 @@ export default function CampPage() {
       <CampHero />
 
       {/* 2. At-a-Glance Strip */}
-      <CampAtAGlance />
+      {/* <CampAtAGlance /> */}
 
       {/* 3. The Tented Suites */}
       <CampSuites />
@@ -40,7 +46,7 @@ export default function CampPage() {
       <CampNightfall />
 
       {/* 7. Getting Here */}
-      <CampGettingHere />
+      {/* <CampGettingHere /> */}
 
       {/* 8. Inquiry CTA */}
       <CampInquiryCTA />

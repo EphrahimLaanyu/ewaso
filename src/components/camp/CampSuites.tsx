@@ -6,9 +6,9 @@ export default function CampSuites() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
   // The three suite images requested
-  const suiteMain = `${baseUrl}CAMP1.jpeg`; 
-  const suiteAlt1 = `${baseUrl}CAMP4.jpeg`; 
-  const suiteAlt2 = `${baseUrl}WhatsApp%20Image%202026-10-09%20at%2020.01.57%20(2).jpeg`;
+  const suiteMain = `${baseUrl}luxury-tent-suite-handcrafted-bed-view.jpeg`; 
+  const suiteAlt1 = `${baseUrl}tent-bedroom-savannah-window-views.jpeg`; 
+  const suiteAlt2 = `${baseUrl}luxury-tent-bedroom-angled-perspective.jpeg`;
 
   return (
     <section id="suites" className="relative w-full min-h-[100svh] lg:h-[100svh] bg-[#F4F1EB] text-[#2C2A25] flex items-center selection:bg-[#591C27] selection:text-[#F4F1EB] overflow-hidden py-16 lg:py-0">

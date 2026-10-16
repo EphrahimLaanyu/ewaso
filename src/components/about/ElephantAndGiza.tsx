@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function ElephantAndGiza() {
-  const elephantImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.53%20(1).jpeg";
-  const gizaImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza-full.jpg";
+  const elephantImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/large-bull-elephant-walking-forward-tusks.jpeg";
+  const gizaImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/black-leopard-and-spotted-leopard-portrait.jpeg";
 
   return (
     <section className="w-full bg-[#F4F1EB] text-[#2C2A25] py-24 md:py-32 px-6 md:px-12 lg:px-20 selection:bg-[#591C27] selection:text-[#F4F1EB]">

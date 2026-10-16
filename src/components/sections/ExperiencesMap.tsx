@@ -9,40 +9,38 @@ const experiences = [
       title: "Early Morning Tracking",
       time: "Pre-Dawn",
       description: "Before the sun comes up, our tracker teams head out into the bush. They radio back to make sure your morning drive goes straight to the best animal sightings.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.07.57.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/young-male-lion-golden-morning-sun.jpeg"
     },
     {
       id: "02",
       title: "Bush Walk with Dalmas",
       time: "Morning",
       description: "Take a walk with Dalmas, an expert guide who grew up right here. He will show you how to read animal footprints, spot local birds, and understand the land.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.01.55%20(2).jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/weathered-tree-kopje-view-1.jpeg"
     },
     {
       id: "03",
       title: "The Elephant Trails",
       time: "Mid-Day",
       description: "Leave the safari jeep behind and take a guided walk along the exact same dirt paths that elephant herds have used for generations.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-11%20at%2009.43.53%20(1).jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/aerial-elephants-single-file-game-trail.jpeg"
     },
     {
       id: "04",
       title: "Sundowners at the Hide",
       time: "Golden Hour",
       description: "Enjoy a sundowner drink safely hidden right next to the water's edge. It is the perfect place to sit back and take close-up photos as the animals come down to drink.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.14.01.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/grevys-zebra-drinking-waterhole-impalas-background.jpeg"
     },
     {
       id: "05",
       title: "Night Time Hide",
       time: "Nightfall",
       description: "One of the only places in Kenya where you can safely watch wildlife in the dark. It is the best spot to look out for the rare black leopard and enjoy the stars.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Image%202026-10-09%20at%2020.05.48.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/golden-sunset-horizon-ridge-dusk.jpeg"
     }
   ];
-  ///images/Official-images/WhatsApp Image 2026-10-09 at 20.01.55 (2).jpeg
-  ///images/Official-images/WhatsApp Image 2026-10-09 at 20.05.48.jpeg
-  ///images/Official-images/WhatsApp Image 2026-10-11 at 09.43.53 (1).jpeg
+
 
   return (
     <section id="gallery" className="w-full bg-[#F4F1EB] py-24 md:py-32 px-4 md:px-8 selection:bg-[#591C27] selection:text-[#F4F1EB]">

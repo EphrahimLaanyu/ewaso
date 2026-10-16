@@ -8,8 +8,14 @@ import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/sections/Navbar';
 
 export const metadata: Metadata = {
-  title: 'About | Goshen · Laikipia, Kenya',
-  description: 'Rooted in Laikipia, Goshen is built on a single conviction: the rarest wildlife experiences must remain unstaged and unobtrusive.',
+  title: 'Our Story & Conservation Ethos',
+  description:
+    'Learn about Goshen’s conservation ethos, our Samburu naturalist guides, and the preservation of ancient wildlife corridors across the Ewaso Enclave.',
+  openGraph: {
+    title: 'Our Story & Conservation Ethos | Goshen Laikipia',
+    description:
+      'Learn about Goshen’s conservation ethos, our Samburu naturalist guides, and the preservation of ancient wildlife corridors across the Ewaso Enclave.',
+  },
 };
 
 // Import any other About-specific sections here (e.g., import AboutEthos from ...)

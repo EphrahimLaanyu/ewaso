@@ -1,15 +1,16 @@
 'use client'; 
 
 import React, { useState, useRef, useEffect } from 'react'; 
+import Link from 'next/link';
 
 export default function HeroAndAbout() { 
   const [isMuted, setIsMuted] = useState(true); 
   const rightVideoRef = useRef<HTMLVideoElement>(null); 
 
   // Video Media 
-  const videoLeft = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Video%202026-10-09%20at%2020.04.25.mp4"; 
-  const videoCenter = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Video%202026-10-09%20at%2020.05.18.mp4"; 
-  const videoRight = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/WhatsApp%20Video%202026-10-09%20at%2020.05.22.mp4"; 
+  const videoLeft = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/leopard-yawning-tall-grass-video.mp4"; 
+  const videoCenter = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/lioness-standing-red-dirt-scrub-video.mp4"; 
+  const videoRight = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/two-cheetahs-bonding-nuzzling-video.mp4"; 
 
   const toggleAudio = () => { 
     const nextMuted = !isMuted; 
@@ -62,11 +63,14 @@ export default function HeroAndAbout() {
           </div>
 
           {/* MOBILE ONLY: Inquire Now Button */}
-          <div className="flex md:hidden absolute bottom-12 left-0 right-0 flex-col items-center gap-4 z-20"> 
-            <a href="/#reservations" className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-4 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"> 
-              Inquire Now 
-            </a> 
-          </div> 
+{/* <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4 z-20"> 
+  <Link 
+    href="/inquire" 
+    className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"
+  > 
+    Inquire Now 
+  </Link> 
+</div> */}
         </div> 
 
         {/* CENTER VIDEO (Lion) - Desktop Only */} 
@@ -91,11 +95,14 @@ export default function HeroAndAbout() {
           </div> 
 
           {/* DESKTOP ONLY: Inquire Now Button */}
-          <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4 z-20"> 
-            <a href="/#reservations" className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"> 
-              Inquire Now 
-            </a> 
-          </div> 
+<div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4 z-20"> 
+  <Link 
+    href="/inquire" 
+    className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"
+  > 
+    Inquire Now 
+  </Link> 
+</div> 
         </div> 
 
         {/* RIGHT VIDEO (Cheetahs) - Desktop Only */} 
@@ -143,7 +150,6 @@ export default function HeroAndAbout() {
                 It is our uncompromising responsibility. Set within the vast Laikipia landscape, we believe the rarest wildlife experiences must remain unstaged. 
               </p> 
               <a href="/#ethos" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
-                Read Our Ethos 
               </a> 
             </div> 
           </div> 
