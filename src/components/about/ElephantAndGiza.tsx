@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ElephantAndGiza() {
   const elephantImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/large-bull-elephant-walking-forward-tusks.jpeg";
-  const gizaImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/black-leopard-and-spotted-leopard-portrait.jpeg";
+  const gizaImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/IMG_5776.JPG";
 
   return (
     <section className="w-full bg-[#F4F1EB] text-[#2C2A25] py-24 md:py-32 px-6 md:px-12 lg:px-20 selection:bg-[#591C27] selection:text-[#F4F1EB]">

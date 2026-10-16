@@ -176,6 +176,10 @@ const memorableMoments = [
   {
     title: "Private Bush Dining",
     desc: "Lantern-lit dinners set in secluded wilderness clearings under the stars. Multi-course seasonal menus paired with fine wines beside an open wood fire."
+  },
+  {
+    title: "Samburu Singing Wells",
+    desc: "Experience the traditional Singing Wells where pastoralists water their livestock to the rhythm of distinctive, ancestral songs passed down through generations."
   }
 ];
 

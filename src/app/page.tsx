@@ -36,7 +36,7 @@ export default function Home() {
       <CampPreview />
       <Peep />
       <ExperiencesMap />
-      <ConservationEthos />
+      {/* <ConservationEthos /> */}
       {/* <BookingReservation /> */}
       <Footer />
     </main>

@@ -6,6 +6,7 @@ import Hero from '@/components/about/Hero';
 import OurConviction from '@/components/about/OurConviction';
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/sections/Navbar';
+import Experience from '@/components/about/Experience';
 
 export const metadata: Metadata = {
   title: 'Our Story & Conservation Ethos',
@@ -34,6 +35,7 @@ export default function AboutPage() {
       <EwasoEcosystem/>
       <ElephantAndGiza/>
       <GuidesAndTeam/>
+      <Experience/>
       <Footer/>
       
       {/* Add your other About sections below as you build them */}
