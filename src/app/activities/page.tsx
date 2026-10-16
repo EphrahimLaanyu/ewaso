@@ -1,22 +1,12 @@
-import type { Metadata } from 'next';
+'use client';
+
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/sections/Navbar';
-import React from 'react';
+import React, { useState, useRef } from 'react';
 
-export const metadata: Metadata = {
-  title: 'Experiences & Wilderness Activities',
-  description:
-    'Track the elusive black leopard Giza, spend hours in dedicated photographic hides, and monitor resident wild dog packs on guided safaris across Goshen in Laikipia.',
-  openGraph: {
-    title: 'Experiences & Wilderness Activities | Goshen Laikipia',
-    description:
-      'Track the elusive black leopard Giza, spend hours in dedicated photographic hides, and monitor resident wild dog packs on guided safaris across Goshen in Laikipia.',
-  },
-};
 
 // ============================================================================
 // IMAGE CONFIGURATION
-// Paste your Supabase image links here. They will automatically update the page.
 // ============================================================================
 const EXPERIENCE_IMAGES = {
   hero: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/elephant-family-wading-river-waters.jpeg",
@@ -139,6 +129,30 @@ const signatureExperiences = [
       "Open fire pit with classic safari canvas seating.",
       "Unobstructed golden-hour views across the Laikipia plateau."
     ]
+  },
+  {
+    title: "Fishing by the River",
+    subtitle: "Cast a line. Unwind. Let the river set the pace.",
+    image: EXPERIENCE_IMAGES.fishing,
+    intro: "Not every adventure needs to be fast-paced.",
+    description: "For guests who enjoy quieter moments, the Ewaso Nyiro River offers a beautiful setting to relax, reconnect with nature, and perhaps try your luck at fishing.",
+    highlights: [
+      "Enjoy a relaxed fishing outing",
+      "Birdwatching along the riverbank",
+      "The simple pleasure of being outdoors"
+    ]
+  },
+  {
+    title: "The Art of Doing Nothing",
+    subtitle: "Stay a little longer. Slow down a little more.",
+    image: EXPERIENCE_IMAGES.doingNothing,
+    intro: "At Goshen, we believe that one of the greatest luxuries is the freedom to do absolutely nothing.",
+    description: "You do not have to fill every moment with an activity. There is no pressure to be anywhere.",
+    highlights: [
+      "Wake up naturally to the sounds of the bush",
+      "Enjoy a leisurely breakfast without the clock",
+      "Find a comfortable chair and a good book"
+    ]
   }
 ];
 
@@ -169,9 +183,32 @@ const memorableMoments = [
 // MAIN PAGE COMPONENT
 // ============================================================================
 export default function ExperiencesPage() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleToggle = (index: number) => {
+    if (activeIndex === index) {
+      setActiveIndex(null);
+      return;
+    }
+
+    setActiveIndex(index);
+
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      setTimeout(() => {
+        const element = itemRefs.current[index];
+        if (element) {
+          const y = element.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 350); 
+    }
+  };
+
   return (
     <main className="w-full bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-[#F4F1EB]">
-      <Navbar/>
+      <Navbar />
+      
       {/* ========================================================
           1. HERO SECTION
       ======================================================== */}
@@ -201,166 +238,140 @@ export default function ExperiencesPage() {
       </section>
 
       {/* ========================================================
-          2. THE SIGNATURE EXPERIENCES (Alternating Grid)
+          2. THE SIGNATURE EXPERIENCES (Sticky Accordion)
       ======================================================== */}
-      <section className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32 flex flex-col gap-32 md:gap-48">
-        {signatureExperiences.map((exp, index) => {
-          const isEven = index % 2 === 0;
-
-          return (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-              
-              {/* IMAGE COLUMN */}
-              <div className={`lg:col-span-6 w-full aspect-[4/5] overflow-hidden bg-[#2C2A25] shadow-2xl group ${isEven ? 'order-1' : 'order-1 lg:order-2'}`}>
-                <img 
-                  src={exp.image} 
-                  alt={exp.title} 
-                  loading="lazy"
-                  width={800}
-                  height={1000}
-                  className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105"
-                />
-              </div>
-
-              {/* TEXT COLUMN */}
-              <div className={`lg:col-span-6 flex flex-col ${isEven ? 'order-2' : 'order-2 lg:order-1'}`}>
-                <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] tracking-tight text-[#2C2A25] mb-2">
-                  {exp.title}
-                </h2>
-                <h3 className="font-serif text-xl md:text-2xl italic font-light text-[#591C27] mb-8">
-                  {exp.subtitle}
-                </h3>
-                
-                <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mb-6 font-semibold">
-                  {exp.intro}
-                </p>
-                <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mb-10">
-                  {exp.description}
-                </p>
-
-                <div className="bg-[#EAE7E0] p-8 md:p-10 border-l-4 border-[#591C27]">
-                  <h4 className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] mb-6">
-                    Experience Highlights
-                  </h4>
-                  <ul className="space-y-3">
-                    {exp.highlights.map((point, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#591C27]/50 mt-2 flex-shrink-0"></span>
-                        <span className="font-sans text-sm leading-relaxed text-[#2C2A25]/80">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-          );
-        })}
-      </section>
-
-      {/* ========================================================
-          3. SLOW DOWN AT GOSHEN (Burgundy Interstitial)
-      ======================================================== */}
-      {/* ========================================================
-          3. OTHER ACTIVITIES (Burgundy Section with Images)
-      ======================================================== */}
-      <section className="w-full bg-[#591C27] text-[#F4F1EB] py-24 md:py-32 px-6 md:px-12 lg:px-20 selection:bg-[#F4F1EB] selection:text-[#591C27]">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 relative">
           
-          <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-6">
-              Other Activities
-            </h2>
-            <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/80 uppercase tracking-[0.1em]">
-              Because sometimes the greatest adventure is having nowhere to be.
-            </p>
+          {/* LEFT: Sticky Image Viewport (Desktop Only) */}
+          <div className="hidden lg:block lg:w-1/2 h-[75vh] sticky top-24 overflow-hidden shadow-2xl bg-[#2C2A25]">
+            {signatureExperiences.map((exp, index) => (
+              <img 
+                key={index}
+                src={exp.image} 
+                alt={exp.title}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+                  activeIndex === index ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
+                }`}
+              />
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 lg:gap-24">
-            
-            {/* Fishing */}
-            <div className="flex flex-col group">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[4px] md:border-[6px] border-[#F4F1EB]/10">
-                <img 
-                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-fishing-ewaso-nyiro-rock-pools.jpeg" 
-                  alt="Fishing by the river" 
-                  className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
-                />
-              </div>
-              <h3 className="font-serif text-3xl mb-2">Fishing by the River</h3>
-              <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">
-                Cast a line. Unwind. Let the river set the pace.
-              </h4>
-              <p className="font-sans text-sm leading-relaxed tracking-wide text-[#F4F1EB]/80 mb-8">
-                Not every adventure needs to be fast-paced. For guests who enjoy quieter moments, the Ewaso Nyiro River offers a beautiful setting to relax, reconnect with nature, and perhaps try your luck at fishing.
-              </p>
-              <ul className="space-y-3 mt-auto">
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
-                  Enjoy a relaxed fishing outing
-                </li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
-                  Birdwatching along the riverbank
-                </li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
-                  The simple pleasure of being outdoors
-                </li>
-              </ul>
-            </div>
+          {/* RIGHT: Accordion List */}
+          <div className="w-full lg:w-1/2 flex flex-col">
+            {signatureExperiences.map((exp, index) => {
+              const isActive = activeIndex === index;
 
-            {/* Doing Nothing */}
-            <div className="flex flex-col group">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-[#2C2A25] mb-8 shadow-2xl border-[4px] md:border-[6px] border-[#F4F1EB]/10">
-                <img 
-                  src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/tent-relaxation-armchair-desk-view.jpeg" 
-                  alt="Relaxing at the camp" 
-                  className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
-                />
-              </div>
-              <h3 className="font-serif text-3xl mb-2">The Art of Doing Nothing</h3>
-              <h4 className="font-serif text-lg italic font-light text-[#F4F1EB]/70 mb-6">
-                Stay a little longer. Slow down a little more.
-              </h4>
-              <p className="font-sans text-sm leading-relaxed tracking-wide text-[#F4F1EB]/80 mb-8">
-                At Goshen, we believe that one of the greatest luxuries is the freedom to do absolutely nothing. You do not have to fill every moment with an activity. There is no pressure to be anywhere.
-              </p>
-              <ul className="space-y-3 mt-auto">
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
-                  Wake up naturally to the sounds of the bush
-                </li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
-                  Enjoy a leisurely breakfast without the clock
-                </li>
-                <li className="flex items-center gap-3 text-sm text-[#F4F1EB]/70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4F1EB]/50"></span> 
-                  Find a comfortable chair and a good book
-                </li>
-              </ul>
-            </div>
+              return (
+                <div 
+                  key={index} 
+                  ref={(el) => { itemRefs.current[index] = el; }} 
+                  className="border-b border-[#2C2A25]/10 group/item"
+                >
+                  
+                  {/* Accordion Header / Button */}
+                  <button 
+                    onClick={() => handleToggle(index)}
+                    className={`w-full text-left py-6 md:py-8 flex flex-col focus:outline-none transition-all duration-500 ease-out border-l-2 ${
+                      isActive 
+                        ? 'pl-6 border-[#591C27]' 
+                        : 'pl-0 hover:pl-6 border-transparent hover:border-[#2C2A25]/20'
+                    }`}
+                  >
+                    <div className="w-full flex justify-between items-center gap-4">
+                      
+                      {/* Title & Subtitle */}
+                      <div className="flex flex-col">
+                        <span className={`text-[9px] tracking-[0.2em] uppercase font-bold transition-colors duration-300 mb-2 ${
+                          isActive ? 'text-[#591C27]' : 'text-[#2C2A25]/40 group-hover/item:text-[#591C27]/70'
+                        }`}>
+                          {exp.subtitle}
+                        </span>
+                        <h2 className={`font-serif text-3xl md:text-4xl transition-colors duration-300 ${
+                          isActive ? 'text-[#2C2A25]' : 'text-[#2C2A25]/40 group-hover/item:text-[#2C2A25]'
+                        }`}>
+                          {exp.title}
+                        </h2>
+                      </div>
 
+                      {/* Clickable Icon Indicator */}
+                      <div className={`flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-500 ${
+                        isActive 
+                          ? 'border-[#591C27] bg-[#591C27] text-[#F4F1EB] rotate-45 shadow-md' 
+                          : 'border-[#2C2A25]/20 text-[#2C2A25]/40 group-hover/item:border-[#2C2A25]/60 group-hover/item:text-[#2C2A25]'
+                      }`}>
+                        <span className="text-xl md:text-2xl font-light leading-none relative -top-[1px]">
+                          +
+                        </span>
+                      </div>
+
+                    </div>
+                  </button>
+
+                  {/* Accordion Content */}
+                  <div className={`grid transition-all duration-500 ease-in-out ${
+                    isActive ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}>
+                    <div className="overflow-hidden">
+                      
+                      {/* Inner Content Wrapper */}
+                      <div className="pl-6 pb-10 max-w-md mx-auto lg:mx-0 lg:pr-8">
+                        
+                        {/* Mobile Image Reveal */}
+                        <div className="block lg:hidden w-full aspect-[4/3] overflow-hidden mb-8 shadow-xl mt-4">
+                          <img 
+                            src={exp.image} 
+                            alt={exp.title} 
+                            className="w-full h-full object-cover scale-100" 
+                          />
+                        </div>
+
+                        <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mb-4 font-semibold">
+                          {exp.intro}
+                        </p>
+                        <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mb-8">
+                          {exp.description}
+                        </p>
+                        
+                        <div className="bg-[#EAE7E0] p-6 md:p-8 border-l-2 border-[#591C27]">
+                          <ul className="space-y-4">
+                            {exp.highlights.map((point, i) => (
+                              <li key={i} className="flex items-start gap-4">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#591C27]/50 mt-2 flex-shrink-0"></span>
+                                <span className="font-sans text-sm leading-relaxed text-[#2C2A25]/80">{point}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ========================================================
-          4. MORE MEMORABLE MOMENTS (Bento Grid)
+          3. MORE MEMORABLE MOMENTS (Bento Grid)
       ======================================================== */}
-      <section className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
-        
+      <section className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pb-24 md:pb-32">
         <div className="flex items-center gap-4 mb-12">
           <span className="w-10 h-[1px] bg-[#591C27]"></span>
           <h2 className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#591C27]">
             More Memorable Moments
           </h2>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {memorableMoments.map((moment, i) => (
-            <div key={i} className="bg-[#EAE7E0] p-8 md:p-10 border border-[#2C2A25]/5 hover:bg-[#2C2A25] hover:text-[#F4F1EB] transition-colors duration-500 group">
+            <div 
+              key={i} 
+              className="bg-[#EAE7E0] p-8 md:p-10 border border-[#2C2A25]/5 hover:bg-[#2C2A25] hover:text-[#F4F1EB] transition-colors duration-500 group"
+            >
               <h3 className="font-serif text-2xl mb-4 group-hover:text-[#F4F1EB] text-[#2C2A25] transition-colors duration-500">
                 {moment.title}
               </h3>
@@ -370,9 +381,9 @@ export default function ExperiencesPage() {
             </div>
           ))}
         </div>
-
       </section>
-<Footer/>
+
+      <Footer />
     </main>
   );
 }
