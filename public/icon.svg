@@ -1,0 +1,18 @@
+<svg width="120" height="120" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Goshen Laikipia Logo</title>
+  <desc>Goshen luxury safari camp emblem in Laikipia, Kenya</desc>
+  <style>
+    .primary-stroke { stroke: #2C2A25; }
+    .primary-fill { fill: #2C2A25; }
+    .accent-fill { fill: #591C27; }
+    @media (prefers-color-scheme: dark) {
+      .primary-stroke { stroke: #F4F1EB; }
+      .primary-fill { fill: #F4F1EB; }
+      .accent-fill { fill: #C5A059; }
+    }
+  </style>
+  <ellipse cx="50" cy="60" rx="42" ry="56" class="primary-stroke" stroke-width="2.5" />
+  <ellipse cx="50" cy="60" rx="38" ry="52" class="primary-stroke" stroke-width="0.8" stroke-opacity="0.5" />
+  <text x="41" y="74" text-anchor="middle" class="primary-fill" font-size="48" font-weight="300" font-family="'Cormorant Garamond', Georgia, serif">G</text>
+  <text x="61" y="84" text-anchor="middle" class="accent-fill" font-size="42" font-style="italic" font-family="'Cormorant Garamond', Georgia, serif">L</text>
+</svg>

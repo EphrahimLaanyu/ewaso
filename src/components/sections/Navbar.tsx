@@ -69,7 +69,7 @@ export default function Navbar() {
             href="/" 
             onClick={() => setIsOpen(false)} 
             className="transition-opacity duration-500 hover:opacity-70 focus:outline-none" 
-            aria-label="Goshen Laikipia Home"
+            aria-label="Goshen Laikipia - Return to Homepage"
           > 
             <GoshenLogo variant="horizontal" theme={logoTheme} />
           </a> 

@@ -14,7 +14,13 @@ export default function Footer() {
           <div className="lg:col-span-5 flex flex-col items-start"> 
             
             {/* The New Logo Component */}
-            <GoshenLogo variant="horizontal" theme="light" className="mb-8 scale-110 origin-left" />
+            <Link 
+              href="/" 
+              className="inline-block focus:outline-none hover:opacity-90 transition-opacity"
+              aria-label="Goshen Laikipia - Return to Homepage"
+            >
+              <GoshenLogo variant="horizontal" theme="light" className="mb-8 scale-110 origin-left" />
+            </Link>
             
             <p className="font-sans text-xs leading-relaxed opacity-75 max-w-md"> 
               Ewaso Enclave Conservancy             

@@ -51,6 +51,15 @@ export const metadata: Metadata = {
       "An exclusive luxury safari camp in Laikipia, Kenya. Home to rare black leopard tracking, bespoke canvas suites, and untamed wildlife corridors.",
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export const viewport: Viewport = {

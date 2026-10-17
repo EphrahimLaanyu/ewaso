@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X, Compass } from "lucide-react";
+import GoshenLogo from "@/components/ui/Logo";
 
 interface NavbarProps {
   onOpenEnquire?: () => void;
@@ -63,15 +64,10 @@ export default function Navbar({ onOpenEnquire }: NavbarProps) {
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="group flex flex-col items-start transition-opacity duration-300 hover:opacity-80"
-              aria-label="Goshen Home"
+              className="transition-opacity duration-300 hover:opacity-80 focus:outline-none"
+              aria-label="Goshen Laikipia - Return to Homepage"
             >
-              <span className="font-serif text-2xl sm:text-3xl tracking-[0.18em] uppercase font-light text-[#221E1F]">
-                Goshen
-              </span>
-              <span className="text-[9px] tracking-[0.32em] uppercase text-[#706C66] group-hover:text-[#591C27] transition-colors duration-300 font-sans pl-0.5">
-                Laikipia · Kenya
-              </span>
+              <GoshenLogo variant="horizontal" theme={isScrolled ? "dark" : "light"} />
             </Link>
           </div>
 

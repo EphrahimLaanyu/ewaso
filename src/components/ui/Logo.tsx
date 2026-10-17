@@ -15,12 +15,16 @@ interface LogoProps {
    */
   theme?: 'dark' | 'light' | 'burgundy' | 'midnight';
   className?: string;
+  title?: string;
+  desc?: string;
 }
 
 export default function GoshenLogo({ 
   variant = 'horizontal', 
   theme = 'dark',
-  className = '' 
+  className = '',
+  title = 'Goshen Laikipia Logo',
+  desc = 'Goshen luxury safari camp emblem in Laikipia, Kenya'
 }: LogoProps) {
   
   // Brand Palette Mapping (Automatically handles the clear backgrounds)
@@ -47,6 +51,9 @@ export default function GoshenLogo({
     }
   }[theme];
 
+  const titleId = React.useId();
+  const descId = React.useId();
+
   // ==========================================================================
   // THE EMBLEM: Concept 03 Interlocking G & L Oval
   // ==========================================================================
@@ -57,7 +64,14 @@ export default function GoshenLogo({
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       className="flex-shrink-0 transition-transform duration-700 ease-out group-hover:scale-105"
+      role="img"
+      aria-hidden="true"
+      aria-labelledby={`${titleId} ${descId}`}
+      focusable="false"
     >
+      <title id={titleId}>{title}</title>
+      <desc id={descId}>{desc}</desc>
+
       {/* Tall Architectural Ovals */}
       <ellipse cx="50" cy="60" rx="42" ry="56" stroke={colors.primary} strokeWidth="1.2" />
       <ellipse cx="50" cy="60" rx="38" ry="52" stroke={colors.primary} strokeWidth="0.5" strokeOpacity="0.4" />
