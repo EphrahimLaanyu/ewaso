@@ -1,11 +1,18 @@
+import type { Metadata } from 'next';
 import BookingReservation from '@/components/sections/BookingReservation';
 import CampPreview from '@/components/sections/CampPreview';
 import ConservationEthos from '@/components/sections/ConservationEthos';
 import ExperiencesMap from '@/components/sections/ExperiencesMap';
 import Footer from '@/components/sections/Footer';
-import Hero from '@/components/sections/Hero'; // Or HeroAndAbout if you kept the combined version
+import Hero from '@/components/sections/Hero';
 import Navbar from '@/components/sections/Navbar';
 import Peep from '@/components/sections/Peep';
+
+export const metadata: Metadata = {
+  title: 'Goshen | Luxury Safari Camp in Laikipia',
+  description:
+    'An exclusive luxury safari camp in Laikipia, Kenya. Home to bespoke canvas suites, black leopard tracking, and untouched wildlife corridors.',
+};
 
 const lodgingSchema = {
   '@context': 'https://schema.org',

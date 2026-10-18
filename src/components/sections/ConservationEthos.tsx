@@ -1,8 +1,9 @@
 import React from 'react'; 
+import Link from 'next/link';
 
 export default function ConservationEthos() { 
   return ( 
-    <section id="ethos" className="relative w-full bg-[#591C27] pt-36 pb-24 md:pt-48 md:pb-32 px-6 md:px-16 flex flex-col items-center selection:bg-[#F4F1EB] selection:text-[#591C27] border-t border-[#F4F1EB]/10 mt-12 overflow-hidden"> 
+    <section id="ethos" className="relative w-full bg-[#591C27] pt-28 pb-24 md:pt-36 md:pb-32 px-6 md:px-16 flex flex-col items-center selection:bg-[#F4F1EB] selection:text-[#591C27] border-t border-[#F4F1EB]/10 overflow-hidden"> 
       
       {/* SUBTLE CSS NOISE TEXTURE OVERLAY */} 
       <div 
@@ -11,31 +12,31 @@ export default function ConservationEthos() {
       ></div> 
 
       {/* SECTION LABEL */} 
-      <div className="relative z-10 flex items-center gap-4 mb-14"> 
+      <div className="relative z-10 flex items-center gap-4 mb-12"> 
         <span className="w-12 h-[1px] bg-[#F4F1EB]/30"></span> 
         <span className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#F4F1EB] opacity-90"> 
-          Our Promise to Nature
+          Our Conservation Ethos
         </span> 
         <span className="w-12 h-[1px] bg-[#F4F1EB]/30"></span> 
       </div> 
 
       {/* THE QUOTE BLOCK */} 
-      <div className="relative z-10 max-w-4xl mx-auto text-center mb-24 md:mb-32"> 
+      <div className="relative z-10 max-w-4xl mx-auto text-center mb-20 md:mb-28"> 
         {/* Massive atmospheric quote mark */} 
         <span className="absolute -top-12 md:-top-16 left-1/2 -translate-x-1/2 font-serif text-[7rem] md:text-[10rem] leading-none text-[#F4F1EB] opacity-[0.07] pointer-events-none select-none"> 
           “ 
         </span> 
         <h2 className="relative z-10 font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.25] tracking-tight text-[#F4F1EB]"> 
           We don't bait. We don't stage sightings. We don't get in the way.<br className="hidden md:block mt-2" /> 
-          <span className="italic font-light opacity-90"> Keeping this place wild is our biggest responsibility.</span> 
+          <span className="italic font-light opacity-90"> Keeping this ecosystem undisturbed is our absolute priority.</span> 
         </h2> 
         <p className="relative z-10 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/85 mt-6 max-w-2xl mx-auto">
-          Guests explore on foot keeping a respectful distance, guided by an armed ranger.
-        </p>
+          Guests experience wildlife on nature&apos;s terms—maintaining respectful distance on foot and in vehicles, always accompanied by dedicated armed rangers.
+        </p> 
       </div> 
 
       {/* THE THREE PILLARS (GRID) */} 
-      <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20"> 
+      <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16"> 
         
         {/* Pillar 1: Anti-Poaching */} 
         <div className="flex flex-col border-t border-[#F4F1EB]/20 pt-8 group"> 
@@ -45,10 +46,10 @@ export default function ConservationEthos() {
             </svg> 
           </div> 
           <h3 className="font-serif text-2xl md:text-3xl mb-4 text-[#F4F1EB] tracking-tight"> 
-            Stopping Poachers
+            24/7 Ranger Patrols
           </h3> 
-          <p className="font-sans text-xs md:text-sm leading-relaxed opacity-75 text-[#F4F1EB] font-normal tracking-wide"> 
-            A portion of every booking helps fund 24/7 ranger teams.
+          <p className="font-sans text-xs md:text-sm leading-relaxed opacity-80 text-[#F4F1EB] font-normal tracking-wide"> 
+            A dedicated conservation share of every booking directly funds round-the-clock community ranger patrols protecting the enclave&apos;s wildlife corridors.
           </p> 
         </div> 
 
@@ -63,10 +64,10 @@ export default function ConservationEthos() {
             </svg> 
           </div> 
           <h3 className="font-serif text-2xl md:text-3xl mb-4 text-[#F4F1EB] tracking-tight"> 
-            Hiring Locals
+            Community Employment
           </h3> 
-          <p className="font-sans text-xs md:text-sm leading-relaxed opacity-75 text-[#F4F1EB] font-normal tracking-wide"> 
-            All of our guides, trackers, and camp staff are hired straight from the local communities that surround the camp.
+          <p className="font-sans text-xs md:text-sm leading-relaxed opacity-80 text-[#F4F1EB] font-normal tracking-wide"> 
+            All guides, trackers, and camp hospitality staff are hired directly from the local communities bordering the Ewaso Enclave Conservancy.
           </p> 
         </div> 
 
@@ -79,14 +80,28 @@ export default function ConservationEthos() {
             </svg> 
           </div> 
           <h3 className="font-serif text-2xl md:text-3xl mb-4 text-[#F4F1EB] tracking-tight"> 
-            Tracking & Research
+            Species Monitoring
           </h3> 
-          <p className="font-sans text-xs md:text-sm leading-relaxed opacity-75 text-[#F4F1EB] font-normal tracking-wide"> 
-            We help scientists keep an eye on endangered animals, from the elephant herds and wild dogs to Giza the black leopard.
+          <p className="font-sans text-xs md:text-sm leading-relaxed opacity-80 text-[#F4F1EB] font-normal tracking-wide"> 
+            In partnership with field researchers, our teams monitor resident wildlife including elephant migration corridors, African wild dogs, and Giza the black leopard.
           </p> 
         </div> 
 
       </div> 
+
+      {/* FULL PROTOCOL CTA */}
+      <div className="relative z-10 mt-16 text-center">
+        <Link 
+          href="/about#ethos" 
+          className="inline-flex items-center gap-3 text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-[#F4F1EB] hover:text-[#EAE7E0] border-b border-[#F4F1EB]/40 pb-1 hover:border-[#F4F1EB] transition-all"
+        >
+          <span>Read The Complete Conservation Protocol</span>
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </Link>
+      </div>
+
     </section> 
   ); 
 }

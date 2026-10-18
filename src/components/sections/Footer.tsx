@@ -1,6 +1,6 @@
 import React from 'react'; 
 import Link from 'next/link'; 
-import GoshenLogo from '@/components/ui/Logo'; // Make sure this path is correct
+import GoshenLogo from '@/components/ui/Logo';
 
 export default function Footer() { 
   return ( 
@@ -13,15 +13,19 @@ export default function Footer() {
           {/* Brand Column */} 
           <div className="lg:col-span-5 flex flex-col items-start"> 
             
-            {/* The New Logo Component */}
+            {/* Logo & Settled Brand Heading */}
             <Link 
               href="/" 
               className="inline-block focus:outline-none hover:opacity-90 transition-opacity"
               aria-label="Goshen Laikipia - Return to Homepage"
             >
-              <GoshenLogo variant="horizontal" theme="light" className="mb-8 scale-110 origin-left" />
+              <GoshenLogo variant="horizontal" theme="light" className="mb-6 scale-110 origin-left" />
             </Link>
+            <h2 className="sr-only">Goshen Laikipia</h2>
             
+            <p className="font-serif text-xl md:text-2xl text-[#F4F1EB] font-light italic mb-2">
+              Goshen Laikipia
+            </p>
             <p className="font-sans text-xs leading-relaxed opacity-75 max-w-md"> 
               Ewaso Enclave Conservancy             
             </p> 
@@ -39,7 +43,7 @@ export default function Footer() {
                 <span className="w-4 h-[1px] bg-[#F4F1EB]/50"></span> Location 
               </span> 
               <p className="font-serif text-xl md:text-2xl leading-snug opacity-90"> 
-                Laikipia 
+                Ewaso Enclave Conservancy 
               </p> 
               <p className="font-sans text-sm tracking-wide opacity-70 mt-3"> 
                 Laikipia County, Kenya 
@@ -70,8 +74,8 @@ export default function Footer() {
 
         {/* BOTTOM ROW: Legal & Copyright */} 
         <div className="w-full border-t border-[#F4F1EB]/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"> 
-          <p className="font-sans text-[10px] tracking-[0.15em] uppercase opacity-50 text-center md:text-left"> 
-            © 2026 Goshen. All rights reserved. 
+          <p className="font-sans text-[10px] tracking-[0.15em] uppercase opacity-60 text-center md:text-left"> 
+            © 2026 Goshen Laikipia. All rights reserved. 
           </p> 
           <div className="flex items-center gap-8 font-sans text-[10px] tracking-[0.15em] uppercase opacity-60"> 
             <Link href="/privacy" className="hover:opacity-100 transition-opacity duration-300">Privacy Policy</Link> 

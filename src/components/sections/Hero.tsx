@@ -149,8 +149,9 @@ export default function HeroAndAbout() {
               <p className="font-sans text-xs xl:text-sm leading-relaxed tracking-wide text-[#2C2A25]/90 mb-6 max-w-[85%] pointer-events-auto"> 
                 It is our uncompromising responsibility. Set within the vast Laikipia landscape, we believe the rarest wildlife experiences must remain unstaged. 
               </p> 
-              <a href="/#ethos" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
-              </a> 
+              <Link href="/about#ethos" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
+                Our Conviction
+              </Link> 
             </div> 
           </div> 
           
@@ -166,9 +167,9 @@ export default function HeroAndAbout() {
               <p className="font-sans text-xs xl:text-sm leading-relaxed tracking-wide text-[#2C2A25]/90 mb-6 max-w-[85%] pointer-events-auto"> 
                 With a strict limit on vehicles and an intimate footprint, we offer an exclusive gateway to the Elephant Kingdom and the elusive black leopard. 
               </p> 
-              <a href="/camp" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
+              <Link href="/camp" className="text-[10px] tracking-[0.15em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors w-max pointer-events-auto"> 
                 Explore The Camp 
-              </a> 
+              </Link> 
             </div> 
           </div> 
         </div> 

@@ -1,35 +1,36 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 export default function WildlifeTeaser() {
   const wildlifeData = [
     {
       title: "Giza",
       subtitle: "The Shadow of Laikipia",
-      description: "Encounters with melanistic leopards are vanishingly rare. Giza stands as one of the few in the region with an established domain, roaming the landscape undisturbed in the quiet shadows of the bush.",
+      description: "Encounters with melanistic leopards are vanishingly rare. Giza is one of the few black leopards in Kenya with a scientifically documented and verified territory, roaming the rocky outcrops and river valleys of the Ewaso Enclave undisturbed.",
       image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/black-leopard-and-spotted-leopard-portrait.jpeg"
     },
     {
-      title: "The Elephant Crossing",
+      title: "Elephant Trails",
       subtitle: "Walking Paths",
-      description: "These natural walking paths have guided wandering herds for generations. From a discreet vantage point, you can witness their river crossings in absolute silence, leaving their journey undisturbed.",
+      description: "Natural seasonal corridors cross through the conservancy as herds move between feeding grounds and the river. Guests walk designated elephant paths on foot accompanied by an armed ranger, scheduled during midday rest hours and maintaining a minimum 100-meter distance so herds remain undisturbed.",
       image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/aerial-elephants-crossing-ewaso-nyiro-river-1.jpeg"
     },
     {
       title: "African Wild Dogs",
       subtitle: "A Vital Refuge",
-      description: "Our territory serves as a critical haven for a monitored pack of African wild dogs. By fiercely protecting this habitat, we help secure the future of one of the continent's most endangered predators.",
+      description: "The conservancy provides an essential sanctuary for a resident, monitored pack of African wild dogs. Ongoing protection ensures this critically endangered predator continues to hunt and den safely in Laikipia.",
       // Placeholder set for client-provided field photograph of resident wild dog pack.
       image: ""
     }
   ];
 
   return (
-    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-[#F4F1EB] border-t border-[#2C2A25]/10 py-12 md:py-16 px-6 md:px-12 lg:px-20">
+    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-[#F4F1EB] border-t border-[#2C2A25]/10 py-16 md:py-24 px-6 md:px-12 lg:px-20">
       
       {/* CHAPTER HEADER */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center text-center mb-10 md:mb-12">
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center text-center mb-12 md:mb-16">
         <div className="flex items-center gap-4 mb-4">
           <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
           <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#591C27]">
@@ -69,7 +70,7 @@ export default function WildlifeTeaser() {
                   </div>
                   <span className="font-serif text-xl tracking-tight mb-2">African Wild Dogs</span>
                   <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-[#F4F1EB]/60">
-                    Client Photo Forthcoming
+                    Field Photo Forthcoming
                   </span>
                 </div>
               )}
@@ -92,6 +93,26 @@ export default function WildlifeTeaser() {
         ))}
       </div>
 
+      {/* REAL CONTENT LINKS: EXPLORE OUR CONSERVATION ETHOS & FULL PROTOCOL */}
+      <div className="w-full max-w-7xl mx-auto mt-16 pt-8 border-t border-[#2C2A25]/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <a 
+          href="#ethos" 
+          className="group inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors"
+        >
+          <span>Explore Our Conservation Ethos</span>
+          <span className="w-6 h-[1px] bg-[#591C27] group-hover:w-10 group-hover:bg-[#2C2A25] transition-all duration-300"></span>
+        </a>
+
+        <Link 
+          href="/about#ethos" 
+          className="group inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase font-bold text-[#2C2A25]/70 hover:text-[#591C27] transition-colors"
+        >
+          <span>Read The Full Protocol</span>
+          <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </Link>
+      </div>
 
     </section>
   );
