@@ -79,7 +79,7 @@ export default function Footer() {
           </p> 
           <div className="flex items-center gap-8 font-sans text-[10px] tracking-[0.15em] uppercase opacity-60"> 
             <Link href="/privacy" className="hover:opacity-100 transition-opacity duration-300">Privacy Policy</Link> 
-            <Link href="/terms" className="hover:opacity-100 transition-opacity duration-300">Terms of Reserve</Link> 
+            <Link href="/terms" className="hover:opacity-100 transition-opacity duration-300">Terms & Conditions</Link> 
           </div> 
         </div> 
       </div> 

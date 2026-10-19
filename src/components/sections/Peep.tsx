@@ -22,7 +22,7 @@ export default function WildlifeTeaser() {
       subtitle: "A Vital Refuge",
       description: "The conservancy provides an essential sanctuary for a resident, monitored pack of African wild dogs. Ongoing protection ensures this critically endangered predator continues to hunt and den safely in Laikipia.",
       // Placeholder set for client-provided field photograph of resident wild dog pack.
-      image: ""
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/wild-dogs.jpeg"
     }
   ];
 

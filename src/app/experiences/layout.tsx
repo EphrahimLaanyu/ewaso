@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'Activities & Experiences | Goshen · Laikipia, Kenya',
+  title: 'Activities & Experiences | Goshen Laikipia',
   description: 'Unforgettable game drives, guided nature walks, black leopard tracking, and sundowners at Goshen in Laikipia.',
 };
 

@@ -40,8 +40,7 @@ export default function PrivacyPage() {
           <div>
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">2. Booking Partner Relationship</h2>
             <p>
-              Booking is exclusive with Ewaso Enclave Conservacy. Reservation information submitted through our site is securely processed in coordination with Goshen Camp to facilitate bookings, private transfers, conservancy registrations, and guest services.
-            </p>
+Reservations are made directly with Goshen Camp.            </p>
           </div>
 
           <div>
@@ -55,8 +54,8 @@ export default function PrivacyPage() {
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">4. Inquiries & Contact</h2>
             <p>
               For questions concerning this Privacy Policy or data requests, please contact our guest concierge at{' '}
-              <a href="mailto:info@goshendomain.com" className="text-[#591C27] underline underline-offset-4 hover:opacity-80">
-                info@goshendomain.com
+              <a href="mailto:info@goshencamp.com" className="text-[#591C27] underline underline-offset-4 hover:opacity-80">
+                info@goshencamp.com
               </a>.
             </p>
           </div>

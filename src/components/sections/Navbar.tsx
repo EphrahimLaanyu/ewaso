@@ -44,8 +44,7 @@ export default function Navbar() {
   }, [isOpen]); 
 
   // --- LOGIC: Check if we are on light background routes --- 
-  const isDarkTextRoute = pathname === '/inquire'; 
-
+const isDarkTextRoute = ['/inquire', '/terms', '/privacy'].includes(pathname);
   // Determine colors based on scroll, route, AND if the menu is open 
   const useDarkElements = (isSolid || isDarkTextRoute) && !isOpen; 
   

@@ -63,15 +63,13 @@ export default function CampNightfall() {
             {/* Closing Call to Action */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <a 
-                href="/#reservations" 
+                href="/inquire" 
                 className="group inline-flex items-center justify-between gap-6 bg-[#591C27] text-[#F4F1EB] px-8 py-4 md:py-5 text-[10px] md:text-xs tracking-[0.25em] uppercase font-bold hover:bg-[#2C2A25] transition-colors duration-500"
               >
                 <span>Book Your Stay</span>
                 <span className="block w-4 h-[1px] bg-[#F4F1EB] group-hover:w-8 transition-all duration-500 ease-out"></span>
               </a>
-              <span className="font-sans text-xs tracking-wider text-[#2C2A25]/70 uppercase font-medium">
-                3-night minimum stay
-              </span>
+
             </div>
 
           </div>

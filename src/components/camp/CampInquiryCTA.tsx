@@ -43,8 +43,7 @@ export default function CampInquiryCTA() {
 
         <div className="pt-8 border-t border-[#F4F1EB]/15 w-full max-w-xl text-center space-y-2">
           <p className="font-sans text-xs md:text-sm text-[#F4F1EB]/85 font-serif italic">
-            Booking is exclusive with Ewaso Enclave Conservacy.
-          </p>
+Reservations are made directly with Goshen Camp.          </p>
         </div>
 
       </div>
