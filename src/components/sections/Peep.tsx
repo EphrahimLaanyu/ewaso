@@ -15,14 +15,14 @@ export default function WildlifeTeaser() {
       title: "Elephant Trails",
       subtitle: "Walking Paths",
       description: "Natural seasonal corridors cross through the conservancy as herds move between feeding grounds and the river. Guests walk designated elephant paths on foot accompanied by an armed ranger, scheduled during midday rest hours and maintaining a minimum 100-meter distance so herds remain undisturbed.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/aerial-elephants-crossing-ewaso-nyiro-river-1.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Elephants-in-river.jpeg"
     },
     {
       title: "African Wild Dogs",
       subtitle: "A Vital Refuge",
       description: "The conservancy provides an essential sanctuary for a resident, monitored pack of African wild dogs. Ongoing protection ensures this critically endangered predator continues to hunt and den safely in Laikipia.",
       // Placeholder set for client-provided field photograph of resident wild dog pack.
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/wild-dogs.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/wild-dogs-2.jpeg"
     }
   ];
 

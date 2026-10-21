@@ -10,12 +10,12 @@ import React, { useState, useRef } from 'react';
 // ============================================================================
 const EXPERIENCE_IMAGES = {
   hero: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/elephant-family-wading-river-waters.jpeg",
-  dayDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/grevys-zebra-pair-savannah-portrait.jpeg",
+  dayDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Day-game-drive.jpeg",
   nightDrives: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/night-game-drive-spotlight-elephants.jpeg",
   natureWalks: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/guided-bush-walk-riverbank-trail.jpeg",
   culturalVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/cultural-visit-samburu-village-elders.jpeg",
   marketVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/market-visit-samburu-beadwork-stalls.jpeg",
-  leopardTracking: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/black-leopard-and-spotted-leopard-portrait.jpeg",
+  leopardTracking: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza%20walking.jpeg",
   kopjeHikes: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/kopje-hike-sunset-viewpoint-couple.jpeg",
   sundowners: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/laikipia-golden-sunset-kopje-silhouette.jpeg",
   fishing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-fishing-ewaso-nyiro-rock-pools.jpeg",

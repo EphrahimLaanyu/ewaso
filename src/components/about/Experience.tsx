@@ -90,8 +90,8 @@ export default function FullItinerary() {
             {/* Image 1: Tall Portrait (Left Column) */}
             <div className="row-span-2 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg">
               <img 
-                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/young-male-lion-enhanced-portrait.jpeg" 
-                alt="Young Male Lion" 
+                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Land.jpeg" 
+                alt="Landscape" 
                 loading="lazy" 
                 className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-105" 
               />
@@ -100,8 +100,8 @@ export default function FullItinerary() {
             {/* Image 2: Landscape Top (Right Column) */}
             <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg">
               <img 
-                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/safari-tent-timber-glass-double-doors.jpeg" 
-                alt="Safari Tent Interior" 
+                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Cars-on-safari.jpeg" 
+                alt="Cars on Safari" 
                 loading="lazy" 
                 className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-105" 
               />
@@ -110,7 +110,7 @@ export default function FullItinerary() {
             {/* Image 3: Landscape Bottom (Right Column) */}
             <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg">
               <img 
-                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/fishing.jpeg" 
+                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-flowing.jpeg" 
                 alt="River Fishing" 
                 loading="lazy" 
                 className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-105" 
