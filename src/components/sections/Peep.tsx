@@ -9,7 +9,7 @@ export default function WildlifeTeaser() {
       title: "Giza",
       subtitle: "The Shadow of Laikipia",
       description: "Encounters with melanistic leopards are vanishingly rare. Giza is one of the few black leopards in Kenya with a scientifically documented and verified territory, roaming the rocky outcrops and river valleys of the Ewaso Enclave undisturbed.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/black-leopard-and-spotted-leopard-portrait.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza-looking.jpeg"
     },
     {
       title: "Elephant Trails",

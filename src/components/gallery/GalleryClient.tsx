@@ -24,18 +24,18 @@ interface GalleryItem {
 const campImages: GalleryItem[] = [ 
   { id: "camp-01", src: `${BASE_URL}luxury-tent-suite-master-bed-panorama.jpeg`, alt: "Master Canvas Suite Interior with Panoramic Bush View", title: "Master Canvas Suite", category: "The Suites", location: "Tent 03", spanClass: "col-span-12 lg:col-span-8", aspectClass: "aspect-[4/3] sm:aspect-[16/10]" }, 
   { id: "camp-02", src: `${BASE_URL}safari-tent-timber-glass-double-doors.jpeg`, alt: "Handcrafted Timber and Glass Suite Entrance", title: "Timber & Canvas Entry", category: "Architecture", location: "Private Veranda", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "camp-03", src: `${BASE_URL}ensuite-bathroom-stone-tile-rain-shower.jpeg`, alt: "Ensuite Rough-Hewn Stone Shower with High Pressure Water", title: "Bush Stone Shower", category: "En-Suite", location: "Bath Quarters", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
+  { id: "camp-03", src: `${BASE_URL}Shower-area-with-shower-flowing.jpeg`, alt: "Ensuite Rough-Hewn Stone Shower with High Pressure Water", title: "Bush Stone Shower", category: "En-Suite", location: "Bath Quarters", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
   { id: "camp-04", src: `${BASE_URL}dining.jpeg `, alt: "Open-Sided Pavilion Dining Looking Out Across the Bush", title: "The Main Pavilion", category: "Dining", location: "Central Ridge", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
   { id: "camp-05", src: `${BASE_URL}interiors.jpeg`, alt: "Deep Sofas and Ambient Lanterns in the Camp Lounge", title: "Pavilion Lounge", category: "Interiors", location: "Main Hearth", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "camp-06", src: `${BASE_URL}elevated-rock-outcrop-viewing-platform.jpeg`, alt: "Elevated Rock Outcrop Platform Overlooking Laikipia Valley", title: "Granite Kopje Deck", category: "Vantage", location: "Eastern Point", spanClass: "col-span-12 md:col-span-7", aspectClass: "aspect-[16/10]" }, 
+  { id: "camp-06", src: `${BASE_URL}Vantage.jpeg`, alt: "Elevated Rock Outcrop Platform Overlooking Laikipia Valley", title: "Granite Kopje Deck", category: "Vantage", location: "Eastern Point", spanClass: "col-span-12 md:col-span-7", aspectClass: "aspect-[16/10]" }, 
   { id: "camp-07", src: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/cuisine.jpeg", alt: "Artisan Dining Table Details with Shuka Linens", title: "Alfresco Table Setting", category: "Cuisine", location: "Dining Deck", spanClass: "col-span-12 md:col-span-5", aspectClass: "aspect-[16/10]" } 
 ]; 
-//https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Giza-licking.jpeg
+//https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Shower-area-with-shower-flowing.jpeg
 // 2. THE WILDLIFE 
 const wildlifeImages: GalleryItem[] = [ 
   { id: "wild-01", src: `${BASE_URL}Giza-licking.jpeg`, alt: "Melanistic Black Leopard Giza with Spotted Leopard in Quiet Bush", title: "Giza & Companion", category: "Rare Sightings", location: "Riverine Corridor", spanClass: "col-span-12 lg:col-span-7", aspectClass: "aspect-[16/11]" }, 
   { id: "wild-02", src: `${BASE_URL}Elephant-in-river-2.jpeg`, alt: "Large Bull Elephant on Ancient Bush Trail", title: "Daylight Giants", category: "Elephant Kingdom", location: "Conservancy Trail", spanClass: "col-span-12 sm:col-span-6 lg:col-span-5", aspectClass: "aspect-[4/5]" }, 
-  { id: "wild-03", src: `${BASE_URL}grevys-zebra-pair-savannah-portrait.jpeg`, alt: "Pair of Grevy's Zebras Alert on the Plain", title: "Grevy's Zebra Pair", category: "Endangered Species", location: "Open Savannah", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/3] sm:aspect-[4/5]" }, 
+  { id: "wild-03", src: `${BASE_URL}kudu.jpeg`, alt: "Pair of Grevy's Zebras Alert on the Plain", title: "Grevy's Zebra Pair", category: "Endangered Species", location: "Open Savannah", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/3] sm:aspect-[4/5]" }, 
   { id: "wild-04", src: `${BASE_URL}young-male-lion-golden-morning-sun.jpeg`, alt: "Young Male Lion in Golden Dawn Sunlight", title: "Pride Patrol", category: "Predators", location: "North Ridges", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/3] sm:aspect-[4/5]" }, 
   { id: "wild-05", src: `${BASE_URL}beisa-oryx-pair-green-bush-portrait.jpeg`, alt: "Beisa Oryx Pair Standing in Green Thicket", title: "Beisa Oryx", category: "Northern Species", location: "Acacia Basin", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/3] sm:aspect-[4/5]" }, 
   { id: "wild-06", src: `${BASE_URL}aerial-elephants-crossing-ewaso-nyiro-river-1.jpeg`, alt: "Aerial Drone Perspective of Elephants Crossing Ewaso Nyiro River", title: "The River Crossing", category: "Aerial", location: "Ewaso Nyiro", spanClass: "col-span-12 lg:col-span-8", aspectClass: "aspect-[16/9]" }, 
@@ -114,7 +114,7 @@ export default function GalleryClient() {
       {/* 2. DRAMATIC HERO SECTION (70svh) */} 
       <section className="relative w-full h-[70svh] min-h-[500px] flex items-center justify-center overflow-hidden bg-[#1A1817]"> 
         <div className="absolute inset-0 z-0"> 
-          <img src={`${BASE_URL}aerial-laikipia-plains-distant-mountains.jpeg`} alt="Goshen Sanctuary Panoramic Bush Landscape" className="w-full h-full object-cover scale-105 animate-[pulse_24s_ease-in-out_infinite]" /> 
+          <img src={`${BASE_URL}elephants-line-drinking-waterhole-monochrome.jpeg`} alt="Goshen Sanctuary Panoramic Bush Landscape" className="w-full h-full object-cover scale-105 animate-[pulse_24s_ease-in-out_infinite]" /> 
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#F4F1EB]"></div> 
         </div> 
         

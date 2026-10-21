@@ -5,8 +5,8 @@ import React from 'react';
 export default function CampVerandaAndBath() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
-  // The two bathroom images
-  const bathMain = `${baseUrl}ensuite-bathroom-stone-tile-rain-shower.jpeg`;
+  // The two bathroom imageshttps://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/bathroom.jpeg
+  const bathMain = `${baseUrl}bathroom.jpeg`;
   const bathDetail = `${baseUrl}ensuite-bathroom-vanity-basin-mirror.jpeg`;
 
   return (
