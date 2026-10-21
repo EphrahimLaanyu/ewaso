@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ElephantAndGiza() {
-  const elephantImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/large-bull-elephant-walking-forward-tusks.jpeg";
+  const elephantImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Elephants-walking.jpeg";
   const gizaImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza-alone.jpeg";
 
   return (
