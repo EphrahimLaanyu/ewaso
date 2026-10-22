@@ -1,9 +1,9 @@
-'use client'; 
+'use client';
 
-import React, { useState, useEffect, useCallback } from 'react'; 
-import Navbar from '@/components/sections/Navbar'; 
-import Footer from '@/components/sections/Footer'; 
-import Link from 'next/link'; 
+import React, { useState, useEffect, useCallback } from 'react';
+import Navbar from '@/components/sections/Navbar';
+import Footer from '@/components/sections/Footer';
+import Link from 'next/link';
 
 // ============================================================================ // BASE SUPABASE MEDIA URL // ============================================================================ 
 const BASE_URL = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/"; 
@@ -18,40 +18,167 @@ interface GalleryItem {
   location?: string; 
   spanClass: string; 
   aspectClass: string; 
-} 
+}
 
 // 1. THE CAMP 
+// 1. THE CAMP 
 const campImages: GalleryItem[] = [ 
-  { id: "camp-01", src: `${BASE_URL}luxury-tent-suite-master-bed-panorama.jpeg`, alt: "Master Canvas Suite Interior with Panoramic Bush View", title: "Master Canvas Suite", category: "The Suites", location: "Tent 03", spanClass: "col-span-12 lg:col-span-8", aspectClass: "aspect-[4/3] sm:aspect-[16/10]" }, 
-  { id: "camp-02", src: `${BASE_URL}safari-tent-timber-glass-double-doors.jpeg`, alt: "Handcrafted Timber and Glass Suite Entrance", title: "Timber & Canvas Entry", category: "Architecture", location: "Private Veranda", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "camp-03", src: `${BASE_URL}Shower-area-with-shower-flowing.jpeg`, alt: "Ensuite Rough-Hewn Stone Shower with High Pressure Water", title: "Bush Stone Shower", category: "En-Suite", location: "Bath Quarters", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "camp-04", src: `${BASE_URL}dining.jpeg `, alt: "Open-Sided Pavilion Dining Looking Out Across the Bush", title: "The Main Pavilion", category: "Dining", location: "Central Ridge", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "camp-05", src: `${BASE_URL}interiors.jpeg`, alt: "Deep Sofas and Ambient Lanterns in the Camp Lounge", title: "Pavilion Lounge", category: "Interiors", location: "Main Hearth", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "camp-06", src: `${BASE_URL}Vantage.jpeg`, alt: "Elevated Rock Outcrop Platform Overlooking Laikipia Valley", title: "Granite Kopje Deck", category: "Vantage", location: "Eastern Point", spanClass: "col-span-12 md:col-span-7", aspectClass: "aspect-[16/10]" }, 
-  { id: "camp-07", src: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/cuisine.jpeg", alt: "Artisan Dining Table Details with Shuka Linens", title: "Alfresco Table Setting", category: "Cuisine", location: "Dining Deck", spanClass: "col-span-12 md:col-span-5", aspectClass: "aspect-[16/10]" } 
-]; 
+  { 
+    id: "camp-01", 
+    src: `${BASE_URL}luxury-tent-suite-master-bed-panorama.jpeg`, 
+    alt: "Master Canvas Suite Interior with wooden bed and Panoramic Bush View", 
+    title: "Master Canvas Suite", 
+    category: "The Suites", 
+    location: "Tent 03", 
+    spanClass: "col-span-12 lg:col-span-8", 
+    aspectClass: "aspect-[4/3] sm:aspect-[16/10]" 
+  }, 
+  { 
+    id: "camp-02", 
+    src: `${BASE_URL}safari-tent-timber-glass-double-doors.jpeg`, 
+    alt: "Handcrafted Timber and Glass Suite Entrance", 
+    title: "Timber & Canvas Entry", 
+    category: "Architecture", 
+    location: "Private Veranda", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", 
+    aspectClass: "aspect-[4/5]" 
+  }, 
+  { 
+    id: "camp-03", 
+    src: `${BASE_URL}Shower-area-with-shower-flowing.jpeg`, 
+    alt: "Ensuite Rough-Hewn Stone Shower with flowing water and open window", 
+    title: "Bush Stone Shower", 
+    category: "En-Suite", 
+    location: "Bath Quarters", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", 
+    aspectClass: "aspect-[4/5]" 
+  }, 
+  { 
+    id: "camp-04", 
+    src: `${BASE_URL}dining.jpeg`, 
+    alt: "Outdoor dining table with red checkered runner on a wooden deck looking out across the bush", 
+    title: "Deck Dining", 
+    category: "Dining", 
+    location: "Central Ridge", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", 
+    aspectClass: "aspect-[4/5]" 
+  }, 
+  { 
+    id: "camp-05", 
+    src: `${BASE_URL}interiors.jpeg`, 
+    alt: "Deep Sofas, colorful cushions, and radiating roof poles in the Camp Lounge", 
+    title: "Pavilion Lounge", 
+    category: "Interiors", 
+    location: "Main Hearth", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", 
+    aspectClass: "aspect-[4/5]" 
+  }, 
+  { 
+    id: "camp-06", 
+    src: `${BASE_URL}Vantage.jpeg`, 
+    alt: "Illuminated safari tent glowing at night under a dark starry sky", 
+    title: "Starlit Sanctuary", 
+    category: "Vantage", 
+    location: "Nightfall", 
+    spanClass: "col-span-12 md:col-span-7", 
+    aspectClass: "aspect-[16/10]" 
+  }, 
+  { 
+    id: "camp-07", 
+    src: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/cuisine.jpeg", 
+    alt: "Outdoor buffet station with chafing dishes set on a burgundy tablecloth with bush views", 
+    title: "Bush Buffet Setup", 
+    category: "Cuisine", 
+    location: "Dining Deck", 
+    spanClass: "col-span-12 md:col-span-5", 
+    aspectClass: "aspect-[16/10]" 
+  } 
+];
 //https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Shower-area-with-shower-flowing.jpeg
 // 2. THE WILDLIFE 
 const wildlifeImages: GalleryItem[] = [ 
-  { id: "wild-01", src: `${BASE_URL}Giza-licking.jpeg`, alt: "Melanistic Black Leopard Giza with Spotted Leopard in Quiet Bush", title: "Giza & Companion", category: "Rare Sightings", location: "Riverine Corridor", spanClass: "col-span-12 lg:col-span-7", aspectClass: "aspect-[16/11]" }, 
-  { id: "wild-02", src: `${BASE_URL}Elephant-in-river-2.jpeg`, alt: "Large Bull Elephant on Ancient Bush Trail", title: "Daylight Giants", category: "Elephant Kingdom", location: "Conservancy Trail", spanClass: "col-span-12 sm:col-span-6 lg:col-span-5", aspectClass: "aspect-[4/5]" }, 
-  { id: "wild-03", src: `${BASE_URL}kudu.jpeg`, alt: "Pair of Grevy's Zebras Alert on the Plain", title: "Grevy's Zebra Pair", category: "Endangered Species", location: "Open Savannah", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/3] sm:aspect-[4/5]" }, 
-  { id: "wild-04", src: `${BASE_URL}young-male-lion-golden-morning-sun.jpeg`, alt: "Young Male Lion in Golden Dawn Sunlight", title: "Pride Patrol", category: "Predators", location: "North Ridges", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/3] sm:aspect-[4/5]" }, 
-  { id: "wild-05", src: `${BASE_URL}beisa-oryx-pair-green-bush-portrait.jpeg`, alt: "Beisa Oryx Pair Standing in Green Thicket", title: "Beisa Oryx", category: "Northern Species", location: "Acacia Basin", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/3] sm:aspect-[4/5]" }, 
-  { id: "wild-06", src: `${BASE_URL}aerial-elephants-crossing-ewaso-nyiro-river-1.jpeg`, alt: "Aerial Drone Perspective of Elephants Crossing Ewaso Nyiro River", title: "The River Crossing", category: "Aerial", location: "Ewaso Nyiro", spanClass: "col-span-12 lg:col-span-8", aspectClass: "aspect-[16/9]" }, 
-  { id: "wild-07", src: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/zebras-b&w.jpeg", alt: "Tower of Reticulated Giraffes in Acacia Bushland", title: "Reticulated Giraffes", category: "Herbivores", location: "Riverine Forest", spanClass: "col-span-12 lg:col-span-4", aspectClass: "aspect-[16/9] lg:aspect-[4/5]" } 
-]; 
+  { 
+    id: "wild-01", 
+    src: `${BASE_URL}Giza-licking.jpeg`, 
+    alt: "Melanistic black leopard standing in tall dry grass, yawning", 
+    title: "Giza the Black Leopard", 
+    category: "Rare Sightings", 
+    location: "Riverine Corridor", 
+    spanClass: "col-span-12 lg:col-span-7", 
+    aspectClass: "aspect-[16/11]" 
+  }, 
+  { 
+    id: "wild-02", 
+    src: `${BASE_URL}Elephant-in-river-2.jpeg`, 
+    alt: "Two large elephants wading through a watering hole surrounded by green bush", 
+    title: "Elephants in the Water", 
+    category: "Elephant Kingdom", 
+    location: "Conservancy Trail", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-5", 
+    aspectClass: "aspect-[4/5]" 
+  }, 
+  { 
+    id: "wild-03", 
+    src: `${BASE_URL}kudu.jpeg`, 
+    alt: "A curious pair of lesser kudus, stopping just long enough to give us a good look.", 
+    title: "Lesser Kudu", 
+    category: "Endangered Species", 
+    location: "Open Savannah", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", 
+    aspectClass: "aspect-[4/3] sm:aspect-[4/5]" 
+  }, 
+  { 
+    id: "wild-04", 
+    src: `${BASE_URL}young-male-lion-golden-morning-sun.jpeg`, 
+    alt: "Majestic male lion resting on a dirt mound looking out over the territory", 
+    title: "Pride Patrol", 
+    category: "Predators", 
+    location: "North Ridges", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", 
+    aspectClass: "aspect-[4/3] sm:aspect-[4/5]" 
+  }, 
+  { 
+    id: "wild-05", 
+    src: `${BASE_URL}beisa-oryx-pair-green-bush-portrait.jpeg`, 
+    alt: "Beisa Oryx Pair Standing in Green Thicket", 
+    title: "Beisa Oryx", 
+    category: "Northern Species", 
+    location: "Acacia Basin", 
+    spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", 
+    aspectClass: "aspect-[4/3] sm:aspect-[4/5]" 
+  }, 
+  { 
+    id: "wild-06", 
+    src: `${BASE_URL}aerial-elephants-crossing-ewaso-nyiro-river-1.jpeg`, 
+    alt: "Aerial drone perspective of wildlife at the muddy Ewaso Nyiro River", 
+    title: "The River Crossing", 
+    category: "Aerial", 
+    location: "Ewaso Nyiro", 
+    spanClass: "col-span-12 lg:col-span-8", 
+    aspectClass: "aspect-[16/9]" 
+  }, 
+  { 
+    id: "wild-07", 
+    src: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/zebras-b&w.jpeg", 
+    alt: "The incredibly photogenic Grevy’s zebras. See how thin their stripes are", 
+    title: "Grevy's Zebra", 
+    category: "Endangered Species", 
+    location: "Open Savannah", 
+    spanClass: "col-span-12 lg:col-span-4", 
+    aspectClass: "aspect-[16/9] lg:aspect-[4/5]" 
+  } 
+];
 
 // 3. THE EXPERIENCE 
 const experienceImages: GalleryItem[] = [ 
   { id: "exp-01", src: `${BASE_URL}laikipia-golden-sunset-kopje-silhouette.jpeg`, alt: "Dramatic Silhouette of Kopje and Bush During Laikipia Sunset", title: "Sunset on the Ridge", category: "Golden Hour", location: "Granite Kopje", spanClass: "col-span-12 md:col-span-6", aspectClass: "aspect-[16/10]" }, 
   { id: "exp-02", src: `${BASE_URL}guided-bush-walk-riverbank-trail.jpeg`, alt: "Walking Safari Along Ewaso Riverbank with Resident Naturalist", title: "Guided Nature Walk", category: "Walking Safari", location: "River Trails", spanClass: "col-span-12 md:col-span-6", aspectClass: "aspect-[16/10]" }, 
   { id: "exp-03", src: `${BASE_URL}river-fishing-ewaso-nyiro-rock-pools.jpeg`, alt: "Quiet River Fishing in Natural Granite Pools", title: "Rock Pool Fishing", category: "River Excursion", location: "Ewaso Rapids", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "exp-04", src: `${BASE_URL}roaring-campfire-flames-sunset-bush.jpeg`, alt: "Roaring Fire Pit Flames Against Deep Twilight Sky", title: "Twilight Firepit", category: "Nightfall", location: "Main Hearth", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
+  { id: "exp-04", src: `${BASE_URL}nightfall.jpeg`, alt: "Roaring Fire Pit Flames Against Deep Twilight Sky", title: "The last whispers of daylight in the African bush.", category: "Nightfall", location: "Main Hearth", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
   { id: "exp-05", src: `${BASE_URL}tent-relaxation-armchair-desk-view.jpeg`, alt: "Tranquil Reading and Writing Nook Overlooking Savannah", title: "The Art of Doing Nothing", category: "Sanctuary", location: "Guest Suite", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
   { id: "exp-06", src: `${BASE_URL}cultural-visit-samburu-village-elders.jpeg`, alt: "Warm Community Welcome in Neighbouring Samburu Village", title: "Samburu Heritage", category: "Community", location: "Neighbouring Manyatta", spanClass: "col-span-12 md:col-span-7", aspectClass: "aspect-[16/10]" }, 
-  { id: "exp-07", src: `${BASE_URL}bush-dinner-around-campfire-twilight.jpeg`, alt: "Guests Gathered for Twilight Dinner Around Open Fire", title: "Fireside Dinner", category: "Dining", location: "Open Wilderness", spanClass: "col-span-12 md:col-span-5", aspectClass: "aspect-[16/10]" } 
-]; 
+  { id: "exp-07", src: `${BASE_URL}night-dinner.jpeg`, alt: "Guests Gathered for Twilight Dinner Around Open Fire", title: "Fireside Dinner", category: "Dining", location: "Open Wilderness", spanClass: "col-span-12 md:col-span-5", aspectClass: "aspect-[16/10]" } 
+];
 
 // Combine all for fullscreen lightbox navigation 
 const allGalleryItems = [...campImages, ...wildlifeImages, ...experienceImages]; 
