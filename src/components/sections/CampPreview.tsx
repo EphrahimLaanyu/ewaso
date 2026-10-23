@@ -4,8 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function CampPreview() {
-  const mainImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/luxury-tent-suite-master-bed-panorama.jpeg";
-  const secondaryImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/ensuite-bathroom-sink-counter-toiletries.jpeg";
+  const secondaryImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/luxury-tent-suite-master-bed-panorama.jpeg";
+  const mainImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/luxury-tent-bedroom.jpeg";
   
   return (
     <section className="relative w-full min-h-[100svh] lg:h-[100svh] bg-[#591C27] text-[#F4F1EB] px-6 md:px-12 lg:px-20 py-16 lg:py-0 flex items-center selection:bg-[#F4F1EB] selection:text-[#591C27] overflow-hidden border-t border-[#F4F1EB]/10">
