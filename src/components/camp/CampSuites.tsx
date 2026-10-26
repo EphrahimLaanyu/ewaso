@@ -6,7 +6,7 @@ export default function CampSuites() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
   // The three suite images requested
-  const suiteMain = `${baseUrl}luxury-tent-suite-handcrafted-bed-view.jpeg`; 
+  const suiteMain = `${baseUrl}room.jpeg`; 
   const suiteAlt1 = `${baseUrl}tent-bedroom-savannah-window-views.jpeg`; 
   const suiteAlt2 = `${baseUrl}luxury-tent-bedroom-angled-perspective.jpeg`;
 
