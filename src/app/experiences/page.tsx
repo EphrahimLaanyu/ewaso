@@ -17,7 +17,7 @@ const EXPERIENCE_IMAGES = {
   marketVisits: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/market-visit-samburu-beadwork-stalls.jpeg",
   leopardTracking: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza%20walking.jpeg",
   kopjeHikes: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/kopje-hike-sunset-viewpoint-couple.jpeg",
-  sundowners: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/laikipia-golden-sunset-kopje-silhouette.jpeg",
+  sundowners: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/bush-sundowner.jpeg",
   fishing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-fishing-ewaso-nyiro-rock-pools.jpeg",
   doingNothing: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/tent-relaxation-armchair-desk-view.jpeg",
 };
