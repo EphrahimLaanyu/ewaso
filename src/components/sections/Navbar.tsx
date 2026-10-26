@@ -82,7 +82,7 @@ const isDarkTextRoute = ['/inquire', '/terms', '/privacy'].includes(pathname);
               onClick={() => setIsOpen(false)} 
               className={`group flex items-center gap-3 font-sans text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-bold transition-colors duration-500 ${textColor}`} 
             > 
-              Inquire 
+              Inquire/ Book
               <span className={`hidden sm:block w-6 h-[1px] group-hover:w-10 transition-all duration-300 ${bgColor}`}></span> 
             </a> 
             
