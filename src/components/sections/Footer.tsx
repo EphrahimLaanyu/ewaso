@@ -64,7 +64,7 @@ export default function Footer() {
                 
                 <a href="https://wa.me/254721753593" target="_blank" rel="noreferrer" className="group flex flex-col w-max mt-2">
                   <span className="font-sans text-sm tracking-wide opacity-70 group-hover:opacity-100 transition-opacity">
-                    WhatsApp: +254 721 753 593
+                    WhatsApp: +254 718 632 994/ + 254 769 030 068
                   </span>
                 </a>
 
