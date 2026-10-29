@@ -20,13 +20,13 @@ export default function BookForm({ onSuccess }: FormProps) {
   const [departureDate, setDepartureDate] = useState<Date | null>(null);
   const [disabledDates, setDisabledDates] = useState<Date[]>([]);
 
-  // Fetch blocked and confirmed dates on mount
+  // Fetch ONLY admin-blocked dates on mount
   useEffect(() => {
     async function fetchUnavailableDates() {
       const { data, error } = await supabase
         .from('bookings')
         .select('arrival_date, departure_date')
-        .in('status', ['Confirmed', 'Blocked']);
+        .eq('status', 'Blocked'); // <-- Only fetching 'Blocked' status now
 
       if (!error && data) {
         const datesToDisable: Date[] = [];

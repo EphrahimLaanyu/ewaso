@@ -62,9 +62,9 @@ export default function Footer() {
                   <span className="w-0 h-[1px] bg-[#F4F1EB] group-hover:w-full transition-all duration-500 ease-out mt-1"></span>
                 </a>
                 
-                <a href="https://wa.me/254721753593" target="_blank" rel="noreferrer" className="group flex flex-col w-max mt-2">
+                <a href="https://wa.me/254769030068" target="_blank" rel="noreferrer" className="group flex flex-col w-max mt-2">
                   <span className="font-sans text-sm tracking-wide opacity-70 group-hover:opacity-100 transition-opacity">
-                    WhatsApp: +254 718 632 994/ + 254 769 030 068
+                    WhatsApp: + 254 769 030 068 / +254 718 632 994
                   </span>
                 </a>
 
@@ -77,6 +77,16 @@ export default function Footer() {
                   </svg>
                   <span className="font-sans text-sm tracking-wide">
                     @ewaso_enclave
+                  </span>
+                </a>
+                                <a href="https://instagram.com/goshen_camp" target="_blank" rel="noreferrer" className="group flex items-center gap-3 w-max mt-2 opacity-70 hover:opacity-100 transition-opacity">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span className="font-sans text-sm tracking-wide">
+                    @goshen_camp
                   </span>
                 </a>
               </div>
