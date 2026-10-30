@@ -35,7 +35,7 @@ const campImages: GalleryItem[] = [
   }, 
   { 
     id: "camp-02", 
-    src: `${BASE_URL}safari-tent-timber-glass-double-doors.jpeg`, 
+    src: `${BASE_URL}Architecture.jpeg`, 
     alt: "Handcrafted Timber and Glass Suite Entrance", 
     title: "Timber & Canvas Entry", 
     category: "Architecture", 
@@ -55,7 +55,7 @@ const campImages: GalleryItem[] = [
   }, 
   { 
     id: "camp-04", 
-    src: `${BASE_URL}dining.jpeg`, 
+    src: `${BASE_URL}dining-gallery.jpeg`, 
     alt: "Outdoor dining table with red checkered runner on a wooden deck looking out across the bush", 
     title: "Deck Dining", 
     category: "Dining", 
@@ -176,7 +176,7 @@ const experienceImages: GalleryItem[] = [
   { id: "exp-03", src: `${BASE_URL}river-fishing-ewaso-nyiro-rock-pools.jpeg`, alt: "Quiet River Fishing in Natural Granite Pools", title: "Rock Pool Fishing", category: "River Excursion", location: "Ewaso Rapids", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
   { id: "exp-04", src: `${BASE_URL}nightfall.jpeg`, alt: "Roaring Fire Pit Flames Against Deep Twilight Sky", title: "The last whispers of daylight in the African bush.", category: "Nightfall", location: "Main Hearth", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
   { id: "exp-05", src: `${BASE_URL}tent-relaxation-armchair-desk-view.jpeg`, alt: "Tranquil Reading and Writing Nook Overlooking Savannah", title: "The Art of Doing Nothing", category: "Sanctuary", location: "Guest Suite", spanClass: "col-span-12 sm:col-span-6 lg:col-span-4", aspectClass: "aspect-[4/5]" }, 
-  { id: "exp-06", src: `${BASE_URL}cultural-visit-samburu-village-elders.jpeg`, alt: "Warm Community Welcome in Neighbouring Samburu Village", title: "Samburu Heritage", category: "Community", location: "Neighbouring Manyatta", spanClass: "col-span-12 md:col-span-7", aspectClass: "aspect-[16/10]" }, 
+  { id: "exp-06", src: `${BASE_URL}community.jpeg`, alt: "Warm Community Welcome in Neighbouring Samburu Village", title: "Samburu Heritage", category: "Community", location: "Neighbouring Manyatta", spanClass: "col-span-12 md:col-span-7", aspectClass: "aspect-[16/10]" }, 
   { id: "exp-07", src: `${BASE_URL}night-dinner.jpeg`, alt: "Guests Gathered for Twilight Dinner Around Open Fire", title: "Fireside Dinner", category: "Dining", location: "Open Wilderness", spanClass: "col-span-12 md:col-span-5", aspectClass: "aspect-[16/10]" } 
 ];
 

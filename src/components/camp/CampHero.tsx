@@ -9,8 +9,8 @@ export default function CampHero() {
   const heroBackdrop = `${baseUrl}camp-stone-walkway-to-safari-cottage.jpeg`;
   
   // The editorial collage images
-  const portraitTent = `${baseUrl}luxury-safari-tent-front-exterior-patio.jpeg`;
-  const squareVeranda = `${baseUrl}safari-tent-timber-glass-double-doors.jpeg`;
+  const portraitTent = `${baseUrl}camp2.jpeg`;
+  const squareVeranda = `${baseUrl}Camp1.jpeg`;
 
   return (
     <section className="relative w-full bg-[#1A1817] selection:bg-[#591C27] selection:text-[#F4F1EB] pb-24 md:pb-32">
