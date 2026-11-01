@@ -62,7 +62,7 @@ export const metadata: Metadata = {
       "Exclusive luxury tented camp in Ewaso Enclave Conservancy, Laikipia. Unscripted safari activities in Kenya, black leopard tracking, and bespoke canvas suites.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg",
         width: 1200,
         height: 630,
         alt: "Goshen Safari Camp overlooking pristine Laikipia wilderness, Kenya",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: "Goshen Laikipia | Luxury Safari Camp & Places to Stay in Laikipia",
     description:
       "Exclusive luxury tented camp in Ewaso Enclave Conservancy, Laikipia. Unrivalled safari activities in Kenya and rare wildlife encounters.",
-    images: ["/og-image.jpg"],
+    images: ["https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg"],
     creator: "@goshen_camp",
   },
   robots: {
