@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CampPreview() {
@@ -26,12 +27,12 @@ export default function CampPreview() {
             
             {/* Main Primary Image (Top-Left Base) */}
             <div className="w-[82%] h-[85%] overflow-hidden bg-[#2C2A25] shadow-2xl relative z-10 group rounded-sm">
-              <img 
+              <Image 
                 src={mainImage} 
                 alt="Goshen Luxury Canvas Suite Interior" 
-                loading="lazy"
                 width={800}
                 height={600}
+                sizes="(max-width: 1024px) 80vw, 50vw"
                 className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/30 via-transparent to-transparent pointer-events-none"></div>
@@ -39,12 +40,12 @@ export default function CampPreview() {
 
             {/* Secondary Overlapping Image (Bottom-Right Floating Cutout) */}
             <div className="w-[52%] h-[55%] absolute bottom-0 right-0 overflow-hidden bg-[#2C2A25] shadow-[0_25px_60px_rgba(0,0,0,0.6)] z-20 border-[6px] md:border-[10px] border-[#591C27] group rounded-sm">
-              <img 
+              <Image 
                 src={secondaryImage} 
                 alt="Goshen En-Suite Bathroom" 
-                loading="lazy"
                 width={500}
                 height={500}
+                sizes="(max-width: 1024px) 50vw, 30vw"
                 className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/20 via-transparent to-transparent pointer-events-none"></div>

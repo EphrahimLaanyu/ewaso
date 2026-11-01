@@ -3,6 +3,7 @@
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/sections/Navbar';
 import React, { useState, useRef } from 'react';
+import Image from 'next/image';
 
 
 // ============================================================================
@@ -218,10 +219,13 @@ export default function ExperiencesPage() {
       ======================================================== */}
       <section className="relative w-full h-[70svh] flex flex-col items-center justify-center overflow-hidden bg-[#1A1817]">
         <div className="absolute inset-0 z-0">
-          <img 
+          <Image 
             src={EXPERIENCE_IMAGES.hero} 
             alt="Laikipia Wilderness" 
-            className="w-full h-full object-cover opacity-60 scale-105 animate-[pulse_20s_ease-in-out_infinite]"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-60 scale-105 animate-[pulse_20s_ease-in-out_infinite]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-[#F4F1EB]"></div>
         </div>
@@ -248,13 +252,15 @@ export default function ExperiencesPage() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 relative">
           
           {/* LEFT: Sticky Image Viewport (Desktop Only) */}
-          <div className="hidden lg:block lg:w-1/2 h-[75vh] sticky top-24 overflow-hidden shadow-2xl bg-[#2C2A25]">
+          <div className="hidden lg:block lg:w-1/2 h-[75vh] sticky top-24 overflow-hidden shadow-2xl bg-[#2C2A25] relative">
             {signatureExperiences.map((exp, index) => (
-              <img 
+              <Image 
                 key={index}
                 src={exp.image} 
                 alt={exp.title}
-                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+                fill
+                sizes="50vw"
+                className={`object-cover transition-all duration-1000 ease-in-out ${
                   activeIndex === index ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                 }`}
               />
@@ -322,11 +328,13 @@ export default function ExperiencesPage() {
                       <div className="pl-6 pb-10 max-w-md mx-auto lg:mx-0 lg:pr-8">
                         
                         {/* Mobile Image Reveal */}
-                        <div className="block lg:hidden w-full aspect-[4/3] overflow-hidden mb-8 shadow-xl mt-4">
-                          <img 
+                        <div className="block lg:hidden relative w-full aspect-[4/3] overflow-hidden mb-8 shadow-xl mt-4">
+                          <Image 
                             src={exp.image} 
                             alt={exp.title} 
-                            className="w-full h-full object-cover scale-100" 
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 500px"
+                            className="object-cover scale-100" 
                           />
                         </div>
 

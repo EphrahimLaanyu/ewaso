@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function WildlifeTeaser() {
@@ -52,13 +53,14 @@ export default function WildlifeTeaser() {
           <div key={index} className="flex flex-col group">
             
             {/* Image Block */}
-            <div className="w-full aspect-[4/5] bg-[#EAE7E0] overflow-hidden mb-5 shadow-lg">
+            <div className="relative w-full aspect-[4/5] bg-[#EAE7E0] overflow-hidden mb-5 shadow-lg">
               {item.image ? (
-                <img 
+                <Image 
                   src={item.image} 
                   alt={item.title} 
-                  loading="lazy" 
-                  className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
                 />
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-center bg-[#2C2A25] text-[#F4F1EB] p-6 text-center">

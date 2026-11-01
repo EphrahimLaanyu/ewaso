@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function ElephantAndGiza() {
   const elephantImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Elephants-walking.jpeg";
@@ -38,12 +39,12 @@ export default function ElephantAndGiza() {
 
             {/* Elephant Image */}
             <div className="w-full aspect-[4/5] overflow-hidden bg-[#EAE7E0] group shadow-xl">
-              <img 
+              <Image 
                 src={elephantImage} 
                 alt="Goshen Elephants in Laikipia" 
-                loading="lazy"
                 width={800}
                 height={1000}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
               />
             </div>
@@ -59,12 +60,12 @@ export default function ElephantAndGiza() {
             
             {/* Giza Image */}
             <div className="w-full aspect-[4/5] overflow-hidden bg-[#1A1817] group shadow-xl mb-12 md:mb-24">
-              <img 
+              <Image 
                 src={gizaImage} 
                 alt="Giza the Black Leopard in Laikipia" 
-                loading="lazy"
                 width={800}
                 height={1000}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105 opacity-90"
               />
             </div>

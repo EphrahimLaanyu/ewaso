@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function CampHero() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
   
-  // The new immersive backdrop image  camp-stone-walkway-to-safari-cottage.jpeg
+  // The new immersive backdrop image
   const heroBackdrop = `${baseUrl}camp4.jpeg`;
   
   // The editorial collage images
@@ -21,10 +22,13 @@ export default function CampHero() {
       <div className="relative w-full h-[100svh] overflow-hidden flex flex-col items-center justify-center">
         
         {/* Background Image with Slow Zoom Effect */}
-        <img 
+        <Image 
           src={heroBackdrop} 
           alt="Goshen Pavilion Built Into the Rocks" 
-          className="absolute inset-0 w-full h-full object-cover scale-105 animate-[pulse_20s_ease-in-out_infinite] origin-center"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover scale-105 animate-[pulse_20s_ease-in-out_infinite] origin-center"
         />
         
         {/* Lighter Cinematic Gradients to let the image shine while protecting text */}
@@ -85,24 +89,24 @@ export default function CampHero() {
 
           {/* Image 1: Tall Portrait (Tent Exterior) */}
           <div className="relative z-10 w-[65%] max-w-[350px] aspect-[3/4] shadow-2xl ml-[-20%] group overflow-hidden border-[8px] border-[#F4F1EB]">
-            <img 
+            <Image 
               src={portraitTent} 
               alt="Goshen Tented Suite" 
-              loading="lazy"
               width={350}
               height={466}
+              sizes="(max-width: 768px) 65vw, 350px"
               className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
             />
           </div>
 
           {/* Image 2: Square Detail (Veranda) - Overlaps Image 1 */}
           <div className="absolute z-20 w-[55%] max-w-[300px] aspect-square shadow-2xl right-[10%] bottom-[10%] md:bottom-[15%] group overflow-hidden border-[8px] border-[#F4F1EB]">
-            <img 
+            <Image 
               src={squareVeranda} 
               alt="Private Stone Veranda" 
-              loading="lazy"
               width={300}
               height={300}
+              sizes="(max-width: 768px) 55vw, 300px"
               className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
             />
           </div>

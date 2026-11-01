@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function About() {
   const img1 = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/safari-lounge-interior-couches-lanterns.jpeg";
@@ -19,12 +20,12 @@ export default function About() {
           */}
           <div className="lg:col-span-5 relative group order-2 lg:order-1 mt-8 lg:mt-0">
             <div className="w-full aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-[#EAE7E0]">
-              <img 
+              <Image 
                 src={img1} 
                 alt="Goshen Atmosphere" 
-                loading="lazy"
                 width={600}
                 height={750}
+                sizes="(max-width: 1024px) 100vw, 42vw"
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" 
               />
             </div>
@@ -73,24 +74,24 @@ export default function About() {
             
             {/* The Landscape Base Image */}
             <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#EAE7E0] group z-10">
-              <img 
+              <Image 
                 src={img2} 
                 alt="Goshen Landscape" 
-                loading="lazy"
                 width={800}
                 height={500}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" 
               />
             </div>
             
             {/* The Overlapping Accent Image */}
             <div className="absolute -bottom-10 md:-bottom-20 -left-4 md:-left-16 w-3/5 md:w-1/2 aspect-[4/5] overflow-hidden bg-[#EAE7E0] shadow-2xl group z-20 border-4 md:border-8 border-[#F4F1EB]">
-              <img 
+              <Image 
                 src={img3} 
                 alt="Goshen Architectural Details" 
-                loading="lazy"
                 width={400}
                 height={500}
+                sizes="(max-width: 768px) 60vw, 30vw"
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" 
               />
             </div>

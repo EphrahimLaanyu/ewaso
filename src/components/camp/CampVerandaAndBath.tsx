@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function CampVerandaAndBath() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
-  // The two bathroom imageshttps://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/bathroom.jpeg
+  // The two bathroom images
   const bathMain = `${baseUrl}bathroom.jpeg`;
   const bathDetail = `${baseUrl}ensuite-bathroom-vanity-basin-mirror.jpeg`;
 
@@ -48,6 +49,16 @@ export default function CampVerandaAndBath() {
               </p>
             </div>
 
+            <div className="mt-10">
+              <a 
+                href="/inquire" 
+                className="group flex items-center gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-[#F4F1EB] hover:text-[#EAE7E0] transition-colors duration-300 w-max"
+              >
+                Inquire For Camp Details
+                <span className="block w-8 h-[1px] bg-[#F4F1EB] group-hover:w-16 group-hover:bg-[#EAE7E0] transition-all duration-500 ease-out"></span>
+              </a>
+            </div>
+
           </div>
 
           {/* ========================================================
@@ -57,12 +68,12 @@ export default function CampVerandaAndBath() {
             
             {/* Primary Background Image (Top Right) */}
             <div className="absolute top-0 right-0 w-[80%] h-[75%] overflow-hidden bg-[#2C2A25] shadow-2xl rounded-sm group">
-              <img 
+              <Image 
                 src={bathMain} 
                 alt="Goshen en-suite bathroom with stone shower and handcrafted vanity" 
-                loading="lazy"
                 width={1200}
                 height={800}
+                sizes="(max-width: 1024px) 80vw, 46vw"
                 className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/20 via-transparent to-transparent pointer-events-none"></div>
@@ -70,12 +81,12 @@ export default function CampVerandaAndBath() {
 
             {/* Secondary Overlapping Image (Bottom Left) */}
             <div className="absolute bottom-0 left-0 w-[55%] h-[65%] overflow-hidden bg-[#2C2A25] shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-[6px] md:border-[10px] border-[#591C27] rounded-sm group z-20">
-              <img 
+              <Image 
                 src={bathDetail} 
                 alt="Goshen bathroom stone wall and wooden vanity details" 
-                loading="lazy"
                 width={800}
                 height={600}
+                sizes="(max-width: 1024px) 55vw, 32vw"
                 className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#591C27]/20 via-transparent to-transparent pointer-events-none"></div>

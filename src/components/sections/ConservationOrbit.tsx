@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Conservation() {
   return (
@@ -38,12 +39,12 @@ export default function Conservation() {
         
         {/* Image 1: The Landscape */}
         <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#EAE7E0] group shadow-lg">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1547471080-7fc2caa7fc12?q=80&w=800&auto=format&fit=crop" 
             alt="Goshen Landscape" 
-            loading="lazy"
             width={800}
             height={1000}
+            sizes="(max-width: 768px) 100vw, 33vw"
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" 
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>
@@ -54,12 +55,12 @@ export default function Conservation() {
 
         {/* Image 2: The Wildlife */}
         <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#EAE7E0] group shadow-lg">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=800&auto=format&fit=crop" 
             alt="Laikipia Wildlife" 
-            loading="lazy"
             width={800}
             height={1000}
+            sizes="(max-width: 768px) 100vw, 33vw"
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" 
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>
@@ -70,12 +71,12 @@ export default function Conservation() {
 
         {/* Image 3: The Rangers/Community */}
         <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#EAE7E0] group shadow-lg">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" 
             alt="Community and Flora" 
-            loading="lazy"
             width={800}
             height={1000}
+            sizes="(max-width: 768px) 100vw, 33vw"
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" 
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>

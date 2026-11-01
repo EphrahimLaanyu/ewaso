@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function CampPavilion() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
@@ -49,6 +50,16 @@ export default function CampPavilion() {
               </p>
             </div>
 
+            <div className="mt-10">
+              <a 
+                href="/inquire" 
+                className="group flex items-center gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors duration-300 w-max"
+              >
+                Inquire About Dining
+                <span className="block w-8 h-[1px] bg-[#591C27] group-hover:w-16 group-hover:bg-[#2C2A25] transition-all duration-500 ease-out"></span>
+              </a>
+            </div>
+
           </div>
 
           {/* ========================================================
@@ -58,12 +69,12 @@ export default function CampPavilion() {
             
             {/* Left Half: Main Image (Spans Full Height) */}
             <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
-              <img 
+              <Image 
                 src={diningMain} 
                 alt="Main dining table in the Goshen pavilion" 
-                loading="lazy"
                 width={1200}
                 height={800}
+                sizes="(max-width: 1024px) 50vw, 29vw"
                 className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
               />
               {/* Subtle inner dark gradient for depth where images meet */}
@@ -75,25 +86,25 @@ export default function CampPavilion() {
               
               {/* Top Right */}
               <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
-                <img 
+                <Image 
                   src={diningAlt1} 
                   alt="Goshen dining table setting details" 
-                  loading="lazy"
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
               </div>
 
               {/* Bottom Right */}
-              <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden">
-                <img 
+              <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
+                <Image 
                   src={diningAlt2} 
                   alt="Goshen pavilion lounge looking out across the bush" 
-                  loading="lazy"
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
               </div>

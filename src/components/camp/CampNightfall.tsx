@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function CampNightfall() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
@@ -56,7 +57,7 @@ export default function CampNightfall() {
                 As the sun drops below the horizon, the evening ritual begins. We light the campfire out in the open, offering front-row seats to the darkening Laikipia sky.
               </p>
               <p>
-                Pull up a chair with a cold sundowner, watch the landscape turn deep blue, and swap stories from the day's wildlife sightings before dinner is served under the stars.
+                Pull up a chair with a cold sundowner, watch the landscape turn deep blue, and swap stories from the day&apos;s wildlife sightings before dinner is served under the stars.
               </p>
             </div>
 
@@ -81,12 +82,12 @@ export default function CampNightfall() {
             
             {/* Top Half: Full Width Landscape Image */}
             <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
-              <img 
+              <Image 
                 src={fireImage2} 
                 alt="Goshen campfire and twilight horizon over Laikipia" 
-                loading="lazy"
                 width={1200}
                 height={600}
+                sizes="(max-width: 1024px) 100vw, 58vw"
                 className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
               />
               {/* Subtle bottom shadow where it meets the lower images */}
@@ -98,12 +99,12 @@ export default function CampNightfall() {
               
               {/* Bottom Left */}
               <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
-                <img 
+                <Image 
                   src={fireImage1} 
                   alt="Campfire setting at dusk at Goshen" 
-                  loading="lazy"
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
                 {/* Subtle right shadow where it meets the right image */}
@@ -111,13 +112,13 @@ export default function CampNightfall() {
               </div>
 
               {/* Bottom Right */}
-              <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden">
-                <img 
+              <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
+                <Image 
                   src={fireImage3} 
                   alt="Guests enjoying sundowners by the campfire at Goshen" 
-                  loading="lazy"
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
               </div>

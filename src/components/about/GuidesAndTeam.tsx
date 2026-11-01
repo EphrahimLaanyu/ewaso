@@ -1,4 +1,5 @@
 import React from 'react'; 
+import Image from 'next/image';
 
 export default function GuidesAndTeam() { 
   const guideImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/guides-observing-elephants-waterhole.jpeg"; 
@@ -23,12 +24,12 @@ export default function GuidesAndTeam() {
           
           {/* LEFT COLUMN: Expansive Image */} 
           <div className="lg:col-span-7 w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-[#EAE7E0] group shadow-xl order-2 lg:order-1"> 
-            <img 
+            <Image 
               src={guideImage} 
               alt="Goshen Guides and Tracking" 
-              loading="lazy"
               width={1200}
               height={750}
+              sizes="(max-width: 1024px) 100vw, 58vw"
               className="w-full h-full object-cover transition-transform duration-[3s] ease-out group-hover:scale-105" 
             /> 
           </div> 

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/sections/Navbar';
 import Footer from '@/components/sections/Footer';
 import Link from 'next/link';
@@ -241,7 +242,14 @@ export default function GalleryClient() {
       {/* 2. DRAMATIC HERO SECTION (70svh) */} 
       <section className="relative w-full h-[70svh] min-h-[500px] flex items-center justify-center overflow-hidden bg-[#1A1817]"> 
         <div className="absolute inset-0 z-0"> 
-          <img src={`${BASE_URL}elephants-line-drinking-waterhole-monochrome.jpeg`} alt="Goshen Sanctuary Panoramic Bush Landscape" className="w-full h-full object-cover scale-105 animate-[pulse_24s_ease-in-out_infinite]" /> 
+          <Image 
+            src={`${BASE_URL}elephants-line-drinking-waterhole-monochrome.jpeg`} 
+            alt="Goshen Sanctuary Panoramic Bush Landscape" 
+            fill 
+            priority
+            sizes="100vw"
+            className="object-cover scale-105 animate-[pulse_24s_ease-in-out_infinite]" 
+          /> 
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#F4F1EB]"></div> 
         </div> 
         
@@ -286,11 +294,12 @@ export default function GalleryClient() {
                 className={`group relative overflow-hidden bg-[#2C2A25] cursor-pointer shadow-xl ${item.spanClass} ${item.aspectClass}`} 
               > 
                 {/* The image is now absolute inset-0 so it ALWAYS fills the container regardless of grid stretching */}
-                <img 
+                <Image 
                   src={item.src} 
                   alt={item.alt} 
-                  loading="lazy" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105 z-0" 
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-[5s] ease-out group-hover:scale-105 z-0" 
                 /> 
                 
                 {/* Ambient dark bottom gradient for caption visibility */} 
@@ -338,11 +347,12 @@ export default function GalleryClient() {
                 onClick={() => openItem(item)} 
                 className={`group relative overflow-hidden bg-[#2C2A25] cursor-pointer shadow-xl ${item.spanClass} ${item.aspectClass}`} 
               > 
-                <img 
+                <Image 
                   src={item.src} 
                   alt={item.alt} 
-                  loading="lazy" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105 z-0" 
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-[5s] ease-out group-hover:scale-105 z-0" 
                 /> 
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div> 
@@ -387,11 +397,12 @@ export default function GalleryClient() {
                 onClick={() => openItem(item)} 
                 className={`group relative overflow-hidden bg-[#2C2A25] cursor-pointer shadow-xl ${item.spanClass} ${item.aspectClass}`} 
               > 
-                <img 
+                <Image 
                   src={item.src} 
                   alt={item.alt} 
-                  loading="lazy" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105 z-0" 
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-[5s] ease-out group-hover:scale-105 z-0" 
                 /> 
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div> 
@@ -455,7 +466,14 @@ export default function GalleryClient() {
               </svg> 
             </button> 
             
-            <img src={allGalleryItems[activeLightboxIndex].src} alt={allGalleryItems[activeLightboxIndex].alt} className="max-h-[75vh] max-w-[90vw] object-contain shadow-2xl transition-all duration-300" /> 
+            <Image 
+              src={allGalleryItems[activeLightboxIndex].src} 
+              alt={allGalleryItems[activeLightboxIndex].alt} 
+              width={1600} 
+              height={1200} 
+              sizes="90vw" 
+              className="max-h-[75vh] max-w-[90vw] w-auto h-auto object-contain shadow-2xl transition-all duration-300" 
+            /> 
             
             <button onClick={showNext} className="absolute right-2 md:right-6 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/80 text-white flex items-center justify-center transition-all border border-white/10" aria-label="Next Image" > 
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"> 

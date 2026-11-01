@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function OurConviction() {
   return (
@@ -31,19 +32,19 @@ export default function OurConviction() {
             
             {/* The Image at the top */}
             <div className="w-full aspect-[4/3] overflow-hidden bg-[#EAE7E0] mb-8 md:mb-auto">
-              <img 
+              <Image 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Giraffes-drinking-water.jpeg" 
                 alt="Goshen Conservation" 
-                loading="lazy"
                 width={800}
                 height={600}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
 
             {/* The Text at the bottom */}
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mt-8">
-              Protecting nature isn't just an extra project for us—it is the whole reason we exist. We stay quiet and respectful to protect the land, giving you a responsible, front-row seat to the real African bush.
+              Protecting nature isn&apos;t just an extra project for us—it is the whole reason we exist. We stay quiet and respectful to protect the land, giving you a responsible, front-row seat to the real African bush.
             </p>
           </div>
 
