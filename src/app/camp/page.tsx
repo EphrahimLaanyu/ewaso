@@ -29,14 +29,23 @@ export const metadata: Metadata = {
     description:
       'Searching for exceptional places to stay in Laikipia? Discover handcrafted canvas suites and private stone verandas at Goshen Camp in Ewaso Enclave.',
     url: 'https://goshencamp.com/camp',
-    images: ['/og-image.jpg'],
+    images: [
+      {
+        url: 'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Luxury tented safari suites at Goshen Camp in Laikipia Kenya',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Places to Stay in Laikipia | Luxury Tented Suites at Goshen Camp',
     description:
       'Bespoke canvas suites and luxury safari camp accommodations in Ewaso Enclave Conservancy, Laikipia.',
-    images: ['/og-image.jpg'],
+    images: [
+      'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+    ],
   },
 };
 

@@ -21,14 +21,23 @@ export const metadata: Metadata = {
     description:
       'Visual anthology of Goshen Safari Camp: handcrafted luxury tented suites, untamed Laikipia wildlife, and safari activities in Kenya.',
     url: 'https://goshencamp.com/gallery',
-    images: ['/og-image.jpg'],
+    images: [
+      {
+        url: 'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Visual gallery of Goshen Safari Camp in Laikipia Kenya',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Goshen Safari Camp Gallery | Photos of Laikipia Wildlife & Tents',
     description:
       'Photography of luxury canvas suites, wildlife encounters, and pristine Laikipia landscapes at Goshen Safari Camp.',
-    images: ['/og-image.jpg'],
+    images: [
+      'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+    ],
   },
 };
 

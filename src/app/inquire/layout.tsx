@@ -20,14 +20,23 @@ export const metadata: Metadata = {
     description:
       'Inquire directly for bespoke canvas suites, private buyouts, and safari activities at Goshen in Ewaso Enclave Conservancy, Laikipia.',
     url: 'https://goshencamp.com/inquire',
-    images: ['/og-image.jpg'],
+    images: [
+      {
+        url: 'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Inquire and book your stay at Goshen Safari Camp in Laikipia Kenya',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Book Your Stay | Inquire at Goshen Luxury Camp in Laikipia',
     description:
       'Reserve your private safari buyout or luxury tented suite at Goshen in Ewaso Enclave Conservancy, Laikipia.',
-    images: ['/og-image.jpg'],
+    images: [
+      'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+    ],
   },
 };
 
@@ -38,4 +47,3 @@ export default function InquireLayout({
 }) {
   return <>{children}</>;
 }
-

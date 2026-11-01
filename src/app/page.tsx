@@ -18,7 +18,23 @@ export const metadata: Metadata = {
     description:
       'Ranked among the premier camps in Laikipia. Goshen offers exclusive places to stay in Laikipia within Ewaso Enclave Conservancy.',
     url: 'https://goshencamp.com',
-    images: ['/og-image.jpg'],
+    images: [
+      {
+        url: 'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Goshen Luxury Safari Camp in Laikipia Kenya',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Camps in Laikipia | Goshen Luxury Safari Camp & Places to Stay',
+    description:
+      'Ranked among the premier camps in Laikipia. Goshen offers exclusive places to stay in Laikipia within Ewaso Enclave Conservancy.',
+    images: [
+      'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+    ],
   },
 };
 

@@ -29,14 +29,23 @@ export const metadata: Metadata = {
     description:
       'Learn about Goshen’s unstaged conservation ethos, our Samburu naturalist guides, and the preservation of ancient wildlife corridors in Ewaso Enclave Conservancy.',
     url: 'https://goshencamp.com/about',
-    images: ['/og-image.jpg'],
+    images: [
+      {
+        url: 'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Conservation and luxury safari camp in Ewaso Enclave Conservancy Laikipia',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ewaso Enclave Conservancy | Conservation Story & Ethos at Goshen',
     description:
       'Discover the unstaged conservation ethos and Samburu naturalist guides at Goshen in Ewaso Enclave Conservancy, Laikipia.',
-    images: ['/og-image.jpg'],
+    images: [
+      'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+    ],
   },
 };
 

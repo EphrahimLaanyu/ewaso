@@ -22,14 +22,23 @@ export const metadata: Metadata = {
     description:
       'Unrivalled safari activities in Kenya at Goshen: guided bush walks on ancient elephant trails, black leopard tracking in Ewaso Enclave, and night game drives.',
     url: 'https://goshencamp.com/experiences',
-    images: ['/og-image.jpg'],
+    images: [
+      {
+        url: 'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Safari activities in Kenya at Goshen Safari Camp Laikipia',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Safari Activities in Kenya | Walking Safaris & Drives in Laikipia',
     description:
       'Unscripted safari activities in Kenya: black leopard tracking, walking safaris, and game drives in Ewaso Enclave Conservancy.',
-    images: ['/og-image.jpg'],
+    images: [
+      'https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/camp-stone-walkway-to-safari-cottage.jpeg',
+    ],
   },
 };
 
