@@ -7,7 +7,7 @@ export default function CampPavilion() {
 
   // The three dining/pavilion images
   const diningMain = `${baseUrl}open-air-dining-pavilion-bush-vista.jpeg`;
-  const diningAlt1 = `${baseUrl}open-air-dining-deck-table-setting.jpeg`;
+  const diningAlt1 = `${baseUrl}camp5.jpeg`;
   const diningAlt2 = `${baseUrl}dining-tent-long-banquet-table-runner.jpeg`;
 
   return (

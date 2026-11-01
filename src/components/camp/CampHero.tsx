@@ -5,8 +5,8 @@ import React from 'react';
 export default function CampHero() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
   
-  // The new immersive backdrop image
-  const heroBackdrop = `${baseUrl}camp-stone-walkway-to-safari-cottage.jpeg`;
+  // The new immersive backdrop image  camp-stone-walkway-to-safari-cottage.jpeg
+  const heroBackdrop = `${baseUrl}camp4.jpeg`;
   
   // The editorial collage images
   const portraitTent = `${baseUrl}camp2.jpeg`;

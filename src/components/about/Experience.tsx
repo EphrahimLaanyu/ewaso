@@ -100,7 +100,7 @@ export default function FullItinerary() {
             {/* Image 2: Landscape Top (Right Column) */}
             <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg">
               <img 
-                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Cars-on-safari.jpeg" 
+                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/women-with-sunglasses.jpeg" 
                 alt="Cars on Safari" 
                 loading="lazy" 
                 className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-105" 
