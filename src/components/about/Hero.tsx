@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   const campImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/River-dried%20up.jpeg"; 
@@ -20,12 +21,13 @@ export default function Hero() {
           clipPath: 'ellipse(120% 100% at 50% 0%)' 
         }}
       >
-        <img 
+        <Image 
           src={campImage} 
-          alt="Goshen Landscape" 
-          width={1920}
-          height={1080}
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          alt="Scenic landscape of Ewaso Enclave Conservancy and Laikipia plateau at Goshen Safari Camp" 
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         
         {/* Dark overlays to ensure the white text pops */}
@@ -36,6 +38,7 @@ export default function Hero() {
         <div className="absolute inset-0 flex items-center justify-center text-center px-6 mt-16 md:mt-12">
           <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] leading-none tracking-tight text-[#F4F1EB] drop-shadow-2xl uppercase">
             About<span className="italic font-light lowercase text-[#F4F1EB]/90 ml-3 md:ml-6">us</span>
+            <span className="sr-only"> — Goshen in Ewaso Enclave Conservancy, Laikipia Kenya</span>
           </h1>
         </div>
       </div>

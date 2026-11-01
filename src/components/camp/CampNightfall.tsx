@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CampNightfall() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
@@ -37,7 +39,7 @@ export default function CampNightfall() {
           {/* ========================================================
               LEFT COLUMN: Typography & Final CTA (5 Cols)
           ======================================================== */}
-          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
+          <article className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
             
             <div className="flex items-center gap-4 mb-6">
               <span className="w-10 h-[1px] bg-[#591C27]"></span>
@@ -49,6 +51,7 @@ export default function CampNightfall() {
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-8">
               Stories by <br />
               <span className="italic font-light text-[#591C27]">the fire.</span>
+              <span className="sr-only"> &mdash; Evening Safari Bush Campfire in Laikipia</span>
             </h2>
             
             <div className="space-y-6 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mb-12 lg:pr-8">
@@ -56,23 +59,22 @@ export default function CampNightfall() {
                 As the sun drops below the horizon, the evening ritual begins. We light the campfire out in the open, offering front-row seats to the darkening Laikipia sky.
               </p>
               <p>
-                Pull up a chair with a cold sundowner, watch the landscape turn deep blue, and swap stories from the day's wildlife sightings before dinner is served under the stars.
+                Pull up a chair with a cold sundowner, watch the landscape turn deep blue, and swap stories from the day&apos;s wildlife sightings before dinner is served under the stars.
               </p>
             </div>
 
             {/* Closing Call to Action */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <a 
+              <Link 
                 href="/inquire" 
                 className="group inline-flex items-center justify-between gap-6 bg-[#591C27] text-[#F4F1EB] px-8 py-4 md:py-5 text-[10px] md:text-xs tracking-[0.25em] uppercase font-bold hover:bg-[#2C2A25] transition-colors duration-500"
               >
                 <span>Book Your Stay</span>
                 <span className="block w-4 h-[1px] bg-[#F4F1EB] group-hover:w-8 transition-all duration-500 ease-out"></span>
-              </a>
-
+              </Link>
             </div>
 
-          </div>
+          </article>
 
           {/* ========================================================
               RIGHT COLUMN: Flush Zero-Gap Grid (7 Cols)
@@ -81,12 +83,12 @@ export default function CampNightfall() {
             
             {/* Top Half: Full Width Landscape Image */}
             <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
-              <img 
+              <Image 
                 src={fireImage2} 
-                alt="Goshen campfire and twilight horizon over Laikipia" 
-                loading="lazy"
+                alt="Bush dinner around roaring campfire under twilight skies in Laikipia Kenya" 
                 width={1200}
                 height={600}
+                sizes="(max-width: 1024px) 100vw, 58vw"
                 className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
               />
               {/* Subtle bottom shadow where it meets the lower images */}
@@ -98,12 +100,12 @@ export default function CampNightfall() {
               
               {/* Bottom Left */}
               <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
-                <img 
+                <Image 
                   src={fireImage1} 
-                  alt="Campfire setting at dusk at Goshen" 
-                  loading="lazy"
+                  alt="Roaring campfire flames at sunset in the Laikipia bush at Goshen" 
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
                 {/* Subtle right shadow where it meets the right image */}
@@ -111,13 +113,13 @@ export default function CampNightfall() {
               </div>
 
               {/* Bottom Right */}
-              <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden">
-                <img 
+              <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
+                <Image 
                   src={fireImage3} 
-                  alt="Guests enjoying sundowners by the campfire at Goshen" 
-                  loading="lazy"
+                  alt="Guests enjoying evening safari bush dinner by campfire at Goshen Laikipia" 
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
               </div>

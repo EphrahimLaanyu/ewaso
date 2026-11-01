@@ -18,7 +18,7 @@ export default function Footer() {
             >
               <GoshenLogo variant="horizontal" theme="light" className="mb-6 scale-110 origin-left" />
             </Link>
-            <h2 className="sr-only">Goshen Laikipia</h2>
+            <p className="sr-only">Goshen Laikipia — Luxury Safari Camp & Places to Stay in Laikipia, Kenya</p>
             <p className="font-serif text-xl md:text-2xl text-[#F4F1EB] font-light italic mb-2">
               Goshen Laikipia
             </p>

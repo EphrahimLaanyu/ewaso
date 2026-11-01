@@ -27,7 +27,7 @@ export default function ConservationEthos() {
           “ 
         </span> 
         <h2 className="relative z-10 font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.25] tracking-tight text-[#F4F1EB]"> 
-          We don't bait. We don't stage sightings. We don't get in the way.<br className="hidden md:block mt-2" /> 
+          We don&apos;t bait. We don&apos;t stage sightings. We don&apos;t get in the way.<br className="hidden md:block mt-2" /> 
           <span className="italic font-light opacity-90"> Keeping this ecosystem undisturbed is our absolute priority.</span> 
         </h2> 
         <p className="relative z-10 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/85 mt-6 max-w-2xl mx-auto">

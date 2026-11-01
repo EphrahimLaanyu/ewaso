@@ -4,8 +4,12 @@ import Footer from '@/components/sections/Footer';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Goshen · Laikipia, Kenya',
-  description: 'Privacy Policy for Goshen safari sanctuary in Laikipia, Kenya.',
+  title: 'Privacy Policy | Goshen Safari Camp · Laikipia, Kenya',
+  description:
+    'Privacy Policy for Goshen luxury safari camp in Ewaso Enclave Conservancy, Laikipia, Kenya.',
+  alternates: {
+    canonical: 'https://goshencamp.com/privacy',
+  },
 };
 
 export default function PrivacyPage() {
@@ -33,30 +37,28 @@ export default function PrivacyPage() {
           <div>
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">1. Information Collection</h2>
             <p>
-              When inquiring about availability or requesting reservations, we collect personal details including names, contact email addresses, phone numbers, preferred travel dates, group composition, and any specialized dietary or safari requirements you voluntarily provide.
+              We collect information provided directly through booking requests, reservation inquiry forms, and communication channels. This includes guest names, contact details, travel party size, and arrival itineraries.
             </p>
           </div>
 
           <div>
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">2. Booking Partner Relationship</h2>
             <p>
-Reservations are made directly with Goshen Camp.            </p>
+              Goshen operates in partnership with authorized booking partners and Ewaso Enclave Conservancy management. Data shared during booking is utilized strictly for reservation coordination, park entry clearance, and personalized service delivery.
+            </p>
           </div>
 
           <div>
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">3. Use of Information</h2>
             <p>
-              Guest information is strictly utilized to process reservations, coordinate conservancy logistics, arrange custom safari activities, and provide responsive customer service. We do not sell or monetize personal data to third parties.
+              Guest information is never sold or distributed to third-party commercial entities. Information is retained solely for communication regarding your stay, compliance with Kenyan hospitality regulations, and safety oversight.
             </p>
           </div>
 
           <div>
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">4. Inquiries & Contact</h2>
             <p>
-              For questions concerning this Privacy Policy or data requests, please contact our guest concierge at{' '}
-              <a href="mailto:info@goshencamp.com" className="text-[#591C27] underline underline-offset-4 hover:opacity-80">
-                info@goshencamp.com
-              </a>.
+              For privacy-related inquiries or to request correction of your personal data, please contact the Goshen management team at info@goshencamp.com.
             </p>
           </div>
         </div>

@@ -34,6 +34,7 @@ export default function InquireClient() {
       <section className="w-full max-w-6xl mx-auto px-6 md:px-12 pt-40 pb-32 flex-grow flex flex-col items-center justify-center">
         <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl tracking-tight mb-16 text-[#2C2A25] text-center">
           How can we help?
+          <span className="sr-only"> &mdash; Inquire &amp; Book Your Safari at Goshen Camp Laikipia</span>
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">

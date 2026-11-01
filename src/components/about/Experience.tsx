@@ -1,6 +1,7 @@
 'use client'; 
 
 import React from 'react'; 
+import Image from 'next/image';
 
 export default function FullItinerary() { 
   const fullItinerary = [ 
@@ -33,22 +34,22 @@ export default function FullItinerary() {
       time: "2:00 PM – 3:00 PM", 
       title: "Siesta Time", 
       description: "As the afternoon temperatures rise and the bush grows quieter, take a little time for yourself. Retreat to the comfort and privacy of your tent for an afternoon nap, read a book, or simply relax while listening to the natural sounds around camp. There is no rush at Goshen; sometimes doing absolutely nothing is part of the safari experience."
-    },
+    }, 
     { 
       time: "3:00 PM – 4:00 PM", 
       title: "Afternoon Coffee & Refreshments", 
       description: "As the afternoon begins to cool, reconvene at the camp's lounge for a freshly brewed cup of coffee, tea, or your favourite refreshing drink, accompanied by some light afternoon treats. Take this opportunity to unwind, exchange stories, and prepare your cameras and binoculars for another exciting adventure into the wilderness."
-    },
+    }, 
     { 
       time: "4:00 PM – 7:00 PM", 
       title: "Evening Game Drive & Night Safari", 
       description: "Head out for an afternoon game drive as the golden light transforms the Laikipia landscape. Explore the wilderness in search of wildlife emerging from the afternoon heat, with plenty of opportunities to appreciate the beauty of the African sunset. As darkness settles over the bush, the adventure continues with a night drive, offering an entirely different perspective of the wilderness. With the help of your guide and spotlight, discover the fascinating nocturnal world as you make your way towards a specially prepared bush dinner location."
-    },
+    }, 
     { 
       time: "7:00 PM – 9:00 PM", 
       title: "Bush Dinner Under the Stars", 
       description: "Arrive at a beautifully prepared bush dinner setting along the banks of the Ewaso Nyiro River, where a warm campfire, lantern-lit tables, and the sounds of the African wilderness welcome you. Enjoy a delicious dinner beneath a canopy of stars, surrounded by the raw beauty of Laikipia. With the gentle flow of the river nearby, the crackling of the fire, and the distant calls of nocturnal wildlife, this is an opportunity to experience the magic of the African bush at its finest. An evening of wonderful food, shared stories, and unforgettable moments in the heart of nature."
-    },
+    }, 
     { 
       time: "9:00 PM – 10:00 PM", 
       title: "Return to Camp & Rest", 
@@ -64,15 +65,15 @@ export default function FullItinerary() {
         <div className="flex items-center gap-4 mb-6"> 
           <span className="w-8 h-[1px] bg-[#591C27]/40"></span> 
           <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27]"> 
-            The Itinerary 
+            Safari Activities in Kenya 
           </span> 
           <span className="w-8 h-[1px] bg-[#591C27]/40"></span> 
         </div> 
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#2C2A25] mb-6 uppercase"> 
-          A Day at Goshen Camp
+          A Day at Goshen Camp &mdash; Safari Routine
         </h2> 
         <p className="font-sans text-sm md:text-base leading-relaxed text-[#2C2A25]/70 max-w-2xl font-bold mb-4">
-          An unforgettable day in the heart of Laikipia's wilderness.
+          An unforgettable day of safari activities in Kenya&apos;s heart of Laikipia.
         </p>
         <p className="font-sans text-sm md:text-base leading-relaxed text-[#2C2A25]/70 max-w-2xl">
           At Goshen, every day unfolds to the rhythm of the African bush. From golden sunrises and intimate wildlife encounters to peaceful afternoons and magical evenings beneath the stars, each experience is thoughtfully designed to immerse you in the beauty of our wilderness home along the Ewaso Nyiro River.
@@ -88,31 +89,37 @@ export default function FullItinerary() {
           <div className="lg:sticky lg:top-32 h-[60vh] md:h-[70vh] w-full grid grid-cols-2 grid-rows-2 gap-4">
             
             {/* Image 1: Tall Portrait (Left Column) */}
-            <div className="row-span-2 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg">
-              <img 
+            <div className="row-span-2 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg relative">
+              <Image 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Land.jpeg" 
-                alt="Landscape" 
-                loading="lazy" 
+                alt="Vast Laikipia wilderness and elephant corridors near Goshen Camp" 
+                width={600}
+                height={1200}
+                sizes="(max-width: 1024px) 50vw, 25vw"
                 className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-105" 
               />
             </div>
             
             {/* Image 2: Landscape Top (Right Column) */}
-            <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg">
-              <img 
-                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Cars-on-safari.jpeg" 
-                alt="Cars on Safari" 
-                loading="lazy" 
+            <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg relative">
+              <Image 
+                src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/women-with-sunglasses.jpeg" 
+                alt="Guests enjoying safari activities in Kenya during game drive in Laikipia" 
+                width={600}
+                height={600}
+                sizes="(max-width: 1024px) 50vw, 25vw"
                 className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-105" 
               />
             </div>
             
             {/* Image 3: Landscape Bottom (Right Column) */}
-            <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg">
-              <img 
+            <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg relative">
+              <Image 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-flowing.jpeg" 
-                alt="River Fishing" 
-                loading="lazy" 
+                alt="Serene Ewaso Nyiro River flowing past Goshen Safari Camp Laikipia" 
+                width={600}
+                height={600}
+                sizes="(max-width: 1024px) 50vw, 25vw"
                 className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-105" 
               />
             </div>
@@ -124,7 +131,7 @@ export default function FullItinerary() {
         <div className="w-full lg:w-1/2 pt-4">
           <div className="border-l border-[#2C2A25]/10 ml-2 md:ml-4">
             {fullItinerary.map((exp, index) => (
-              <div 
+              <article 
                 key={index} 
                 className="relative pl-10 md:pl-16 pb-16 md:pb-20 group last:pb-0"
               >
@@ -143,7 +150,7 @@ export default function FullItinerary() {
                     {exp.description}
                   </p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>

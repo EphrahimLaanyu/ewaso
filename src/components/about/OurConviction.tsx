@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function OurConviction() {
   return (
@@ -9,7 +10,7 @@ export default function OurConviction() {
         <div className="flex items-center gap-4 mb-16 md:mb-24">
           <span className="w-12 h-[1px] bg-[#2C2A25]/30"></span>
           <h2 className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#2C2A25]/50">
-            Our Belief
+            Our Belief — Unscripted Wilderness in Laikipia
           </h2>
         </div>
 
@@ -31,19 +32,19 @@ export default function OurConviction() {
             
             {/* The Image at the top */}
             <div className="w-full aspect-[4/3] overflow-hidden bg-[#EAE7E0] mb-8 md:mb-auto">
-              <img 
+              <Image 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Giraffes-drinking-water.jpeg" 
-                alt="Goshen Conservation" 
-                loading="lazy"
+                alt="Giraffes drinking at savannah waterhole in Ewaso Enclave Conservancy, Laikipia" 
                 width={800}
                 height={600}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
 
             {/* The Text at the bottom */}
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mt-8">
-              Protecting nature isn't just an extra project for us—it is the whole reason we exist. We stay quiet and respectful to protect the land, giving you a responsible, front-row seat to the real African bush.
+              Protecting nature isn&apos;t just an extra project for us—it is the whole reason we exist. We stay quiet and respectful to protect the land, giving you a responsible, front-row seat to the real African bush.
             </p>
           </div>
 

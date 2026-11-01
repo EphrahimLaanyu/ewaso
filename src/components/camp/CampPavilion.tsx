@@ -1,13 +1,15 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CampPavilion() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
 
   // The three dining/pavilion images
   const diningMain = `${baseUrl}open-air-dining-pavilion-bush-vista.jpeg`;
-  const diningAlt1 = `${baseUrl}open-air-dining-deck-table-setting.jpeg`;
+  const diningAlt1 = `${baseUrl}camp5.jpeg`;
   const diningAlt2 = `${baseUrl}dining-tent-long-banquet-table-runner.jpeg`;
 
   return (
@@ -26,7 +28,7 @@ export default function CampPavilion() {
           {/* ========================================================
               LEFT: Typography & Story (5 Cols)
           ======================================================== */}
-          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
+          <article className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
             
             <div className="flex items-center gap-4 mb-6">
               <span className="w-10 h-[1px] bg-[#591C27]"></span>
@@ -36,8 +38,9 @@ export default function CampPavilion() {
             </div>
             
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-8">
-              Open-air dining & <br />
+              Open-air dining &amp; <br />
               <span className="italic font-light text-[#591C27]">endless views.</span>
+              <span className="sr-only"> &mdash; Safari Camp Cuisine &amp; Lounging in Laikipia</span>
             </h2>
             
             <div className="space-y-6 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 pr-0 lg:pr-6">
@@ -49,7 +52,17 @@ export default function CampPavilion() {
               </p>
             </div>
 
-          </div>
+            <div className="mt-10">
+              <Link 
+                href="/inquire" 
+                className="group flex items-center gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors duration-300 w-max"
+              >
+                Inquire About Dining
+                <span className="block w-8 h-[1px] bg-[#591C27] group-hover:w-16 group-hover:bg-[#2C2A25] transition-all duration-500 ease-out"></span>
+              </Link>
+            </div>
+
+          </article>
 
           {/* ========================================================
               RIGHT: 100vh Flush Grid / Touching Images (7 Cols)
@@ -58,12 +71,12 @@ export default function CampPavilion() {
             
             {/* Left Half: Main Image (Spans Full Height) */}
             <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
-              <img 
+              <Image 
                 src={diningMain} 
-                alt="Main dining table in the Goshen pavilion" 
-                loading="lazy"
+                alt="Main open-air dining pavilion table overlooking Laikipia bush vista at Goshen" 
                 width={1200}
                 height={800}
+                sizes="(max-width: 1024px) 50vw, 29vw"
                 className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
               />
               {/* Subtle inner dark gradient for depth where images meet */}
@@ -75,25 +88,25 @@ export default function CampPavilion() {
               
               {/* Top Right */}
               <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
-                <img 
+                <Image 
                   src={diningAlt1} 
-                  alt="Goshen dining table setting details" 
-                  loading="lazy"
+                  alt="Goshen dining table setting and bush banquet details" 
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
               </div>
 
               {/* Bottom Right */}
-              <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden">
-                <img 
+              <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
+                <Image 
                   src={diningAlt2} 
-                  alt="Goshen pavilion lounge looking out across the bush" 
-                  loading="lazy"
+                  alt="Goshen safari camp pavilion lounge looking out across the Laikipia plains" 
                   width={800}
                   height={600}
+                  sizes="(max-width: 1024px) 50vw, 29vw"
                   className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105"
                 />
               </div>
