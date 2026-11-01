@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CampVerandaAndBath() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
@@ -26,7 +27,7 @@ export default function CampVerandaAndBath() {
           {/* ========================================================
               LEFT COLUMN: Typography & Copy (5 Cols)
           ======================================================== */}
-          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1">
+          <article className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1">
             
             <div className="flex items-center gap-4 mb-6 md:mb-8">
               <span className="w-10 h-[1px] bg-[#F4F1EB]/40"></span>
@@ -36,8 +37,9 @@ export default function CampVerandaAndBath() {
             </div>
             
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-8">
-              Hot bush showers & <br />
+              Hot bush showers &amp; <br />
               <span className="italic font-light text-[#F4F1EB]/85">rough-hewn luxury.</span>
+              <span className="sr-only"> &mdash; En-Suite Safari Tents in Kenya</span>
             </h2>
             
             <div className="space-y-6 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/80">
@@ -50,16 +52,16 @@ export default function CampVerandaAndBath() {
             </div>
 
             <div className="mt-10">
-              <a 
+              <Link 
                 href="/inquire" 
                 className="group flex items-center gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-[#F4F1EB] hover:text-[#EAE7E0] transition-colors duration-300 w-max"
               >
                 Inquire For Camp Details
                 <span className="block w-8 h-[1px] bg-[#F4F1EB] group-hover:w-16 group-hover:bg-[#EAE7E0] transition-all duration-500 ease-out"></span>
-              </a>
+              </Link>
             </div>
 
-          </div>
+          </article>
 
           {/* ========================================================
               RIGHT COLUMN: 100vh Layered Image Collage (7 Cols)
@@ -70,7 +72,7 @@ export default function CampVerandaAndBath() {
             <div className="absolute top-0 right-0 w-[80%] h-[75%] overflow-hidden bg-[#2C2A25] shadow-2xl rounded-sm group">
               <Image 
                 src={bathMain} 
-                alt="Goshen en-suite bathroom with stone shower and handcrafted vanity" 
+                alt="Goshen en-suite bathroom with stone shower and handcrafted vanity in Laikipia" 
                 width={1200}
                 height={800}
                 sizes="(max-width: 1024px) 80vw, 46vw"
@@ -83,7 +85,7 @@ export default function CampVerandaAndBath() {
             <div className="absolute bottom-0 left-0 w-[55%] h-[65%] overflow-hidden bg-[#2C2A25] shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-[6px] md:border-[10px] border-[#591C27] rounded-sm group z-20">
               <Image 
                 src={bathDetail} 
-                alt="Goshen bathroom stone wall and wooden vanity details" 
+                alt="Goshen bathroom stone wall and wooden vanity details in Laikipia tented suite" 
                 width={800}
                 height={600}
                 sizes="(max-width: 1024px) 55vw, 32vw"

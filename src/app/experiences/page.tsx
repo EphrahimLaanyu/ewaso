@@ -5,7 +5,6 @@ import Navbar from '@/components/sections/Navbar';
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
-
 // ============================================================================
 // IMAGE CONFIGURATION
 // ============================================================================
@@ -31,6 +30,7 @@ const signatureExperiences = [
     title: "Day Game Drives",
     subtitle: "Across the rugged bushveld of Ewaso Enclave.",
     image: EXPERIENCE_IMAGES.dayDrives,
+    alt: "Day game drive safari activities across Ewaso Enclave Conservancy in Laikipia Kenya",
     intro: "Traverse the private Ewaso Enclave Conservancy and surrounding Laikipia wilderness in open 4x4 safari vehicles. Expert local trackers read spoor and navigate terrain shaped by seasonal wildlife corridors.",
     description: "Encounters follow the pulse of the bush, from breeding herds crossing the Ewaso Nyiro River to leopards resting in riverine fig trees.",
     highlights: [
@@ -44,6 +44,7 @@ const signatureExperiences = [
     title: "Night Game Drives",
     subtitle: "The bushveld after sunset.",
     image: EXPERIENCE_IMAGES.nightDrives,
+    alt: "Night game drive with spotlight tracking leopards and nocturnal wildlife in Laikipia",
     intro: "Dusk shifts the savannah into an active hunting ground. Filtered red spotlights reveal elusive nocturnal species rarely encountered during daylight hours.",
     description: "Drives operate across designated conservancy zones as temperature drops and predators begin their patrol. (Subject to conservancy regulations).",
     highlights: [
@@ -57,6 +58,7 @@ const signatureExperiences = [
     title: "Guided Nature Walks",
     subtitle: "The wilderness on foot.",
     image: EXPERIENCE_IMAGES.natureWalks,
+    alt: "Guided bush walking safari along Ewaso riverbank trail in Laikipia Kenya",
     intro: "Step beyond the vehicle with resident naturalist Dalmas to decode the landscape at ground level. Walking safaris reveal the intricate micro-ecosystems and subtle wildlife signs missed from a car.",
     description: "Learn spoor identification, traditional ethnobotany, and bird alarm language across ancient game trails.",
     highlights: [
@@ -70,6 +72,7 @@ const signatureExperiences = [
     title: "Cultural Visits",
     subtitle: "Living heritage of the Samburu and Maasai.",
     image: EXPERIENCE_IMAGES.culturalVisits,
+    alt: "Authentic cultural visit with Samburu elders and community in Laikipia Kenya",
     intro: "Visit neighboring pastoralist homesteads through genuine partnerships built on mutual respect. Spend unhurried time with elders, women artisans, and warriors.",
     description: "Engage in direct dialogue on pastoral traditions, indigenous architecture, and community-led conservation coexistence.",
     highlights: [
@@ -83,6 +86,7 @@ const signatureExperiences = [
     title: "Village Market Visits",
     subtitle: "Rural commerce and community life.",
     image: EXPERIENCE_IMAGES.marketVisits,
+    alt: "Vibrant Samburu community beadwork market visit in rural Laikipia Kenya",
     intro: "Join your guide on market days to experience the trading hub of rural Laikipia. Pastoralists gather weekly from across the district to barter livestock, produce, and goods.",
     description: "Browse stalls of hand-forged tools, bright textiles, and fresh regional harvests. (Arranged on designated weekly market days).",
     highlights: [
@@ -96,6 +100,7 @@ const signatureExperiences = [
     title: "Black Leopard Tracking",
     subtitle: "Pursuing the melanistic leopard of the plateau.",
     image: EXPERIENCE_IMAGES.leopardTracking,
+    alt: "Rare black leopard Giza tracking safari excursion in Laikipia wilderness",
     intro: "Laikipia hosts one of the world's few documented wild populations of melanistic leopards. Specialized tracking excursions navigate known territories across granite kopjes and dense riverine thickets.",
     description: "Read pugmarks, monitor vervet monkey alarm calls, and glass territory markers alongside dedicated trackers. (Sightings depend on wild movement and are not guaranteed).",
     highlights: [
@@ -109,6 +114,7 @@ const signatureExperiences = [
     title: "Scenic Kopje Hikes",
     subtitle: "Panoramic vistas from ancient granite inselbergs.",
     image: EXPERIENCE_IMAGES.kopjeHikes,
+    alt: "Scenic kopje hiking viewpoint overlooking Laikipia plateau toward Mount Kenya",
     intro: "Ascend the weathered granite kopjes rising above the plateau. Guided scrambles through wild bushland yield unbroken 360-degree vistas across the northern frontier toward Mount Kenya.",
     description: "Summit at dawn or late afternoon for cool breezes, raptor sightings, and vantage points unreachable by vehicle.",
     highlights: [
@@ -122,6 +128,7 @@ const signatureExperiences = [
     title: "Bush Sundowners",
     subtitle: "An enduring safari ritual as dusk settles.",
     image: EXPERIENCE_IMAGES.sundowners,
+    alt: "Classic African bush sundowner evening drinks over the Laikipia plains Kenya",
     intro: "As the heat breaks, vehicles gather on elevated ridges or sandy riverbanks. A mobile bar opens with cold drinks, house canapés, and canvas camp chairs circled around an open fire.",
     description: "Toast the sunset against dramatic escarpments as daytime sounds transition into the chorus of the African night.",
     highlights: [
@@ -135,6 +142,7 @@ const signatureExperiences = [
     title: "Fishing by the River",
     subtitle: "Cast a line. Unwind. Let the river set the pace.",
     image: EXPERIENCE_IMAGES.fishing,
+    alt: "Relaxing river fishing along the Ewaso Nyiro River in Kenya",
     intro: "Not every adventure needs to be fast-paced.",
     description: "For guests who enjoy quieter moments, the Ewaso Nyiro River offers a beautiful setting to relax, reconnect with nature, and perhaps try your luck at fishing.",
     highlights: [
@@ -147,6 +155,7 @@ const signatureExperiences = [
     title: "The Art of Doing Nothing",
     subtitle: "Stay a little longer. Slow down a little more.",
     image: EXPERIENCE_IMAGES.doingNothing,
+    alt: "Serene tent armchair relaxation overlooking the Laikipia wilderness",
     intro: "At Goshen, we believe that one of the greatest luxuries is the freedom to do absolutely nothing.",
     description: "You do not have to fill every moment with an activity. There is no pressure to be anywhere.",
     highlights: [
@@ -189,7 +198,7 @@ const memorableMoments = [
 // ============================================================================
 export default function ExperiencesPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const itemRefs = useRef<(HTMLElement | null)[]>([]);
 
   const handleToggle = (index: number) => {
     if (activeIndex === index) {
@@ -221,7 +230,7 @@ export default function ExperiencesPage() {
         <div className="absolute inset-0 z-0">
           <Image 
             src={EXPERIENCE_IMAGES.hero} 
-            alt="Laikipia Wilderness" 
+            alt="Elephant family wading in river waters during safari activities in Kenya" 
             fill
             priority
             sizes="100vw"
@@ -234,13 +243,14 @@ export default function ExperiencesPage() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="w-12 h-[1px] bg-[#F4F1EB]/60"></span>
             <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#F4F1EB]">
-              Goshen • Laikipia
+              Goshen &bull; Laikipia
             </span>
             <span className="w-12 h-[1px] bg-[#F4F1EB]/60"></span>
           </div>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#F4F1EB] tracking-tight uppercase leading-[0.9]">
             Signature <br />
             <span className="italic font-light lowercase text-[#F4F1EB]/90">experiences.</span>
+            <span className="sr-only"> &mdash; Safari Activities in Kenya &amp; Ewaso Enclave Conservancy</span>
           </h1>
         </div>
       </section>
@@ -257,7 +267,7 @@ export default function ExperiencesPage() {
               <Image 
                 key={index}
                 src={exp.image} 
-                alt={exp.title}
+                alt={exp.alt}
                 fill
                 sizes="50vw"
                 className={`object-cover transition-all duration-1000 ease-in-out ${
@@ -273,7 +283,7 @@ export default function ExperiencesPage() {
               const isActive = activeIndex === index;
 
               return (
-                <div 
+                <article 
                   key={index} 
                   ref={(el) => { itemRefs.current[index] = el; }} 
                   className="border-b border-[#2C2A25]/10 group/item"
@@ -282,6 +292,7 @@ export default function ExperiencesPage() {
                   {/* Accordion Header / Button */}
                   <button 
                     onClick={() => handleToggle(index)}
+                    aria-expanded={isActive}
                     className={`w-full text-left py-6 md:py-8 flex flex-col focus:outline-none transition-all duration-500 ease-out border-l-2 ${
                       isActive 
                         ? 'pl-6 border-[#591C27]' 
@@ -331,7 +342,7 @@ export default function ExperiencesPage() {
                         <div className="block lg:hidden relative w-full aspect-[4/3] overflow-hidden mb-8 shadow-xl mt-4">
                           <Image 
                             src={exp.image} 
-                            alt={exp.title} 
+                            alt={exp.alt} 
                             fill
                             sizes="(max-width: 1024px) 100vw, 500px"
                             className="object-cover scale-100" 
@@ -360,7 +371,7 @@ export default function ExperiencesPage() {
                     </div>
                   </div>
 
-                </div>
+                </article>
               );
             })}
           </div>
@@ -374,13 +385,13 @@ export default function ExperiencesPage() {
         <div className="flex items-center gap-4 mb-12">
           <span className="w-10 h-[1px] bg-[#591C27]"></span>
           <h2 className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#591C27]">
-            More Memorable Moments
+            More Memorable Safari Activities in Kenya
           </h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {memorableMoments.map((moment, i) => (
-            <div 
+            <article 
               key={i} 
               className="bg-[#EAE7E0] p-8 md:p-10 border border-[#2C2A25]/5 hover:bg-[#2C2A25] hover:text-[#F4F1EB] transition-colors duration-500 group"
             >
@@ -390,7 +401,7 @@ export default function ExperiencesPage() {
               <p className="font-sans text-sm leading-relaxed tracking-wide text-[#2C2A25]/70 group-hover:text-[#F4F1EB]/70 transition-colors duration-500">
                 {moment.desc}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </section>

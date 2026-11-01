@@ -30,7 +30,7 @@ export default function HeroAndAbout() {
   }, [isMuted]); 
 
   return ( 
-    <section className="relative w-full bg-[#1A1817] selection:bg-[#591C27] selection:text-[#F4F1EB]"> 
+    <section className="relative w-full bg-[#1A1817] selection:bg-[#591C27] selection:text-[#F4F1EB]" aria-label="Hero Introduction"> 
       
       {/* ======================================================== 
           LAYER 1: THE STICKY HERO 
@@ -54,23 +54,13 @@ export default function HeroAndAbout() {
             <span className="text-[#F4F1EB]/80 text-[9px] tracking-[0.3em] uppercase font-bold mb-4 drop-shadow-md"> 
               A Private Sanctuary 
             </span> 
-            <h1 className="text-[#F4F1EB] font-serif text-7xl leading-[0.85] tracking-tight uppercase drop-shadow-xl"> 
+            <p className="text-[#F4F1EB] font-serif text-7xl leading-[0.85] tracking-tight uppercase drop-shadow-xl"> 
               Goshen 
-            </h1> 
-            <h2 className="text-[#F4F1EB] font-serif text-5xl italic font-light mt-2 drop-shadow-xl"> 
+            </p> 
+            <p className="text-[#F4F1EB] font-serif text-5xl italic font-light mt-2 drop-shadow-xl"> 
               Laikipia 
-            </h2> 
+            </p> 
           </div>
-
-          {/* MOBILE ONLY: Inquire Now Button */}
-{/* <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4 z-20"> 
-  <Link 
-    href="/inquire" 
-    className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"
-  > 
-    Inquire Now 
-  </Link> 
-</div> */}
         </div> 
 
         {/* CENTER VIDEO (Lion) - Desktop Only */} 
@@ -82,27 +72,28 @@ export default function HeroAndAbout() {
           <div className="absolute inset-0 bg-black/15 z-0"></div> 
           
           {/* DESKTOP ONLY: Cutout Mask Effect */}
-          <div className="absolute inset-0 bg-[#F4F1EB] mix-blend-lighten flex flex-col items-center justify-center z-10 px-4 text-center"> 
+          <header className="absolute inset-0 bg-[#F4F1EB] mix-blend-lighten flex flex-col items-center justify-center z-10 px-4 text-center"> 
             <span className="text-black text-[10px] lg:text-xs tracking-[0.3em] uppercase font-bold mb-6"> 
-              A Private Sanctuary 
+              A Private Sanctuary · Ewaso Enclave Conservancy
             </span> 
             <h1 className="text-black font-serif text-6xl lg:text-[7vw] leading-[0.85] tracking-tight uppercase"> 
               Goshen 
+              <span className="block text-black font-serif text-4xl lg:text-[4vw] italic font-light mt-3">
+                Laikipia
+              </span>
+              <span className="sr-only"> — Luxury Safari Camp & Premier Places to Stay in Laikipia, Kenya</span>
             </h1> 
-            <h2 className="text-black font-serif text-4xl lg:text-[4vw] italic font-light mt-3"> 
-              Laikipia 
-            </h2> 
-          </div> 
+          </header> 
 
           {/* DESKTOP ONLY: Inquire Now Button */}
-<div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4 z-20"> 
-  <Link 
-    href="/inquire" 
-    className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"
-  > 
-    Inquire Now 
-  </Link> 
-</div> 
+          <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4 z-20"> 
+            <Link 
+              href="/inquire" 
+              className="group bg-[#2C2A25] text-[#F4F1EB] px-8 py-3 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#591C27] transition-colors duration-500 shadow-xl"
+            > 
+              Inquire Now 
+            </Link> 
+          </div> 
         </div> 
 
         {/* RIGHT VIDEO (Cheetahs) - Desktop Only */} 
@@ -113,7 +104,7 @@ export default function HeroAndAbout() {
           <div className="absolute inset-0 bg-black/20 mix-blend-multiply"></div> 
         </div> 
 
-        {/* AUDIO CONTROL TOGGLE - Hidden on mobile so users don't hear a hidden video */} 
+        {/* AUDIO CONTROL TOGGLE */} 
         <button 
           onClick={toggleAudio} 
           className="hidden md:flex absolute bottom-12 right-12 z-50 items-center justify-center w-12 h-12 rounded-full border border-[#F4F1EB]/30 bg-black/20 backdrop-blur-md text-[#F4F1EB] hover:bg-black/40 hover:scale-105 transition-all duration-300 focus:outline-none group" 
@@ -139,7 +130,7 @@ export default function HeroAndAbout() {
         
         {/* --- DESKTOP LAYOUT (Transparent Scrolling Curtains) --- */} 
         <div className="hidden md:flex w-full h-[100svh]"> 
-          <div className="relative w-1/3 h-full"> 
+          <article className="relative w-1/3 h-full"> 
             <div className="absolute inset-0 bg-[#F4F1EB] mix-blend-lighten flex flex-col justify-center px-8 xl:px-12"> 
               <h2 className="text-black font-serif text-5xl lg:text-6xl xl:text-[5.5vw] leading-[0.85] tracking-tight uppercase"> 
                 The wild <br/>is not our<br/>product. 
@@ -153,11 +144,11 @@ export default function HeroAndAbout() {
                 Our Conviction
               </Link> 
             </div> 
-          </div> 
+          </article> 
           
           <div className="relative w-1/3 h-full bg-transparent"></div> 
           
-          <div className="relative w-1/3 h-full"> 
+          <article className="relative w-1/3 h-full"> 
             <div className="absolute inset-0 bg-[#F4F1EB] mix-blend-lighten flex flex-col justify-center px-8 xl:px-12 text-right items-end"> 
               <h2 className="text-black font-serif text-5xl lg:text-6xl xl:text-[5.5vw] leading-[0.85] tracking-tight uppercase"> 
                 Rooted<br/>in<br/>Laikipia. 
@@ -171,11 +162,11 @@ export default function HeroAndAbout() {
                 Explore The Camp 
               </Link> 
             </div> 
-          </div> 
+          </article> 
         </div> 
 
         {/* --- MOBILE LAYOUT (Solid Elegant Block) --- */} 
-        <div className="flex md:hidden relative w-full bg-[#F4F1EB] rounded-t-[2.5rem] mt-[-5vh] shadow-[0_-20px_50px_rgba(0,0,0,0.3)] flex-col px-6 py-24 z-30"> 
+        <article className="flex md:hidden relative w-full bg-[#F4F1EB] rounded-t-[2.5rem] mt-[-5vh] shadow-[0_-20px_50px_rgba(0,0,0,0.3)] flex-col px-6 py-24 z-30"> 
           
           <div className="flex items-center gap-4 mb-8">
             <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
@@ -192,10 +183,10 @@ export default function HeroAndAbout() {
             Set within the vast Laikipia landscape, Goshen is built on a single belief: the rarest wildlife experiences must remain unstaged and unobtrusive. With an intimate footprint, we offer an exclusive gateway to the Elephant Kingdom.
           </p> 
           
-          <a href="/#ethos" className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] border-b border-[#591C27]/30 pb-1 w-max hover:border-[#591C27] transition-all"> 
+          <Link href="/about" className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] border-b border-[#591C27]/30 pb-1 w-max hover:border-[#591C27] transition-all"> 
             Discover Our Story 
-          </a> 
-        </div> 
+          </Link> 
+        </article> 
 
       </div> 
     </section> 

@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react'; 
 import { usePathname } from 'next/navigation'; 
-import GoshenLogo from '@/components/ui/Logo'; // Make sure this path matches where you saved Logo.tsx
+import Link from 'next/link';
+import GoshenLogo from '@/components/ui/Logo'; 
 
 export default function Navbar() { 
   const [isSolid, setIsSolid] = useState(false); 
@@ -20,42 +21,41 @@ export default function Navbar() {
   // Track scroll to change navbar styling 
   useEffect(() => { 
     const handleScroll = () => { 
-      if (window.scrollY > window.innerHeight * 0.9) { 
+      if (window.scrollY > 40) { 
         setIsSolid(true); 
       } else { 
         setIsSolid(false); 
       } 
     }; 
-    window.addEventListener('scroll', handleScroll, { passive: true }); 
-    handleScroll(); 
+
+    window.addEventListener('scroll', handleScroll); 
     return () => window.removeEventListener('scroll', handleScroll); 
   }, []); 
 
-  // Lock body scroll when the mobile menu is open 
-  useEffect(() => { 
-    if (isOpen) { 
-      document.body.style.overflow = 'hidden'; 
-    } else { 
-      document.body.style.overflow = 'unset'; 
-    } 
-    return () => { 
-      document.body.style.overflow = 'unset'; 
-    }; 
-  }, [isOpen]); 
+  // Dynamic colors based on scroll state & open state 
+  const textColor = isOpen 
+    ? 'text-[#F4F1EB]' 
+    : isSolid 
+      ? 'text-[#2C2A25]' 
+      : 'text-[#F4F1EB]'; 
 
-  // --- LOGIC: Check if we are on light background routes --- 
-const isDarkTextRoute = ['/inquire', '/terms', '/privacy'].includes(pathname);
-  // Determine colors based on scroll, route, AND if the menu is open 
-  const useDarkElements = (isSolid || isDarkTextRoute) && !isOpen; 
-  
-  const textColor = useDarkElements ? 'text-[#2C2A25]' : 'text-[#F4F1EB]'; 
-  const bgColor = useDarkElements ? 'bg-[#2C2A25]' : 'bg-[#F4F1EB]'; 
-  const logoTheme = useDarkElements ? 'dark' : 'light';
+  const bgColor = isOpen 
+    ? 'bg-[#F4F1EB]' 
+    : isSolid 
+      ? 'bg-[#2C2A25]' 
+      : 'bg-[#F4F1EB]'; 
+
+  // Choose the logo theme based on current background
+  // When scrolled down, background is light (#F4F1EB) -> use dark logo
+  // When at top, background is dark hero -> use light logo
+  // When menu is open, background is dark overlay -> use light logo
+  const logoTheme = (isSolid && !isOpen) ? 'dark' : 'light';
 
   return ( 
     <> 
+      {/* FIXED TOP HEADER */} 
       <header 
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${ 
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${ 
           isSolid && !isOpen 
             ? 'bg-[#F4F1EB] py-4 md:py-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)]' 
             : 'bg-transparent py-6 md:py-8' 
@@ -64,27 +64,33 @@ const isDarkTextRoute = ['/inquire', '/terms', '/privacy'].includes(pathname);
         <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-center"> 
           
           {/* LEFT: The Masthead / Logo */} 
-          <a 
+          <Link 
             href="/" 
             onClick={() => setIsOpen(false)} 
             className="transition-opacity duration-500 hover:opacity-70 focus:outline-none" 
             aria-label="Goshen Laikipia - Return to Homepage"
           > 
             <GoshenLogo variant="horizontal" theme={logoTheme} />
-          </a> 
+          </Link> 
 
-          {/* RIGHT: CTA & Menu Toggle */} 
-          <div className="flex items-center gap-6 md:gap-10"> 
+          {/* RIGHT: Coordinates + Inquire Link + Hamburger Menu */} 
+          <div className="flex items-center gap-6 sm:gap-10"> 
             
-            {/* Primary Action (Inquire) */} 
-            <a 
+            {/* Elegant Geography Coordinates (Desktop Only) */}
+            <div className={`hidden lg:flex flex-col items-end font-mono text-[9px] tracking-[0.25em] uppercase opacity-75 transition-colors duration-500 ${textColor}`}>
+              <span>0&deg; 01&apos; 14&quot; N</span>
+              <span>37&deg; 04&apos; 28&quot; E</span>
+            </div>
+
+            {/* Inquire Link */} 
+            <Link 
               href="/inquire" 
               onClick={() => setIsOpen(false)} 
               className={`group flex items-center gap-3 font-sans text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-bold transition-colors duration-500 ${textColor}`} 
             > 
               Inquire/ Book
               <span className={`hidden sm:block w-6 h-[1px] group-hover:w-10 transition-all duration-300 ${bgColor}`}></span> 
-            </a> 
+            </Link> 
             
             {/* Hamburger Menu Icon */} 
             <button 
@@ -109,7 +115,7 @@ const isDarkTextRoute = ['/inquire', '/terms', '/privacy'].includes(pathname);
           {menuItems.map((item, i) => { 
             const isActive = pathname === item.href || (pathname === '/' && item.href === '/'); 
             return ( 
-              <a 
+              <Link 
                 key={item.name} 
                 href={item.href} 
                 onClick={() => setIsOpen(false)} 
@@ -121,7 +127,7 @@ const isDarkTextRoute = ['/inquire', '/terms', '/privacy'].includes(pathname);
                 style={{ transitionDelay: `${isOpen ? i * 50 : 0}ms` }} 
               > 
                 {item.name} 
-              </a> 
+              </Link> 
             ); 
           })} 
         </nav> 

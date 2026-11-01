@@ -23,7 +23,7 @@ export default function Hero() {
       >
         <Image 
           src={campImage} 
-          alt="Goshen Landscape" 
+          alt="Scenic landscape of Ewaso Enclave Conservancy and Laikipia plateau at Goshen Safari Camp" 
           fill
           priority
           sizes="100vw"
@@ -38,6 +38,7 @@ export default function Hero() {
         <div className="absolute inset-0 flex items-center justify-center text-center px-6 mt-16 md:mt-12">
           <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] leading-none tracking-tight text-[#F4F1EB] drop-shadow-2xl uppercase">
             About<span className="italic font-light lowercase text-[#F4F1EB]/90 ml-3 md:ml-6">us</span>
+            <span className="sr-only"> — Goshen in Ewaso Enclave Conservancy, Laikipia Kenya</span>
           </h1>
         </div>
       </div>

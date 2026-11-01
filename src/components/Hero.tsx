@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowRight, Compass, Sparkles, Eye } from "lucide-react";
+import { ArrowRight, Compass, Sparkles } from "lucide-react";
 
 interface HeroProps {
   onOpenEnquire?: () => void;

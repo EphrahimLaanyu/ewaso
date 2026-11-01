@@ -10,54 +10,56 @@ export default function WildlifeTeaser() {
       title: "Giza",
       subtitle: "The Shadow of Laikipia",
       description: "Encounters with melanistic leopards are vanishingly rare. Giza is one of the few black leopards in Kenya with a scientifically documented and verified territory, roaming the rocky outcrops and river valleys of the Ewaso Enclave undisturbed.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza-looking.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/giza-looking.jpeg",
+      alt: "Giza the rare melanistic black leopard of Ewaso Enclave Conservancy, Laikipia Kenya"
     },
     {
       title: "Elephant Trails",
       subtitle: "Walking Paths",
       description: "Natural seasonal corridors cross through the conservancy as herds move between feeding grounds and the river. Guests walk designated elephant paths on foot accompanied by an armed ranger, scheduled during midday rest hours and maintaining a minimum 100-meter distance so herds remain undisturbed.",
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Elephants-in-river.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Elephants-in-river.jpeg",
+      alt: "Elephant breeding herd wading Ewaso Nyiro River corridor in Laikipia, Kenya"
     },
     {
       title: "African Wild Dogs",
       subtitle: "A Vital Refuge",
       description: "The conservancy provides an essential sanctuary for a resident, monitored pack of African wild dogs. Ongoing protection ensures this critically endangered predator continues to hunt and den safely in Laikipia.",
-      // Placeholder set for client-provided field photograph of resident wild dog pack.
-      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/wild-dogs-2.jpeg"
+      image: "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/wild-dogs-2.jpeg",
+      alt: "African wild dog pack roaming protected corridors of Ewaso Enclave Conservancy"
     }
   ];
 
   return (
-    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-[#F4F1EB] border-t border-[#2C2A25]/10 py-16 md:py-24 px-6 md:px-12 lg:px-20">
+    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] selection:bg-[#591C27] selection:text-[#F4F1EB] border-t border-[#2C2A25]/10 py-16 md:py-24 px-6 md:px-12 lg:px-20" aria-label="Ecosystem and Wildlife Encounters">
       
       {/* CHAPTER HEADER */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center text-center mb-12 md:mb-16">
+      <header className="w-full max-w-7xl mx-auto flex flex-col items-center text-center mb-12 md:mb-16">
         <div className="flex items-center gap-4 mb-4">
           <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
           <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#591C27]">
-            The Ecosystem
+            The Ecosystem · Ewaso Enclave Conservancy
           </span>
           <span className="w-8 h-[1px] bg-[#2C2A25]/30"></span>
         </div>
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-4">
-          The Wild
+          The Wild in Laikipia
         </h2>
         <p className="font-sans text-[10px] md:text-xs tracking-[0.1em] uppercase opacity-70">
-          Unscripted and unconfined
+          Unscripted wildlife encounters & safari activities in Kenya
         </p>
-      </div>
+      </header>
 
       {/* EDITORIAL GRID */}
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
         {wildlifeData.map((item, index) => (
-          <div key={index} className="flex flex-col group">
+          <article key={index} className="flex flex-col group">
             
             {/* Image Block */}
             <div className="relative w-full aspect-[4/5] bg-[#EAE7E0] overflow-hidden mb-5 shadow-lg">
               {item.image ? (
                 <Image 
                   src={item.image} 
-                  alt={item.title} 
+                  alt={item.alt} 
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
@@ -91,25 +93,25 @@ export default function WildlifeTeaser() {
               </p>
             </div>
             
-          </div>
+          </article>
         ))}
       </div>
 
-      {/* REAL CONTENT LINKS: EXPLORE OUR CONSERVATION ETHOS & FULL PROTOCOL */}
+      {/* REAL CONTENT LINKS */}
       <div className="w-full max-w-7xl mx-auto mt-16 pt-8 border-t border-[#2C2A25]/10 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <a 
-          href="#ethos" 
-          className="group inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors"
-        >
-          <span>Explore Our Conservation Ethos</span>
-          <span className="w-6 h-[1px] bg-[#591C27] group-hover:w-10 group-hover:bg-[#2C2A25] transition-all duration-300"></span>
-        </a>
-
         <Link 
           href="/about#ethos" 
+          className="group inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors"
+        >
+          <span>Explore Our Conservation Ethos in Ewaso Enclave</span>
+          <span className="w-6 h-[1px] bg-[#591C27] group-hover:w-10 group-hover:bg-[#2C2A25] transition-all duration-300"></span>
+        </Link>
+
+        <Link 
+          href="/experiences" 
           className="group inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase font-bold text-[#2C2A25]/70 hover:text-[#591C27] transition-colors"
         >
-          <span>Read The Full Protocol</span>
+          <span>View All Safari Activities in Kenya</span>
           <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>

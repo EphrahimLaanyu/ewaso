@@ -65,15 +65,15 @@ export default function FullItinerary() {
         <div className="flex items-center gap-4 mb-6"> 
           <span className="w-8 h-[1px] bg-[#591C27]/40"></span> 
           <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27]"> 
-            The Itinerary 
+            Safari Activities in Kenya 
           </span> 
           <span className="w-8 h-[1px] bg-[#591C27]/40"></span> 
         </div> 
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#2C2A25] mb-6 uppercase"> 
-          A Day at Goshen Camp
+          A Day at Goshen Camp &mdash; Safari Routine
         </h2> 
         <p className="font-sans text-sm md:text-base leading-relaxed text-[#2C2A25]/70 max-w-2xl font-bold mb-4">
-          An unforgettable day in the heart of Laikipia&apos;s wilderness.
+          An unforgettable day of safari activities in Kenya&apos;s heart of Laikipia.
         </p>
         <p className="font-sans text-sm md:text-base leading-relaxed text-[#2C2A25]/70 max-w-2xl">
           At Goshen, every day unfolds to the rhythm of the African bush. From golden sunrises and intimate wildlife encounters to peaceful afternoons and magical evenings beneath the stars, each experience is thoughtfully designed to immerse you in the beauty of our wilderness home along the Ewaso Nyiro River.
@@ -92,7 +92,7 @@ export default function FullItinerary() {
             <div className="row-span-2 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg relative">
               <Image 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/Land.jpeg" 
-                alt="Landscape" 
+                alt="Vast Laikipia wilderness and elephant corridors near Goshen Camp" 
                 width={600}
                 height={1200}
                 sizes="(max-width: 1024px) 50vw, 25vw"
@@ -104,7 +104,7 @@ export default function FullItinerary() {
             <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg relative">
               <Image 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/women-with-sunglasses.jpeg" 
-                alt="Cars on Safari" 
+                alt="Guests enjoying safari activities in Kenya during game drive in Laikipia" 
                 width={600}
                 height={600}
                 sizes="(max-width: 1024px) 50vw, 25vw"
@@ -116,7 +116,7 @@ export default function FullItinerary() {
             <div className="row-span-1 col-span-1 bg-[#2C2A25] overflow-hidden shadow-lg relative">
               <Image 
                 src="https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/river-flowing.jpeg" 
-                alt="River Fishing" 
+                alt="Serene Ewaso Nyiro River flowing past Goshen Safari Camp Laikipia" 
                 width={600}
                 height={600}
                 sizes="(max-width: 1024px) 50vw, 25vw"
@@ -131,7 +131,7 @@ export default function FullItinerary() {
         <div className="w-full lg:w-1/2 pt-4">
           <div className="border-l border-[#2C2A25]/10 ml-2 md:ml-4">
             {fullItinerary.map((exp, index) => (
-              <div 
+              <article 
                 key={index} 
                 className="relative pl-10 md:pl-16 pb-16 md:pb-20 group last:pb-0"
               >
@@ -150,7 +150,7 @@ export default function FullItinerary() {
                     {exp.description}
                   </p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>

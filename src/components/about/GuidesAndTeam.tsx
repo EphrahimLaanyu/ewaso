@@ -5,7 +5,7 @@ export default function GuidesAndTeam() {
   const guideImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/guides-observing-elephants-waterhole.jpeg"; 
 
   return ( 
-    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] px-6 md:px-12 lg:px-20 pb-24 md:pb-32 selection:bg-[#591C27] selection:text-[#F4F1EB]"> 
+    <section className="w-full bg-[#F4F1EB] text-[#2C2A25] px-6 md:px-12 lg:px-20 pb-24 md:pb-32 selection:bg-[#591C27] selection:text-[#F4F1EB]" aria-label="Local Samburu Naturalist Guides"> 
       <div className="max-w-7xl mx-auto"> 
         
         {/* THE DIVIDER */} 
@@ -15,7 +15,7 @@ export default function GuidesAndTeam() {
         <div className="flex items-center gap-4 mb-12 md:mb-16"> 
           <span className="w-12 h-[1px] bg-[#2C2A25]/30"></span> 
           <h2 className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#2C2A25]/50"> 
-            Our Local Experts
+            Our Local Experts — Samburu Naturalists & Trackers
           </h2> 
         </div> 
 
@@ -23,19 +23,19 @@ export default function GuidesAndTeam() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center"> 
           
           {/* LEFT COLUMN: Expansive Image */} 
-          <div className="lg:col-span-7 w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-[#EAE7E0] group shadow-xl order-2 lg:order-1"> 
+          <article className="lg:col-span-7 w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-[#EAE7E0] group shadow-xl order-2 lg:order-1"> 
             <Image 
               src={guideImage} 
-              alt="Goshen Guides and Tracking" 
+              alt="Certified Samburu safari guides observing elephant herds at waterhole in Laikipia" 
               width={1200}
               height={750}
               sizes="(max-width: 1024px) 100vw, 58vw"
               className="w-full h-full object-cover transition-transform duration-[3s] ease-out group-hover:scale-105" 
             /> 
-          </div> 
+          </article> 
 
           {/* RIGHT COLUMN: Copy */} 
-          <div className="lg:col-span-5 flex flex-col order-1 lg:order-2"> 
+          <article className="lg:col-span-5 flex flex-col order-1 lg:order-2"> 
             <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight mb-8"> 
               The Guides & <br /> 
               <span className="italic text-[#591C27] font-light">Team</span> 
@@ -54,7 +54,7 @@ export default function GuidesAndTeam() {
             <div className="mt-12"> 
               <span className="inline-block w-8 h-[1px] bg-[#591C27]"></span> 
             </div> 
-          </div> 
+          </article> 
 
         </div> 
 

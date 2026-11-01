@@ -19,45 +19,28 @@ interface LogoProps {
   desc?: string;
 }
 
-export default function GoshenLogo({ 
-  variant = 'horizontal', 
-  theme = 'dark',
-  className = '',
-  title = 'Goshen Laikipia Logo',
-  desc = 'Goshen luxury safari camp emblem in Laikipia, Kenya'
-}: LogoProps) {
-  
-  // Brand Palette Mapping (Automatically handles the clear backgrounds)
-  const colors = {
-    dark: {
-      primary: '#2C2A25',   // Charcoal
-      accent: '#591C27',    // Burgundy
-      muted: 'rgba(44, 42, 37, 0.7)'
-    },
-    light: {
-      primary: '#F4F1EB',   // Cream
-      accent: '#F4F1EB',    // Cream
-      muted: 'rgba(244, 241, 235, 0.7)'
-    },
-    burgundy: {
-      primary: '#591C27',   // Burgundy
-      accent: '#2C2A25',    // Charcoal
-      muted: 'rgba(89, 28, 39, 0.7)'
-    },
-    midnight: {
-      primary: '#F4F1EB',   // Cream
-      accent: '#C5A059',    // Gold
-      muted: 'rgba(244, 241, 235, 0.7)'
-    }
-  }[theme];
+interface ColorPalette {
+  primary: string;
+  accent: string;
+  muted: string;
+}
 
-  const titleId = React.useId();
-  const descId = React.useId();
-
-  // ==========================================================================
-  // THE EMBLEM: Concept 03 Interlocking G & L Oval
-  // ==========================================================================
-  const EmblemSVG = ({ size = 64 }: { size?: number }) => (
+function EmblemSVG({
+  size = 64,
+  colors,
+  title,
+  desc,
+  titleId,
+  descId,
+}: {
+  size?: number;
+  colors: ColorPalette;
+  title: string;
+  desc: string;
+  titleId: string;
+  descId: string;
+}) {
+  return (
     <svg 
       width={size} 
       viewBox="0 0 100 120" 
@@ -98,6 +81,42 @@ export default function GoshenLogo({
       </text>
     </svg>
   );
+}
+
+export default function GoshenLogo({ 
+  variant = 'horizontal', 
+  theme = 'dark',
+  className = '',
+  title = 'Goshen Laikipia Logo',
+  desc = 'Goshen luxury safari camp emblem in Laikipia, Kenya'
+}: LogoProps) {
+  
+  // Brand Palette Mapping (Automatically handles the clear backgrounds)
+  const colors: ColorPalette = {
+    dark: {
+      primary: '#2C2A25',   // Charcoal
+      accent: '#591C27',    // Burgundy
+      muted: 'rgba(44, 42, 37, 0.7)'
+    },
+    light: {
+      primary: '#F4F1EB',   // Cream
+      accent: '#F4F1EB',    // Cream
+      muted: 'rgba(244, 241, 235, 0.7)'
+    },
+    burgundy: {
+      primary: '#591C27',   // Burgundy
+      accent: '#2C2A25',    // Charcoal
+      muted: 'rgba(89, 28, 39, 0.7)'
+    },
+    midnight: {
+      primary: '#F4F1EB',   // Cream
+      accent: '#C5A059',    // Gold
+      muted: 'rgba(244, 241, 235, 0.7)'
+    }
+  }[theme];
+
+  const titleId = React.useId();
+  const descId = React.useId();
 
   // ==========================================================================
   // VARIATION 1: HORIZONTAL (Navbar)
@@ -105,7 +124,14 @@ export default function GoshenLogo({
   if (variant === 'horizontal') {
     return (
       <div className={`inline-flex items-center gap-4 group select-none ${className}`}>
-        <EmblemSVG size={45} />
+        <EmblemSVG 
+          size={45} 
+          colors={colors} 
+          title={title} 
+          desc={desc} 
+          titleId={titleId} 
+          descId={descId} 
+        />
         <div className="flex flex-col justify-center">
           <span 
             className="font-serif text-2xl md:text-[28px] tracking-[0.25em] uppercase leading-none font-normal"
@@ -136,7 +162,14 @@ export default function GoshenLogo({
   if (variant === 'stacked') {
     return (
       <div className={`inline-flex flex-col items-center text-center group select-none ${className}`}>
-        <EmblemSVG size={70} />
+        <EmblemSVG 
+          size={70} 
+          colors={colors} 
+          title={title} 
+          desc={desc} 
+          titleId={titleId} 
+          descId={descId} 
+        />
         
         <span 
           className="font-serif text-2xl md:text-3xl tracking-[0.28em] uppercase leading-none mt-5 pl-[0.28em]"
@@ -162,7 +195,14 @@ export default function GoshenLogo({
   // ==========================================================================
   return (
     <div className={`inline-flex items-center justify-center group select-none ${className}`}>
-      <EmblemSVG size={56} />
+      <EmblemSVG 
+        size={56} 
+        colors={colors} 
+        title={title} 
+        desc={desc} 
+        titleId={titleId} 
+        descId={descId} 
+      />
     </div>
   );
 }

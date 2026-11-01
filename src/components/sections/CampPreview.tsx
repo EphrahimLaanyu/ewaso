@@ -9,7 +9,7 @@ export default function CampPreview() {
   const mainImage = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/luxury-tent-bedroom.jpeg";
   
   return (
-    <section className="relative w-full min-h-[100svh] lg:h-[100svh] bg-[#591C27] text-[#F4F1EB] px-6 md:px-12 lg:px-20 py-16 lg:py-0 flex items-center selection:bg-[#F4F1EB] selection:text-[#591C27] overflow-hidden border-t border-[#F4F1EB]/10">
+    <section className="relative w-full min-h-[100svh] lg:h-[100svh] bg-[#591C27] text-[#F4F1EB] px-6 md:px-12 lg:px-20 py-16 lg:py-0 flex items-center selection:bg-[#F4F1EB] selection:text-[#591C27] overflow-hidden border-t border-[#F4F1EB]/10" aria-label="Camp Accommodations Preview">
       
       {/* Subtle Background Grain Texture */}
       <div 
@@ -29,7 +29,7 @@ export default function CampPreview() {
             <div className="w-[82%] h-[85%] overflow-hidden bg-[#2C2A25] shadow-2xl relative z-10 group rounded-sm">
               <Image 
                 src={mainImage} 
-                alt="Goshen Luxury Canvas Suite Interior" 
+                alt="Goshen luxury canvas tent suite interior - premier places to stay in Laikipia" 
                 width={800}
                 height={600}
                 sizes="(max-width: 1024px) 80vw, 50vw"
@@ -42,7 +42,7 @@ export default function CampPreview() {
             <div className="w-[52%] h-[55%] absolute bottom-0 right-0 overflow-hidden bg-[#2C2A25] shadow-[0_25px_60px_rgba(0,0,0,0.6)] z-20 border-[6px] md:border-[10px] border-[#591C27] group rounded-sm">
               <Image 
                 src={secondaryImage} 
-                alt="Goshen En-Suite Bathroom" 
+                alt="Goshen luxury camp ensuite bush bathroom in Laikipia Kenya" 
                 width={500}
                 height={500}
                 sizes="(max-width: 1024px) 50vw, 30vw"
@@ -55,7 +55,7 @@ export default function CampPreview() {
             <div className="absolute bottom-3 left-2 z-30 hidden sm:flex items-center gap-3">
               <span className="w-4 h-[1px] bg-[#F4F1EB]/40"></span>
               <span className="text-[9px] tracking-[0.25em] uppercase font-semibold text-[#F4F1EB]/60">
-                01 / Canvas & Comfort
+                01 / Canvas & Comfort in Ewaso Enclave
               </span>
             </div>
 
@@ -64,25 +64,25 @@ export default function CampPreview() {
           {/* ==========================================
               RIGHT COLUMN: Editorial Copy & Clear CTA (5 Cols)
           ========================================== */}
-          <div className="lg:col-span-5 flex flex-col justify-center lg:pl-6 order-1 lg:order-2">
+          <article className="lg:col-span-5 flex flex-col justify-center lg:pl-6 order-1 lg:order-2">
             
             {/* Section Tag */}
             <div className="flex items-center gap-4 mb-6">
               <span className="w-10 h-[1px] bg-[#F4F1EB]/40"></span>
               <h2 className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#F4F1EB]/80">
-                The Camp
+                The Camp — Places to Stay in Laikipia
               </h2>
             </div>
 
             {/* Main Headline */}
             <h3 className="font-serif text-4xl sm:text-5xl xl:text-6xl leading-[1.08] tracking-tight mb-6">
               Your private home <br />
-              <span className="italic font-light text-[#F4F1EB]/85">in the bush.</span>
+              <span className="italic font-light text-[#F4F1EB]/85">in the Laikipia bush.</span>
             </h3>
 
             {/* Easy-to-read Copy */}
             <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#F4F1EB]/85 mb-8">
-              After a long day out in the bush, come back to a place built for pure rest. Enjoy hot showers, big comfortable beds, and a cold drink by the campfire right under the stars.
+              Recognized among the finest camps in Laikipia. After a thrilling day of safari activities in Kenya, return to an intimate sanctuary in Ewaso Enclave Conservancy built for pure rest—featuring hot showers, king-size beds, and campfire dining under the stars.
             </p>
 
             {/* Quick Feature Highlights */}
@@ -116,7 +116,7 @@ export default function CampPreview() {
               </Link>
             </div>
 
-          </div>
+          </article>
 
         </div>
       </div>

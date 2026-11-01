@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CampHero() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
@@ -24,7 +25,7 @@ export default function CampHero() {
         {/* Background Image with Slow Zoom Effect */}
         <Image 
           src={heroBackdrop} 
-          alt="Goshen Pavilion Built Into the Rocks" 
+          alt="Goshen Safari Camp Pavilion built into the rocky kopjes of Laikipia Kenya" 
           fill
           priority
           sizes="100vw"
@@ -54,6 +55,7 @@ export default function CampHero() {
             <span className="text-4xl md:text-6xl lg:text-[6rem] italic font-light mt-2 md:mt-4 text-[#F4F1EB]/90">
               Laikipia
             </span>
+            <span className="sr-only"> &mdash; Luxury Tented Camps &amp; Places to Stay in Laikipia</span>
           </h1>
         </div>
       </div>
@@ -61,24 +63,25 @@ export default function CampHero() {
       {/* ========================================================
           PART 2: THE FLOATING EDITORIAL CARD (Breaks the Grid)
       ======================================================== */}
-      <div className="relative z-20 w-[92%] max-w-7xl mx-auto -mt-32 md:-mt-48 bg-[#F4F1EB] shadow-[0_30px_80px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row">
+      <article className="relative z-20 w-[92%] max-w-7xl mx-auto -mt-32 md:-mt-48 bg-[#F4F1EB] shadow-[0_30px_80px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row">
         
         {/* Left Column: Copy */}
         <div className="w-full lg:w-5/12 p-10 md:p-16 lg:p-20 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#2C2A25]/10">
           <h2 className="font-serif text-4xl md:text-5xl leading-[1.1] tracking-tight text-[#2C2A25] mb-6">
             Built into the rocks. <br />
             <span className="italic text-[#591C27] font-light">Open to the wild.</span>
+            <span className="sr-only"> &mdash; Places to Stay in Laikipia</span>
           </h2>
           <p className="font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 mb-10">
             Stone, canvas and timber, set on the rocks above the valley. Enjoy the absolute quiet of the bush, offering total privacy and highly personalized service.
           </p>
-          <a 
+          <Link 
             href="#suites" 
             className="group flex items-center gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors duration-300 w-max"
           >
             Explore The Suites
             <span className="block w-8 h-[1px] bg-[#591C27] group-hover:w-16 group-hover:bg-[#2C2A25] transition-all duration-500 ease-out"></span>
-          </a>
+          </Link>
         </div>
 
         {/* Right Column: Layered Image Collage */}
@@ -91,7 +94,7 @@ export default function CampHero() {
           <div className="relative z-10 w-[65%] max-w-[350px] aspect-[3/4] shadow-2xl ml-[-20%] group overflow-hidden border-[8px] border-[#F4F1EB]">
             <Image 
               src={portraitTent} 
-              alt="Goshen Tented Suite" 
+              alt="Luxury safari tented suite at Goshen Camp in Laikipia Kenya" 
               width={350}
               height={466}
               sizes="(max-width: 768px) 65vw, 350px"
@@ -103,7 +106,7 @@ export default function CampHero() {
           <div className="absolute z-20 w-[55%] max-w-[300px] aspect-square shadow-2xl right-[10%] bottom-[10%] md:bottom-[15%] group overflow-hidden border-[8px] border-[#F4F1EB]">
             <Image 
               src={squareVeranda} 
-              alt="Private Stone Veranda" 
+              alt="Private stone veranda overlooking the Ewaso Nyiro River valley in Laikipia" 
               width={300}
               height={300}
               sizes="(max-width: 768px) 55vw, 300px"
@@ -112,7 +115,7 @@ export default function CampHero() {
           </div>
 
         </div>
-      </div>
+      </article>
       
     </section>
   );

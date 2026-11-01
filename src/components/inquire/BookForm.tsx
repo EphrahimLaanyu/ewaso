@@ -33,7 +33,7 @@ export default function BookForm({ onSuccess }: FormProps) {
         
         data.forEach(booking => {
           // Parse as local dates to avoid timezone shifting
-          let current = new Date(`${booking.arrival_date}T00:00:00`);
+          const current = new Date(`${booking.arrival_date}T00:00:00`);
           const end = new Date(`${booking.departure_date}T00:00:00`);
           
           while (current <= end) {

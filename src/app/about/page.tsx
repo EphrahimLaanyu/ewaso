@@ -9,36 +9,48 @@ import Navbar from '@/components/sections/Navbar';
 import Experience from '@/components/about/Experience';
 
 export const metadata: Metadata = {
-  title: 'Our Story & Conservation Ethos',
+  title: 'Ewaso Enclave Conservancy | Conservation Story & Ethos at Goshen',
   description:
-    'Learn about Goshen’s conservation ethos, our Samburu naturalist guides, and the preservation of ancient wildlife corridors across the Ewaso Enclave.',
+    'Discover the conservation ethos of Goshen within Ewaso Enclave Conservancy, Laikipia. Learn about our Samburu naturalist guides, unstaged wildlife ethics, and the preservation of ancient elephant corridors.',
+  keywords: [
+    'Ewaso Enclave Conservancy',
+    'camps in Laikipia',
+    'places to stay in Laikipia',
+    'conservation Laikipia Kenya',
+    'Samburu naturalist guides',
+    'black leopard territory Kenya',
+    'Goshen story',
+  ],
+  alternates: {
+    canonical: 'https://goshencamp.com/about',
+  },
   openGraph: {
-    title: 'Our Story & Conservation Ethos | Goshen Laikipia',
+    title: 'Ewaso Enclave Conservancy | Conservation Story & Ethos at Goshen',
     description:
-      'Learn about Goshen’s conservation ethos, our Samburu naturalist guides, and the preservation of ancient wildlife corridors across the Ewaso Enclave.',
+      'Learn about Goshen’s unstaged conservation ethos, our Samburu naturalist guides, and the preservation of ancient wildlife corridors in Ewaso Enclave Conservancy.',
+    url: 'https://goshencamp.com/about',
+    images: ['/og-image.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ewaso Enclave Conservancy | Conservation Story & Ethos at Goshen',
+    description:
+      'Discover the unstaged conservation ethos and Samburu naturalist guides at Goshen in Ewaso Enclave Conservancy, Laikipia.',
+    images: ['/og-image.jpg'],
   },
 };
 
-// Import any other About-specific sections here (e.g., import AboutEthos from ...)
-
 export default function AboutPage() {
   return (
-    // The min-h-screen ensures the page is always at least the height of the device
-    <main className="flex min-h-screen flex-col bg-[#1A1817]">
-      {/* 
-        The Hero component will now render seamlessly at the top. 
-        No padding wrapper ensures the image bleeds to the top edge. 
-      */}
-      <Navbar/>
+    <main className="flex min-h-screen flex-col bg-[#1A1817] w-full">
+      <Navbar />
       <Hero />
-      <OurConviction/>
-      <EwasoEcosystem/>
-      <ElephantAndGiza/>
-      <GuidesAndTeam/>
-      <Experience/>
-      <Footer/>
-      
-      {/* Add your other About sections below as you build them */}
+      <OurConviction />
+      <EwasoEcosystem />
+      <ElephantAndGiza />
+      <GuidesAndTeam />
+      <Experience />
+      <Footer />
     </main>
   );
 }

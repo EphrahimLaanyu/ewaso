@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CampPavilion() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
@@ -27,7 +28,7 @@ export default function CampPavilion() {
           {/* ========================================================
               LEFT: Typography & Story (5 Cols)
           ======================================================== */}
-          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
+          <article className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
             
             <div className="flex items-center gap-4 mb-6">
               <span className="w-10 h-[1px] bg-[#591C27]"></span>
@@ -37,8 +38,9 @@ export default function CampPavilion() {
             </div>
             
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-8">
-              Open-air dining & <br />
+              Open-air dining &amp; <br />
               <span className="italic font-light text-[#591C27]">endless views.</span>
+              <span className="sr-only"> &mdash; Safari Camp Cuisine &amp; Lounging in Laikipia</span>
             </h2>
             
             <div className="space-y-6 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 pr-0 lg:pr-6">
@@ -51,16 +53,16 @@ export default function CampPavilion() {
             </div>
 
             <div className="mt-10">
-              <a 
+              <Link 
                 href="/inquire" 
                 className="group flex items-center gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors duration-300 w-max"
               >
                 Inquire About Dining
                 <span className="block w-8 h-[1px] bg-[#591C27] group-hover:w-16 group-hover:bg-[#2C2A25] transition-all duration-500 ease-out"></span>
-              </a>
+              </Link>
             </div>
 
-          </div>
+          </article>
 
           {/* ========================================================
               RIGHT: 100vh Flush Grid / Touching Images (7 Cols)
@@ -71,7 +73,7 @@ export default function CampPavilion() {
             <div className="w-1/2 h-full bg-[#2C2A25] group overflow-hidden relative">
               <Image 
                 src={diningMain} 
-                alt="Main dining table in the Goshen pavilion" 
+                alt="Main open-air dining pavilion table overlooking Laikipia bush vista at Goshen" 
                 width={1200}
                 height={800}
                 sizes="(max-width: 1024px) 50vw, 29vw"
@@ -88,7 +90,7 @@ export default function CampPavilion() {
               <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
                 <Image 
                   src={diningAlt1} 
-                  alt="Goshen dining table setting details" 
+                  alt="Goshen dining table setting and bush banquet details" 
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 29vw"
@@ -101,7 +103,7 @@ export default function CampPavilion() {
               <div className="w-full h-1/2 bg-[#2C2A25] group overflow-hidden relative">
                 <Image 
                   src={diningAlt2} 
-                  alt="Goshen pavilion lounge looking out across the bush" 
+                  alt="Goshen safari camp pavilion lounge looking out across the Laikipia plains" 
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 29vw"

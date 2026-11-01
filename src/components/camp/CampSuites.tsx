@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CampSuites() {
   const baseUrl = "https://bfwisxjfneudldalecsl.supabase.co/storage/v1/object/public/Media/";
@@ -27,7 +28,7 @@ export default function CampSuites() {
           {/* ========================================================
               LEFT: Typography & Story (5 Cols)
           ======================================================== */}
-          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
+          <article className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 z-20">
             
             <div className="flex items-center gap-4 mb-6">
               <span className="w-10 h-[1px] bg-[#591C27]"></span>
@@ -37,8 +38,9 @@ export default function CampSuites() {
             </div>
             
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-8">
-              Canvas walls & <br />
+              Canvas walls &amp; <br />
               <span className="italic font-light text-[#591C27]">king-size beds.</span>
+              <span className="sr-only"> &mdash; Luxury Places to Stay in Laikipia</span>
             </h2>
             
             <div className="space-y-6 font-sans text-sm md:text-base leading-relaxed tracking-wide text-[#2C2A25]/80 pr-0 lg:pr-6">
@@ -51,16 +53,16 @@ export default function CampSuites() {
             </div>
 
             <div className="mt-10">
-              <a 
+              <Link 
                 href="/inquire" 
                 className="group flex items-center gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-[#591C27] hover:text-[#2C2A25] transition-colors duration-300 w-max"
               >
                 Inquire About The Suites
                 <span className="block w-8 h-[1px] bg-[#591C27] group-hover:w-16 group-hover:bg-[#2C2A25] transition-all duration-500 ease-out"></span>
-              </a>
+              </Link>
             </div>
 
-          </div>
+          </article>
 
           {/* ========================================================
               RIGHT: 100vh Flush Grid / Touching Images (7 Cols)
@@ -71,7 +73,7 @@ export default function CampSuites() {
             <div className="w-1/2 h-full bg-[#EAE7E0] group overflow-hidden relative">
               <Image 
                 src={suiteMain} 
-                alt="Handcrafted king-size log bed and luxury canvas interior" 
+                alt="Handcrafted king-size log bed and luxury canvas interior at Goshen Camp in Laikipia" 
                 width={800}
                 height={1000}
                 sizes="(max-width: 1024px) 50vw, 29vw"
@@ -88,7 +90,7 @@ export default function CampSuites() {
               <div className="w-full h-1/2 bg-[#EAE7E0] group overflow-hidden relative">
                 <Image 
                   src={suiteAlt1} 
-                  alt="Wide view of the bed looking out to the Laikipia plains" 
+                  alt="Panoramic view of the Laikipia plains from Goshen luxury safari tent bedroom window" 
                   width={600}
                   height={500}
                   sizes="(max-width: 1024px) 50vw, 29vw"
@@ -101,7 +103,7 @@ export default function CampSuites() {
               <div className="w-full h-1/2 bg-[#EAE7E0] group overflow-hidden relative">
                 <Image 
                   src={suiteAlt2} 
-                  alt="Suite details and natural textures" 
+                  alt="Luxury tent bedroom interior details and natural safari textures in Laikipia Kenya" 
                   width={600}
                   height={500}
                   sizes="(max-width: 1024px) 50vw, 29vw"

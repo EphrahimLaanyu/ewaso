@@ -4,8 +4,12 @@ import Footer from '@/components/sections/Footer';
 import React from 'react'; 
 
 export const metadata: Metadata = { 
-  title: 'Terms of Reserve | Goshen · Laikipia, Kenya', 
-  description: 'Terms of Reserve and reservation policies for Goshen in Laikipia, Kenya.', 
+  title: 'Terms of Reserve | Goshen Safari Camp · Laikipia, Kenya', 
+  description:
+    'Terms of Reserve and reservation policies for Goshen safari camp in Ewaso Enclave Conservancy, Laikipia, Kenya.', 
+  alternates: {
+    canonical: 'https://goshencamp.com/terms',
+  },
 }; 
 
 export default function TermsPage() { 
@@ -28,26 +32,32 @@ export default function TermsPage() {
           </p> 
           <div> 
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">1. Exclusive Booking Partner</h2> 
-            <p> Reservations are made directly with Goshen Camp. </p> 
+            <p> 
+              All reservations for Goshen are managed through authorized conservancy booking channels. Confirmation of reservation requires designated deposit commitments as outlined in your personalized itinerary schedule. 
+            </p> 
           </div> 
           <div> 
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">2. Rates</h2> 
-            <p> Rates are coming soon. </p> 
+            <p> 
+              Rates are quoted per person, per night on a full-board basis, and exclude statutory conservancy fees. Minimum length-of-stay requirements apply during peak wildlife seasons. 
+            </p> 
           </div> 
           <div> 
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">3. Activities & Conservation Vehicle Regulations</h2> 
-            <p> Game drives and specialized safari activities are priced separately. In order to preserve the pristine nature of the habitat and minimize disturbances to wildlife, no outside vehicles are allowed in the conservancy. </p> 
+            <p> 
+              To safeguard wilderness corridors, private outside vehicles are strictly prohibited within Ewaso Enclave Conservancy. All game drives, foot safaris, and transfers are conducted exclusively in Goshen&apos;s specialized open 4x4 vehicles. 
+            </p> 
           </div> 
           <div> 
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">4. Guided Wilderness Exploration</h2> 
-            <p> To maintain our strict conservation ethos and protect the safety of both wildlife and guests, walking activities are conducted with respect for natural habitats. Guests explore on foot keeping a respectful distance, guided by an armed ranger. </p> 
+            <p> 
+              Guided bush walks and black leopard tracking excursions are accompanied by certified naturalist guides and armed Kenya Wildlife Service / conservancy rangers to ensure strict adherence to conservation protocols. 
+            </p> 
           </div> 
           <div> 
             <h2 className="font-serif text-2xl text-[#591C27] mb-3">5. Inquiries & Cancellations</h2> 
-            <p> For cancellation schedules, seasonal terms, or inquiries, please contact our team at{' '} 
-              <a href="mailto:info@goshencamp.com" className="text-[#591C27] underline underline-offset-4 hover:opacity-80"> 
-                info@goshencamp.com 
-              </a>. 
+            <p> 
+              For cancellations, amendments, or custom group buyouts, please correspond directly with our reservations team at info@goshencamp.com. 
             </p> 
           </div> 
         </div> 
