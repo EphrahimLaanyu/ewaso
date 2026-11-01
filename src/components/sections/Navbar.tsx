@@ -76,11 +76,7 @@ export default function Navbar() {
           {/* RIGHT: Coordinates + Inquire Link + Hamburger Menu */} 
           <div className="flex items-center gap-6 sm:gap-10"> 
             
-            {/* Elegant Geography Coordinates (Desktop Only) */}
-            <div className={`hidden lg:flex flex-col items-end font-mono text-[9px] tracking-[0.25em] uppercase opacity-75 transition-colors duration-500 ${textColor}`}>
-              <span>0&deg; 01&apos; 14&quot; N</span>
-              <span>37&deg; 04&apos; 28&quot; E</span>
-            </div>
+
 
             {/* Inquire Link */} 
             <Link 
